@@ -19,8 +19,6 @@ else ()
 	project(CICD VERSION 0.0.1)
 endif()
 
-set(BIN_DIR ${CMAKE_BINARY_DIR}/bin)
-
 configure_file(config.h.in "${CMAKE_BINARY_DIR}/config.h")
 
 find_package(Boost COMPONENTS unit_test_framework REQUIRED)
