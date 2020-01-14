@@ -3,10 +3,12 @@ before_script:
 - sudo apt-get install libboost-test-dev -y
 - sudo apt-get install libgtest-dev -y
 - sudo apt-get install cmake -y
-- cd /usr/src/gtest/
-- sudo cmake -DBUILD_SHARED_LIBS=ON
-- sudo make
+- mkdir gtest_temp
+- cd gtest_temp
+- cmake -DBUILD_SHARED_LIBS=ON /usr/src/gtest/
+- cmake --build .
 - sudo cp *.so /usr/lib
+- cd ../
 - echo "deb http://archive.ubuntu.com/ubuntu xenial main universe" | sudo tee -a /etc/apt/sources.list
 - sudo apt-get update -qq
 script:
