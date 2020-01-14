@@ -19,5 +19,3 @@ target_link_libraries(${PROJECT_NAME}
 target_include_directories(${PROJECT_NAME} PRIVATE "${CMAKE_SOURCE_DIR}/lib")
 
 add_test(${PROJECT_NAME} ${PROJECT_NAME})
-
-install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION "${BIN_DIR}")

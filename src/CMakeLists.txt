@@ -18,4 +18,5 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
 
 target_include_directories(${PROJECT_NAME} PRIVATE "${CMAKE_SOURCE_DIR}/lib")
 
-install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION "${BIN_DIR}")
+set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME cicd)
+install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION ${BIN_DIR})
