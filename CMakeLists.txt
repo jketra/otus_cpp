@@ -21,11 +21,11 @@ configure_file(config.h.in "${CMAKE_BINARY_DIR}/config.h")
 find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 find_package(GTest REQUIRED)
 
+enable_testing()
+
 add_subdirectory(lib)
 add_subdirectory(src)
 add_subdirectory(tests)
-
-enable_testing()
 
 set(CPACK_GENERATOR DEB)
 
