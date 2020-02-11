@@ -2,10 +2,9 @@
 
 project(BoostTests)
 
-file(GLOB sources ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
-file(GLOB headers ${CMAKE_CURRENT_SOURCE_DIR}/*.h)
+set(sources ProjectVersionTests.cpp)
 
-add_executable(${PROJECT_NAME} ${sources} ${headers})
+add_executable(${PROJECT_NAME} ${sources})
 
 set_target_properties(${PROJECT_NAME} PROPERTIES
     INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR}

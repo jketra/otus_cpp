@@ -2,8 +2,8 @@
 
 project(GoogleTests)
 
-file(GLOB sources ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
-file(GLOB headers ${CMAKE_CURRENT_SOURCE_DIR}/*.h)
+set(sources GoogleTest.cpp)
+set(headers ProjectVersionTests.h)
 
 add_executable(${PROJECT_NAME} ${sources} ${headers})
 

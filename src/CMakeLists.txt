@@ -2,10 +2,9 @@
 
 project(HelloWorld)
 
-file(GLOB sources ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
-file(GLOB headers ${CMAKE_CURRENT_SOURCE_DIR}/*.h)
+set(sources main.cpp)
 
-add_executable(${PROJECT_NAME} ${sources} ${headers})
+add_executable(${PROJECT_NAME} ${sources})
 
 target_link_libraries(${PROJECT_NAME} PRIVATE
 	ProjectInfo

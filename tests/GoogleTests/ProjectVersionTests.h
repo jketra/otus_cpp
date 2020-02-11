@@ -1,8 +1,8 @@
 ﻿#pragma once
 
-#include <gtest/gtest.h>
-
 #include "version.h"
+
+#include <gtest/gtest.h>
 
 namespace test
 {

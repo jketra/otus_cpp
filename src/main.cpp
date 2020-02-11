@@ -1,6 +1,6 @@
-﻿#include <iostream>
+﻿#include "version.h"
 
-#include "version.h"
+#include <iostream>
 
 int main (int, char **)
 {

@@ -1,7 +1,7 @@
 ﻿project(ProjectInfo)
 
-file(GLOB sources ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
-file(GLOB headers ${CMAKE_CURRENT_SOURCE_DIR}/*.h)
+set(sources version.cpp)
+set(headers version.h)
 
 add_library(${PROJECT_NAME} ${sources} ${headers})
 

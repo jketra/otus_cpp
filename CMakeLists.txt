@@ -1,9 +1,6 @@
 cmake_minimum_required(VERSION 3.2)
 
 if (WIN32)
-	if (NOT CMAKE_TOOLCHAIN_FILE)
-		set(CMAKE_TOOLCHAIN_FILE "C:/Tools/vcpkg/scripts/buildsystems/vcpkg.cmake")
-	endif()
 	set(BIN_DIR ${CMAKE_BINARY_DIR}/bin)
 else()
 	set(BIN_DIR bin)

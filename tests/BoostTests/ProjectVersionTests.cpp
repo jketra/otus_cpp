@@ -4,9 +4,9 @@
 
 #define BOOST_TEST_MODULE ProjectVersionTests
 
-#include <boost/test/unit_test.hpp>
-
 #include "version.h"
+
+#include <boost/test/unit_test.hpp>
 
 BOOST_AUTO_TEST_SUITE(ProjectVersionTests)
 

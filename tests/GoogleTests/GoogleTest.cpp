@@ -1,6 +1,6 @@
-﻿#include <gtest/gtest.h>
+﻿#include "ProjectVersionTests.h"
 
-#include "ProjectVersionTests.h"
+#include <gtest/gtest.h>
 
 int main(int argc, char** argv)
 {
