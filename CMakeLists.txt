@@ -6,27 +6,50 @@ else()
 	set(BIN_DIR bin)
 endif()
 
-include("${CMAKE_SOURCE_DIR}/CompilerOptions.cmake")
+set(CMAKE_MODULES_DIR "${CMAKE_SOURCE_DIR}/cmakeModules")
+include("${CMAKE_MODULES_DIR}/CompilerOptions.cmake")
 
-set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+set(CICD "CICD")
 
+# options
+#
+option(BUILD_${CICD} "Build Homework 1" ON)
+
+option(TESTING_GTEST "Build Google Tests" ON)
+option(TESTING_BOOST_TESTS "Build Boost Tests" OFF)
+
+# pre deploy
+#
+include("${CMAKE_MODULES_DIR}/PreDeploy.cmake")
+
+# project
+#
 if ($ENV{TRAVIS_BUILD_NUMBER})
-	project(CICD VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
+	project(OTUS_CPP VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 else ()
-	project(CICD VERSION 0.0.1)
+	project(OTUS_CPP VERSION 0.0.1)
 endif()
 
-configure_file(config.h.in "${CMAKE_BINARY_DIR}/config.h")
-
-find_package(Boost COMPONENTS unit_test_framework REQUIRED)
-find_package(GTest REQUIRED)
-
+# tests
+#
+if (TESTING_BOOST_TESTS)
+	find_package(Boost COMPONENTS unit_test_framework REQUIRED)
+endif()
+if (TESTING_GTEST)
+	find_package(GTest REQUIRED)
+endif()
 enable_testing()
 
-add_subdirectory(lib)
-add_subdirectory(src)
-add_subdirectory(tests)
+# directories
+#
+add_subdirectory(hw1_cicd)
 
+# folders for IDE
+#
+set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+
+# package
+#
 set(CPACK_GENERATOR DEB)
 
 set(CPACK_PACKAGE_VERSION_MAJOR "${PROJECT_VERSION_MAJOR}")

@@ -2,9 +2,9 @@
 
 project(BoostTests)
 
-set(sources ProjectVersionTests.cpp)
+set(_sources ProjectVersionTests.cpp)
 
-add_executable(${PROJECT_NAME} ${sources})
+add_executable(${PROJECT_NAME} ${_sources})
 
 set_target_properties(${PROJECT_NAME} PROPERTIES
     INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR}
@@ -15,6 +15,6 @@ target_link_libraries(${PROJECT_NAME}
     ProjectInfo
 )
 
-target_include_directories(${PROJECT_NAME} PRIVATE "${CMAKE_SOURCE_DIR}/lib")
+target_include_directories(${PROJECT_NAME} PRIVATE "${PROJECT_HOME_DIRECTORY}/lib")
 
 add_test(${PROJECT_NAME} ${PROJECT_NAME})

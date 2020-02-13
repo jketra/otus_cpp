@@ -1,0 +1,15 @@
+﻿set(DEFAULT_DEPLOY_PROJECT "${CICD}")
+
+set(DEPLOY_PROJECT "${DEFAULT_DEPLOY_PROJECT}" CACHE STRING "${DEFAULT_DEPLOY_PROJECT}")
+
+set_property(CACHE DEPLOY_PROJECT PROPERTY STRINGS "none" "${CICD}")
+
+set(DEPLOY_${CICD} OFF)
+
+if (NOT ${DEPLOY_PROJECT} STREQUAL "none")
+	set(DEPLOY_${DEPLOY_PROJECT} ON)
+
+	set(BUILD_${DEPLOY_PROJECT} ON CACHE BOOL "Build Deployment Project" FORCE)
+
+	message(STATUS "Release package will be created for ${DEPLOY_PROJECT} project.")
+endif()
