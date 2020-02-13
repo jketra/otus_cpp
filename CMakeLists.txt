@@ -27,8 +27,8 @@ include("${CMAKE_MODULES_DIR}/PreDeploy.cmake")
 
 # project
 #
-if ($ENV{TRAVIS_CUSTOM_BUILD_NUMBER})
-	project(OTUS_CPP VERSION 0.0.$ENV{TRAVIS_CUSTOM_BUILD_NUMBER})
+if ($ENV{TRAVIS_BUILD_NUMBER})
+	project(OTUS_CPP VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 else ()
 	project(OTUS_CPP VERSION 0.0.1)
 endif()
