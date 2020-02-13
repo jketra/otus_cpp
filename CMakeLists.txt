@@ -8,6 +8,9 @@ endif()
 
 set(CMAKE_MODULES_DIR "${CMAKE_SOURCE_DIR}/cmakeModules")
 include("${CMAKE_MODULES_DIR}/CompilerOptions.cmake")
+if (NOT ${CMAKE_VERSION} VERSION_LESS 3.7)
+	include("${CMAKE_MODULES_DIR}/Functions.cmake")
+endif()
 
 set(CICD "CICD")
 
@@ -44,9 +47,12 @@ enable_testing()
 #
 add_subdirectory(hw1_cicd)
 
-# folders for IDE
+# folder filter for IDE
 #
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+if (NOT ${CMAKE_VERSION} VERSION_LESS 3.7)
+	apply_folder_filter("OTUS_CPP" ${CMAKE_CURRENT_SOURCE_DIR})
+endif()
 
 # package
 #
