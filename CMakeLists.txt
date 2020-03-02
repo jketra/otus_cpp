@@ -12,11 +12,15 @@ if (NOT ${CMAKE_VERSION} VERSION_LESS 3.7)
 	include("${CMAKE_MODULES_DIR}/Functions.cmake")
 endif()
 
+# subprojects names
+#
 set(CICD "CICD")
+set(IP_FILTER "IP_FILTER")
 
 # options
 #
 option(BUILD_${CICD} "Build Homework 1" ON)
+option(BUILD_${IP_FILTER} "Build Homework 2" ON)
 
 option(TESTING_GTEST "Build Google Tests" ON)
 option(TESTING_BOOST_TESTS "Build Boost Tests" OFF)
@@ -45,7 +49,13 @@ enable_testing()
 
 # directories
 #
-add_subdirectory(hw1_cicd)
+if (BUILD_${CICD})
+	add_subdirectory(hw1_cicd)
+endif()
+
+if (BUILD_${IP_FILTER})
+	add_subdirectory(hw2_ip_filter)
+endif()
 
 # folder filter for IDE
 #

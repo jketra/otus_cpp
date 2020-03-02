@@ -1,0 +1,15 @@
+﻿cmake_minimum_required(VERSION 3.2)
+
+project(IpFilterTests)
+
+set(_sources IpFilterTests)
+set(_headers IpV4Tests.h)
+
+add_executable(${PROJECT_NAME} ${_sources} ${_headers})
+
+target_link_libraries(${PROJECT_NAME} PRIVATE
+	GTest::GTest
+	IpFilter
+)
+
+add_test(${PROJECT_NAME} ${PROJECT_NAME})
