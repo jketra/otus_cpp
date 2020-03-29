@@ -1,12 +1,10 @@
-﻿#pragma once
-
-#include "OperationResult.h"
+﻿#include "OperationResult.h"
 
 namespace bl
 {
 
-std::ostream& operator<<(std::ostream& out, const OperationResult& or ) {
-	return out << or._msg.str() << std::endl;
+std::ostream& operator<<(std::ostream& out, const OperationResult& operationResult) {
+	return out << operationResult._msg.str() << std::endl;
 }
 
 }

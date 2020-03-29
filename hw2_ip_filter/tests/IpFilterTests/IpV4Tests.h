@@ -11,14 +11,13 @@ namespace test
 
 TEST(IpV4Tests, GetBytes)
 {
-	std::array<int, 4u> expValues{ 10, 11, 13, 15 };
+	std::array<bl::IpV4::Byte, 4u> expValues{ 10, 11, 13, 15 };
 
 	bl::IpV4 ip = bl::IpV4{ expValues[0], expValues[1], expValues[2], expValues[3] };
 
-	EXPECT_EQ(ip.byte<1>(), expValues[0]);
-	EXPECT_EQ(ip.byte<2>(), expValues[1]);
-	EXPECT_EQ(ip.byte<3>(), expValues[2]);
-	EXPECT_EQ(ip.byte<4>(), expValues[3]);
+	for (size_t i = 0; i < 4u; ++i) {
+		EXPECT_EQ(ip.byte(i), expValues[i]);
+	}
 }
 
 TEST(IpV4Tests, Comparison)

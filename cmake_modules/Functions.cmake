@@ -1,4 +1,4 @@
-# Получение всех целей от указанного каталога.
+# РџРѕР»СѓС‡РµРЅРёРµ РІСЃРµС… С†РµР»РµР№ РѕС‚ СѓРєР°Р·Р°РЅРЅРѕРіРѕ РєР°С‚Р°Р»РѕРіР°.
 function(get_all_targets _result _dir)
 	get_property(_subdirs DIRECTORY "${_dir}" PROPERTY SUBDIRECTORIES)
 	foreach(_subdir IN LISTS _subdirs)
@@ -10,8 +10,8 @@ function(get_all_targets _result _dir)
 	set(${_result} ${${_result}} ${_sub_targets} PARENT_SCOPE)
 endfunction()
 
-# Применение FOLDER фильтра на цели в каталоге _dir (для компоновки проектов по папкам в IDE).
-# Первый уровень дерева будет с названием _parent_dir_name.
+# РџСЂРёРјРµРЅРµРЅРёРµ FOLDER С„РёР»СЊС‚СЂР° РЅР° С†РµР»Рё РІ РєР°С‚Р°Р»РѕРіРµ _dir (РґР»СЏ РєРѕРјРїРѕРЅРѕРІРєРё РїСЂРѕРµРєС‚РѕРІ РїРѕ РїР°РїРєР°Рј РІ IDE).
+# РџРµСЂРІС‹Р№ СѓСЂРѕРІРµРЅСЊ РґРµСЂРµРІР° Р±СѓРґРµС‚ СЃ РЅР°Р·РІР°РЅРёРµРј _parent_dir_name.
 function(apply_folder_filter _parent_dir_name _dir)
 	get_property(_subdirs DIRECTORY ${_dir} PROPERTY SUBDIRECTORIES)
 

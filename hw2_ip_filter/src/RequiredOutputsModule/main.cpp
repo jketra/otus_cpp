@@ -21,14 +21,20 @@ int main(int argc, char const *argv[])
 	auto inStream = std::cin;
 #else
 	std::stringstream inStream;
+	#ifdef WIN32
+		std::string filePath{ "D:\\study\\OTUS\\HW2\\input_part.txt" };
+	#else
+		std::string filePath{ "/home/user/code/test_data/input_part.txt" };
+	#endif
 
-	std::ifstream file("D:\\study\\OTUS\\HW2\\input_part.txt");
+	std::ifstream file(filePath);
+
 	if (file) {
 		inStream << file.rdbuf();
 		file.close();
 	}
 	else {
-		return 0;
+		std::cout << "Could not open file " << filePath << std::endl;
 	}
 #endif
 	
@@ -38,7 +44,6 @@ int main(int argc, char const *argv[])
 		bl::IpStorage ipStorage(std::cout);
 
 		for (std::string line; std::getline(inStream, line);)
-		//for (std::string line; std::getline(std::cin, line);)
 		{
 			std::vector<std::string> v = bl::split(line, '\t');
 			if (!v.at(0).empty()) {
@@ -57,14 +62,12 @@ int main(int argc, char const *argv[])
 		std::cout << "\n=====================================================\n";
 
 		// 2. Список адресов, первый байт которых равен 1. Порядок сортировки не меняется.
-		/*auto filteredIpsRange = */ipStorage.printFilteredByFirstBytes<DESC>(1);
-		//ipStorage.print<DESC>(filteredIpsRange.first, filteredIpsRange.second);
+		ipStorage.printFilteredByFirstBytes<DESC>(1);
 
 		std::cout << "\n=====================================================\n";
 
 		// 3. Список адресов, первый байт которых равен 46, а второй 70. Порядок сортировки не меняется.
-		/*filteredIpsRange = */ipStorage.printFilteredByFirstBytes<DESC>(46, 70);
-		//ipStorage.print<DESC>(filteredIpsRange.first, filteredIpsRange.second);
+		ipStorage.printFilteredByFirstBytes<DESC>(46, 70);
 
 		std::cout << "\n=====================================================\n";
 

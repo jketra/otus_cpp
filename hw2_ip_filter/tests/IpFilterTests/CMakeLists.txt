@@ -2,7 +2,7 @@
 
 project(IpFilterTests)
 
-set(_sources IpFilterTests)
+set(_sources IpFilterTests.cpp)
 set(_headers IpV4Tests.h)
 
 add_executable(${PROJECT_NAME} ${_sources} ${_headers})

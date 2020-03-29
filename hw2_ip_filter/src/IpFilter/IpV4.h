@@ -18,9 +18,6 @@ public:
 	IpV4(const IpV4& other);
 	IpV4(IpV4&& other);
 
-	template<size_t _index, std::enable_if_t<(_index > 0 && _index <= BYTE_NUMBER), int> = 0>
-	Byte byte() const;
-
 	Byte& byte(size_t index);
 	Byte byte(size_t index) const;
 
@@ -35,11 +32,5 @@ public:
 private:
 	std::array<Byte, BYTE_NUMBER> _data;
 };
-
-template<size_t _index, std::enable_if_t<(_index > 0 && _index <= IpV4::BYTE_NUMBER), int>>
-IpV4::Byte IpV4::byte() const
-{
-	return _data[_index - 1];
-}
 
 }

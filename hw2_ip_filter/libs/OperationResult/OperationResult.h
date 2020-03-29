@@ -34,17 +34,7 @@ public:
 		return *this;
 	}
 
-	//OperationResult& operator<<(const std::string& str) {
-	//	_msg << str;
-	//	return *this;
-	//}
-	//
-	//OperationResult& operator<<(const char* str) {
-	//	_msg << str;
-	//	return *this;
-	//}
-
-	friend std::ostream& operator<<(std::ostream& out, const OperationResult& or);
+	friend std::ostream& operator<<(std::ostream& out, const OperationResult& operationResult);
 
 private:
 	explicit OperationResult(bool isSuccess, const std::string& message = "") :

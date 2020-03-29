@@ -7,7 +7,6 @@ set(_sources main.cpp)
 add_executable(${PROJECT_NAME} ${_sources})
 
 target_link_libraries(${PROJECT_NAME} PRIVATE
-	GTest::GTest
 	IpFilter
 	StringAddOns
 )

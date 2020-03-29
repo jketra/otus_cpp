@@ -19,18 +19,31 @@ public:
 	{}
 
 	template<ProcessDirection processingDirection_ = ProcessDirection::ASC>
-	void process(Iterator begin, Iterator end) const;
-
-	template<>
-	void process<ProcessDirection::ASC>(Iterator begin, Iterator end) const {
-		std::for_each(begin, end, _function);
-	}
-
-	template<>
-	void process<ProcessDirection::DESC>(Iterator begin, Iterator end) const {
-		std::for_each(std::reverse_iterator<Iterator>{ end }, std::reverse_iterator<Iterator>{ begin },
+	void process(Iterator begin, Iterator end) const {
+		switch (processingDirection_)
+		{
+		case ProcessDirection::ASC:
+			std::for_each(begin, end, _function);
+			break;
+		case ProcessDirection::DESC:
+			std::for_each(std::reverse_iterator<Iterator>{ end }, std::reverse_iterator<Iterator>{ begin },
 			_function);
+			break;
+		default:
+			break;
+		}
 	}
+
+//	template<typename FakeType>
+//	void process<ProcessDirection::ASC, FakeType>(Iterator begin, Iterator end) const {
+//		std::for_each(begin, end, _function);
+//	}
+//
+//	template<typename FakeType>
+//	void process<ProcessDirection::DESC, FakeType>(Iterator begin, Iterator end) const {
+//		std::for_each(std::reverse_iterator<Iterator>{ end }, std::reverse_iterator<Iterator>{ begin },
+//			_function);
+//	}
 
 private:
 	std::function<void(const ValueType&)> _function;

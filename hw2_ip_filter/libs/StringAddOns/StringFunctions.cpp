@@ -1,6 +1,4 @@
-﻿#pragma once
-
-#include "StringFunctions.h"
+﻿#include "StringFunctions.h"
 
 namespace bl
 {
