@@ -1,15 +1,80 @@
-﻿#include "IpFilter/IpV4.h"
+﻿#include "StringAddOns/StringFunctions.h"
 
+#include <IpFilter/ProcessDirection.h>
+#include <IpFilter/IpV4.h>
+#include <IpFilter/IpStorage.h>
+#include <IpFilter/ForEach.h>
+
+#include <vector>
+#include <string>
 #include <iostream>
 
-int main (int, char **)
+#define JDEBUG
+#ifdef  JDEBUG
+	#include <fstream>
+	#include <sstream>
+#endif
+
+int main(int argc, char const *argv[])
 {
-	bl::IpV4 ip1;
-	bl::IpV4 ip2{10, 10, 10, 10};
+#ifndef JDEBUG
+	auto inStream = std::cin;
+#else
+	std::stringstream inStream;
 
-	std::cout << ip1 << " < " << ip2 << " is " << (ip1 < ip2) << std::endl;
+	std::ifstream file("D:\\study\\OTUS\\HW2\\input_part.txt");
+	if (file) {
+		inStream << file.rdbuf();
+		file.close();
+	}
+	else {
+		return 0;
+	}
+#endif
+	
+	try {
+		constexpr auto DESC = bl::ProcessDirection::DESC;
 
-	std::cout << ip1.byte<3>() << '.' << ip1.byte<4>() << std::endl;
+		bl::IpStorage ipStorage(std::cout);
+
+		for (std::string line; std::getline(inStream, line);)
+		//for (std::string line; std::getline(std::cin, line);)
+		{
+			std::vector<std::string> v = bl::split(line, '\t');
+			if (!v.at(0).empty()) {
+				auto result = ipStorage.add(v.at(0));
+				if (!result) {
+					std::cout << result;
+				}
+			}
+		}
+
+		// ВЫВОД В СТАНДАРТНЫЙ ПОТОК:
+
+		// 1. Полный список адресов после обратной сортировки.
+		ipStorage.printAll<DESC>();
+
+		std::cout << "\n=====================================================\n";
+
+		// 2. Список адресов, первый байт которых равен 1. Порядок сортировки не меняется.
+		/*auto filteredIpsRange = */ipStorage.printFilteredByFirstBytes<DESC>(1);
+		//ipStorage.print<DESC>(filteredIpsRange.first, filteredIpsRange.second);
+
+		std::cout << "\n=====================================================\n";
+
+		// 3. Список адресов, первый байт которых равен 46, а второй 70. Порядок сортировки не меняется.
+		/*filteredIpsRange = */ipStorage.printFilteredByFirstBytes<DESC>(46, 70);
+		//ipStorage.print<DESC>(filteredIpsRange.first, filteredIpsRange.second);
+
+		std::cout << "\n=====================================================\n";
+
+		// 4. Список адресов, любой байт которых равен 46. Порядок сортировки не меняется.
+		ipStorage.printIpsContainsByte<DESC>(46);
+	}
+	catch (const std::exception &e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
 
 	return 0;
 }

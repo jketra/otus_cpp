@@ -2,17 +2,65 @@
 
 #include "IpV4.h"
 
+#include <StringAddOns/StringFunctions.h>
+
+#include <utility>
+#include <assert.h>
+
 namespace bl
 {
 
-IpV4::IpV4(int first, int second, int third, int forth) :
+IpV4::IpV4(Byte first, Byte second, Byte third, Byte forth) :
 	_data{ first, second, third, forth }
 {
 }
 
-bool IpV4::operator<(const IpV4& other)
+IpV4::IpV4(const IpV4& other) :
+	_data(other._data)
+{
+}
+
+IpV4::IpV4(IpV4&& other) :
+	_data(std::forward<std::array<Byte, BYTE_NUMBER>>(other._data))
+{
+}
+
+IpV4::Byte& IpV4::byte(size_t index)
+{
+	assert(index < BYTE_NUMBER);
+	
+	return _data[index];
+}
+
+IpV4::Byte IpV4::byte(size_t index) const
+{
+	assert(index < BYTE_NUMBER);
+
+	return _data[index];
+}
+
+bool IpV4::contains(Byte byte) const
+{
+	size_t index = 0;
+
+	while (index < IpV4::BYTE_NUMBER - 1) {
+		if (_data[index++] == byte) {
+			return true;
+		}
+	}
+
+	return false;
+}
+
+bool IpV4::operator<(const IpV4& other) const
 {
 	return _data < other._data;
+}
+
+constexpr size_t IpV4::bytesNumber()
+{
+	static constexpr size_t BYTE_NUMBER = 4u;
+	return BYTE_NUMBER;
 }
 
 std::ostream& operator<<(std::ostream& out, const IpV4& ip)

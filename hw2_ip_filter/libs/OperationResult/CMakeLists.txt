@@ -1,9 +1,9 @@
 ﻿cmake_minimum_required(VERSION 3.2)
 
-project(StringAddOns)
+project(OperationResult)
 
-set(_sources StringFunctions.cpp)
-set(_headers StringFunctions.h)
+set(_sources OperationResult.cpp)
+set(_headers OperationResult.h)
 
 add_library(${PROJECT_NAME} ${_sources} ${_headers})
 

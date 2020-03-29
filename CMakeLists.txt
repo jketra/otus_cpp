@@ -1,12 +1,17 @@
 cmake_minimum_required(VERSION 3.2)
 
 if (WIN32)
+	if(DEFINED ENV{VCPKG_ROOT} AND NOT DEFINED CMAKE_TOOLCHAIN_FILE)
+		set(CMAKE_TOOLCHAIN_FILE "$ENV{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake" CACHE
+			STRING "$ENV{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake")
+		message(STATUS "Set CMake toolchain file ${CMAKE_TOOLCHAIN_FILE}")
+	endif()
 	set(BIN_DIR ${CMAKE_BINARY_DIR}/bin)
 else()
 	set(BIN_DIR bin)
 endif()
 
-set(CMAKE_MODULES_DIR "${CMAKE_SOURCE_DIR}/cmakeModules")
+set(CMAKE_MODULES_DIR "${CMAKE_SOURCE_DIR}/cmake_modules")
 include("${CMAKE_MODULES_DIR}/CompilerOptions.cmake")
 if (NOT ${CMAKE_VERSION} VERSION_LESS 3.7)
 	include("${CMAKE_MODULES_DIR}/Functions.cmake")
