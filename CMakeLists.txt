@@ -62,6 +62,8 @@ if (BUILD_${IP_FILTER})
 	add_subdirectory(hw2_ip_filter)
 endif()
 
+add_subdirectory(libs)
+
 # folder filter for IDE
 #
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
