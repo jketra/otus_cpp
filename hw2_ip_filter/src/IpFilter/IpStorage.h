@@ -60,6 +60,8 @@ private:
 	bool validateIp(const IpV4& ip) const;
 
 	void formFilteringBoundaries(IpBoundaries& range, size_t byteIndex) {
+		(void)range;
+		(void)byteIndex;
 	}
 
 	template<ProcessDirection processingDirection_>

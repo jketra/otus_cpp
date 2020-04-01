@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.2)
+cmake_minimum_required(VERSION 3.7)
 
 if (WIN32)
 	if(DEFINED ENV{VCPKG_ROOT} AND NOT DEFINED CMAKE_TOOLCHAIN_FILE)
@@ -12,10 +12,8 @@ else()
 endif()
 
 set(CMAKE_MODULES_DIR "${CMAKE_SOURCE_DIR}/cmake_modules")
-include("${CMAKE_MODULES_DIR}/CompilerOptions.cmake")
-if (NOT ${CMAKE_VERSION} VERSION_LESS 3.7)
-	include("${CMAKE_MODULES_DIR}/Functions.cmake")
-endif()
+
+include("${CMAKE_MODULES_DIR}/Functions.cmake")
 
 # subprojects names
 #
@@ -42,6 +40,8 @@ else ()
 	project(OTUS_CPP VERSION 0.0.1)
 endif()
 
+include("${CMAKE_MODULES_DIR}/CompilerOptions.cmake")
+
 # tests
 #
 if (TESTING_BOOST_TESTS)
@@ -67,9 +67,7 @@ add_subdirectory(libs)
 # folder filter for IDE
 #
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
-if (NOT ${CMAKE_VERSION} VERSION_LESS 3.7)
-	apply_folder_filter("OTUS_CPP" ${CMAKE_CURRENT_SOURCE_DIR})
-endif()
+apply_folder_filter("OTUS_CPP" ${CMAKE_CURRENT_SOURCE_DIR})
 
 # package
 #

@@ -17,6 +17,9 @@
 
 int main(int argc, char const *argv[])
 {
+	(void)argc;
+	(void)argv;
+
 #ifndef JDEBUG
 	auto inStream = std::cin;
 #else

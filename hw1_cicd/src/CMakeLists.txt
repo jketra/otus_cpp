@@ -1,4 +1,4 @@
-﻿cmake_minimum_required(VERSION 3.2)
+﻿cmake_minimum_required(VERSION 3.7)
 
 project(HelloWorld)
 
@@ -8,11 +8,6 @@ add_executable(${PROJECT_NAME} ${_sources})
 
 target_link_libraries(${PROJECT_NAME} PRIVATE
 	ProjectInfo
-)
-
-set_target_properties(${PROJECT_NAME} PROPERTIES
-	CXX_STANDARD 14
-	CXX_STANDARD_REQUIRED ON
 )
 
 target_include_directories(${PROJECT_NAME} PRIVATE "${PROJECT_HOME_DIRECTORY}/lib")

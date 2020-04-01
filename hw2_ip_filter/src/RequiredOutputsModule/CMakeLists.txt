@@ -1,4 +1,4 @@
-﻿cmake_minimum_required(VERSION 3.2)
+﻿cmake_minimum_required(VERSION 3.7)
 
 project(RequiredOutputsModule)
 
@@ -9,11 +9,6 @@ add_executable(${PROJECT_NAME} ${_sources})
 target_link_libraries(${PROJECT_NAME} PRIVATE
 	IpFilter
 	StringAddOns
-)
-
-set_target_properties(${PROJECT_NAME} PROPERTIES
-	CXX_STANDARD 14
-	CXX_STANDARD_REQUIRED ON
 )
 
 set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME ip_filter)

@@ -1,4 +1,4 @@
-﻿cmake_minimum_required(VERSION 3.2)
+﻿cmake_minimum_required(VERSION 3.7)
 
 project(IpFilter)
 
@@ -16,7 +16,3 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
 
 target_include_directories(${PROJECT_NAME} INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/..)
 
-set_target_properties(${PROJECT_NAME} PROPERTIES
-	CXX_STANDARD 14
-	CXX_STANDARD_REQUIRED ON
-)
