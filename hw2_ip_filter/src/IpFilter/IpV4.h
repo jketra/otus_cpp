@@ -23,7 +23,9 @@ public:
 
 	bool contains(Byte byte) const;
 
+	const IpV4& operator=(const IpV4& other);
 	bool operator<(const IpV4& other) const;
+	bool operator>(const IpV4& other) const;
 
 	static constexpr size_t bytesNumber();
 

@@ -9,9 +9,9 @@ set(_headers IpV4.h
 
 add_library(${PROJECT_NAME} ${_sources} ${_headers})
 
-target_link_libraries(${PROJECT_NAME} PRIVATE
-	OperationResult
-	StringAddOns
+target_link_libraries(${PROJECT_NAME}
+	PUBLIC  OperationResult
+	PRIVATE StringAddOns
 )
 
 target_include_directories(${PROJECT_NAME} INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/..)

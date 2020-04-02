@@ -17,6 +17,16 @@ IpStorage::IpStorage(std::ostream& out) :
 {
 }
 
+OperationResult IpStorage::add(const IpV4& ip)
+{
+	if (validateIp(ip)) {
+		_storage.insert(ip);
+		return OperationResult::Success();
+	}
+
+	return std::move(OperationResult::Fail("Invalid IpV4: ") << ip);
+}
+
 OperationResult IpStorage::add(IpV4&& ip)
 {
 	if (validateIp(ip)) {
@@ -24,8 +34,7 @@ OperationResult IpStorage::add(IpV4&& ip)
 		return OperationResult::Success();
 	}
 
-	return std::move(OperationResult::Fail("Invalid IpV4 [") << _ipRestrictions.min <<
-		"-" << _ipRestrictions.max << "]: " << ip);
+	return std::move(OperationResult::Fail("Invalid IpV4: ") << ip);
 }
 
 OperationResult IpStorage::add(const std::string& ipStr)
@@ -37,14 +46,24 @@ OperationResult IpStorage::add(const std::string& ipStr)
 			return add(IpV4{ std::stoi(bytes[0]), std::stoi(bytes[1]), std::stoi(bytes[2]), std::stoi(bytes[3]) });
 		}
 		catch (std::invalid_argument const &e) {
-			return std::move(OperationResult::Fail("Bad input : ") << e.what() << ": "<< ipStr);
+			return std::move(OperationResult::Fail("Bad input: ") << std::string(e.what()) << ": "<< ipStr);
 		}
 		catch (std::out_of_range const &e) {
-			return  std::move(OperationResult::Fail("Integer overflow: ") << e.what() << ": " << ipStr);
+			return  std::move(OperationResult::Fail("Integer overflow : ") << e.what() << ": " << ipStr);
 		}
 	}
 
-	return  OperationResult::Fail("Invalid input");
+	return std::move(OperationResult::Fail("Invalid input: ") << ipStr);
+}
+
+void IpStorage::clear()
+{
+	_storage.clear();
+}
+
+bool IpStorage::empty() const
+{
+	return _storage.empty();
 }
 
 bool IpStorage::validateIp(const IpV4& ip) const

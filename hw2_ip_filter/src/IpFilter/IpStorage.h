@@ -27,8 +27,13 @@ public:
 
 	IpStorage(std::ostream& out);
 
+	OperationResult add(const IpV4& ip);
 	OperationResult add(IpV4&& ip);
 	OperationResult add(const std::string& ipStr);
+
+	void clear();
+
+	bool empty() const;
 
 	template<ProcessDirection processingDirection_ = ProcessDirection::ASC>
 	void printAll() const {

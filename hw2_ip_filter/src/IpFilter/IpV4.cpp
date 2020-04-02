@@ -39,10 +39,8 @@ IpV4::Byte IpV4::byte(size_t index) const
 
 bool IpV4::contains(Byte byte) const
 {
-	size_t index = 0;
-
-	while (index < IpV4::bytesNumber() - 1) {
-		if (_data[index++] == byte) {
+	for (size_t index = 0; index < IpV4::bytesNumber() - 1; ++index) {
+		if (_data[index] == byte) {
 			return true;
 		}
 	}
@@ -50,9 +48,21 @@ bool IpV4::contains(Byte byte) const
 	return false;
 }
 
+const IpV4& IpV4::operator=(const IpV4& other)
+{
+	_data = other._data;
+
+	return *this;
+}
+
 bool IpV4::operator<(const IpV4& other) const
 {
 	return _data < other._data;
+}
+
+bool IpV4::operator>(const IpV4& other) const
+{
+	return _data > other._data;
 }
 
 constexpr size_t IpV4::bytesNumber()
