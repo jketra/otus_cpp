@@ -47,10 +47,10 @@ TEST_F(IpStorageTests, AddValidIpV4) {
 	auto result = _ipStorage.add(bl::IpV4{ 79, 46, 201, 157 });
 	ASSERT_TRUE(result) << result;
 
-	result = _ipStorage.add({ 0, 0, 0, 0 });
+	result = _ipStorage.add(bl::IpV4{ 0, 0, 0, 0 });
 	ASSERT_TRUE(result) << result;
 
-	result = _ipStorage.add({ 255, 255, 255, 255 });
+	result = _ipStorage.add(bl::IpV4{ 255, 255, 255, 255 });
 	ASSERT_TRUE(result) << result;
 
 	_expOutput << "0.0.0.0\n" << "79.46.201.157\n" << "255.255.255.255\n"
