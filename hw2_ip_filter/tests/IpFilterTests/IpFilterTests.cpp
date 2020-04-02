@@ -1,4 +1,5 @@
-﻿#include "IpV4Tests.h"
+﻿#include "IpStorageTests.h"
+#include "IpV4Tests.h"
 
 #include <gtest/gtest.h>
 
