@@ -3,6 +3,7 @@
 #include <string>
 #include <iostream>
 #include <sstream>
+#include <utility>
 
 namespace bl
 {
@@ -10,40 +11,46 @@ namespace bl
 class OperationResult {
 public:
 	OperationResult() = delete;
+	OperationResult(const OperationResult& other) = delete;
 
-	OperationResult(OperationResult&& other) :
-		_isSuccess(other._isSuccess),
-		_msg(std::move(other._msg))
-	{}
+	OperationResult(OperationResult&& other);
 
-	static OperationResult Success() {
-		return OperationResult(true);
-	}
+	static OperationResult Success();
+	static OperationResult Fail();
+	static OperationResult Fail(const std::string& message);
 
-	static OperationResult Fail(const std::string& message = "") {
-		return OperationResult(false, message);
-	}
+	operator bool() const;
 
-	operator bool() const {
-		return _isSuccess;
-	}
-
-	template<typename T>
-	OperationResult&  operator<<(const T& str) {
-		_msg << str;
-		return *this;
-	}
+	const OperationResult& operator=(OperationResult&& other);
 
 	friend std::ostream& operator<<(std::ostream& out, const OperationResult& operationResult);
 
+	template<class T>
+	friend OperationResult& operator<<(OperationResult& operationResult, const T& t);
+
+	template<class T>
+	friend OperationResult operator<<(OperationResult&& operationResult, const T& t);
+
 private:
-	explicit OperationResult(bool isSuccess, const std::string& message = "") :
-		_isSuccess(isSuccess),
-		_msg(message)
-	{}
+	explicit OperationResult(bool isSuccess);
+	explicit OperationResult(const std::string& message);
 
 	bool _isSuccess;
-	std::stringstream _msg;
+	std::stringstream _message;
 };
+
+template<class T>
+OperationResult& operator<<(OperationResult& operationResult, const T& t)
+{
+	operationResult._message << t;
+	return operationResult;
+}
+
+template<class T>
+OperationResult operator<<(OperationResult&& operationResult, const T& t)
+{
+	operationResult._message << t;
+	return std::move(operationResult);
+}
 
 }
