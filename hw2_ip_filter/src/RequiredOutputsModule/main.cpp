@@ -1,9 +1,8 @@
 ﻿#include "StringAddOns/StringFunctions.h"
 
-#include <IpFilter/ProcessDirection.h>
-#include <IpFilter/IpV4.h>
+#include <IpFilter/IpStoragePrinter.h>
 #include <IpFilter/IpStorage.h>
-#include <IpFilter/ForEach.h>
+#include <IpFilter/IpV4.h>
 
 #include <vector>
 #include <string>
@@ -42,9 +41,10 @@ int main(int argc, char const *argv[])
 #endif
 	
 	try {
-		constexpr auto DESC = bl::ProcessDirection::DESC;
+		constexpr auto DESC = bl::PrintDirection::DESC;
 
-		bl::IpStorage ipStorage(std::cout);
+		bl::IpStorage ipStorage;
+		bl::IpStoragePrinter printer(std::cout);
 
 		for (std::string line; std::getline(inStream, line);)
 		{
@@ -60,22 +60,22 @@ int main(int argc, char const *argv[])
 		// ВЫВОД В СТАНДАРТНЫЙ ПОТОК:
 
 		// 1. Полный список адресов после обратной сортировки.
-		ipStorage.printAll<DESC>();
+		printer.print<DESC>(ipStorage.getAllIps());
 
 		std::cout << "\n=====================================================\n";
 
 		// 2. Список адресов, первый байт которых равен 1. Порядок сортировки не меняется.
-		ipStorage.printFilteredByFirstBytes<DESC>(1);
+		printer.print<DESC>(ipStorage.filteredByFirstBytes(1));
 
 		std::cout << "\n=====================================================\n";
 
 		// 3. Список адресов, первый байт которых равен 46, а второй 70. Порядок сортировки не меняется.
-		ipStorage.printFilteredByFirstBytes<DESC>(46, 70);
+		printer.print<DESC>(ipStorage.filteredByFirstBytes(46, 70));
 
 		std::cout << "\n=====================================================\n";
 
 		// 4. Список адресов, любой байт которых равен 46. Порядок сортировки не меняется.
-		ipStorage.printIpsContainsByte<DESC>(46);
+		printer.print<DESC>(ipStorage.getIpsContainsByte(46));
 	}
 	catch (const std::exception &e)
 	{

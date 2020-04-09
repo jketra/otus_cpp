@@ -1,8 +1,8 @@
 ﻿#pragma once
 
+#include "IpFilter/IpStoragePrinter.h"
 #include "IpFilter/IpStorage.h"
 #include "IpFilter/IpV4.h"
-#include "IpFilter/ProcessDirection.h"
 
 #include <sstream>
 #include <vector>
@@ -16,7 +16,8 @@ class IpStorageTests : public ::testing::Test {
 // protected for GTest
 protected:
 	IpStorageTests() :
-		_ipStorage(_actOutput)
+		_ipStorage(),
+		_printer(_actOutput)
 	{}
 	
 	void setTestsIps() {
@@ -40,6 +41,10 @@ protected:
 
 	bl::IpStorage _ipStorage;
 
+	const static auto ASC { bl::PrintDirection::ASC };
+	const static auto DESC{ bl::PrintDirection::DESC };
+	bl::IpStoragePrinter _printer;
+
 	std::vector<bl::IpV4> _inputIps;
 };
 
@@ -56,8 +61,9 @@ TEST_F(IpStorageTests, AddValidIpV4) {
 	_expOutput << "0.0.0.0\n" << "79.46.201.157\n" << "255.255.255.255\n"
 		<< "255.255.255.255\n" << "79.46.201.157\n" << "0.0.0.0\n";
 
-	_ipStorage.printAll();
-	_ipStorage.printAll<bl::ProcessDirection::DESC>();
+	auto allIps = _ipStorage.getAllIps();
+	_printer.print(allIps);
+	_printer.print<DESC>(allIps);
 
 	EXPECT_EQ(_actOutput.str(), _expOutput.str());
 }
@@ -74,7 +80,7 @@ TEST_F(IpStorageTests, AddValidString) {
 
 	_expOutput << "0.0.0.0\n" << "79.46.201.157\n" << "255.255.255.255\n";
 
-	_ipStorage.printAll();
+	_printer.print(_ipStorage.getAllIps());
 
 	EXPECT_EQ(_actOutput.str(), _expOutput.str());
 }
@@ -140,8 +146,9 @@ TEST_F(IpStorageTests, PrintFilteredByFirstBytes) {
 		_expOutput << ip << '\n';
 	}
 
-	_ipStorage.printFilteredByFirstBytes(firstByte, secondByte);
-	_ipStorage.printFilteredByFirstBytes<bl::ProcessDirection::DESC>(firstByte, secondByte);
+	auto resultIps = _ipStorage.filteredByFirstBytes(firstByte, secondByte);
+	_printer.print(resultIps);
+	_printer.print<DESC>(resultIps);
 
 	EXPECT_EQ(_actOutput.str(), _expOutput.str());
 }
@@ -169,8 +176,10 @@ TEST_F(IpStorageTests, PrintIpsContainsByte) {
 		_expOutput << ip << '\n';
 	}
 
-	_ipStorage.printIpsContainsByte(byteValue);
-	_ipStorage.printIpsContainsByte<bl::ProcessDirection::DESC>(byteValue);
+	auto resultIps = _ipStorage.getIpsContainsByte(byteValue);
+	
+	_printer.print(resultIps);
+	_printer.print<DESC>(resultIps);
 
 	EXPECT_EQ(_actOutput.str(), _expOutput.str());
 }

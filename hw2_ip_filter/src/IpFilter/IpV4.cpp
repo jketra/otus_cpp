@@ -65,11 +65,6 @@ bool IpV4::operator>(const IpV4& other) const
 	return _data > other._data;
 }
 
-constexpr size_t IpV4::bytesNumber()
-{
-	return BYTE_NUMBER;
-}
-
 std::ostream& operator<<(std::ostream& out, const IpV4& ip)
 {
 	size_t index = 0;

@@ -3,9 +3,11 @@
 project(IpFilter)
 
 set(_sources IpV4.cpp
-			 IpStorage.cpp)
+			 IpStorage.cpp
+			 IpStoragePrinter.cpp)
 set(_headers IpV4.h
-			 IpStorage.h)
+			 IpStorage.h
+			 IpStoragePrinter.h)
 
 add_library(${PROJECT_NAME} ${_sources} ${_headers})
 

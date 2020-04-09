@@ -10,10 +10,8 @@
 namespace bl
 {
 
-IpStorage::IpStorage(std::ostream& out) :
-	_ipRestrictions{ { 0, 0, 0, 0 }, { 255, 255, 255, 255 } },
-	_print(std::function<void(const IpV4&)>([&out](const IpV4& ip){ out << ip << std::endl; })),
-	_out(out)
+IpStorage::IpStorage() :
+	_ipRestrictions{ { 0, 0, 0, 0 }, { 255, 255, 255, 255 } }
 {
 }
 
@@ -54,6 +52,19 @@ OperationResult IpStorage::add(const std::string& ipStr)
 	}
 
 	return std::move(OperationResult::Fail("Invalid input: ") << ipStr);
+}
+
+const IpStorage::Container& IpStorage::getAllIps() const {
+	return _storage;
+}
+
+IpStorage::Container IpStorage::getIpsContainsByte(IpV4::Byte byte) const {
+	Container result;
+	std::vector<IpV4> vet;
+	std::copy_if(std::begin(_storage), std::end(_storage), std::inserter(result, std::begin(result)),
+		[&byte](const IpV4& ip) { return ip.contains(byte); });
+
+	return std::move(result);
 }
 
 void IpStorage::clear()

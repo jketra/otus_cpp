@@ -27,9 +27,11 @@ public:
 	bool operator<(const IpV4& other) const;
 	bool operator>(const IpV4& other) const;
 
-	static constexpr size_t bytesNumber();
-
 	friend std::ostream& operator<<(std::ostream& out, const IpV4& ip);
+
+	static constexpr size_t bytesNumber() {
+		return BYTE_NUMBER;
+	}
 
 private:
 	std::array<Byte, BYTE_NUMBER> _data;
