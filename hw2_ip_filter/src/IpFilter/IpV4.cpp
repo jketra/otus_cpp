@@ -1,9 +1,7 @@
 ﻿#include "IpV4.h"
 
-#include <StringAddOns/StringFunctions.h>
-
 #include <utility>
-#include <assert.h>
+#include <cassert>
 
 namespace bl
 {
@@ -19,27 +17,23 @@ IpV4::IpV4(const IpV4& other) :
 }
 
 IpV4::IpV4(IpV4&& other) :
-	_data(std::forward<std::array<Byte, BYTE_NUMBER>>(other._data))
-{
+	_data(std::forward<std::array<Byte, bytesNumber()>>(other._data)) {
 }
 
-IpV4::Byte& IpV4::byte(size_t index)
-{
+IpV4::Byte& IpV4::byte(size_t index) {
 	assert(index < bytesNumber());
 	
 	return _data[index];
 }
 
-IpV4::Byte IpV4::byte(size_t index) const
-{
+IpV4::Byte IpV4::byte(size_t index) const {
 	assert(index < bytesNumber());
 
 	return _data[index];
 }
 
-bool IpV4::contains(Byte byte) const
-{
-	for (size_t index = 0; index < IpV4::bytesNumber() - 1; ++index) {
+bool IpV4::contains(Byte byte) const {
+	for (size_t index = 0; index < bytesNumber() - 1; ++index) {
 		if (_data[index] == byte) {
 			return true;
 		}
@@ -48,25 +42,21 @@ bool IpV4::contains(Byte byte) const
 	return false;
 }
 
-const IpV4& IpV4::operator=(const IpV4& other)
-{
+const IpV4& IpV4::operator=(const IpV4& other) {
 	_data = other._data;
 
 	return *this;
 }
 
-bool IpV4::operator<(const IpV4& other) const
-{
+bool IpV4::operator<(const IpV4& other) const {
 	return _data < other._data;
 }
 
-bool IpV4::operator>(const IpV4& other) const
-{
+bool IpV4::operator>(const IpV4& other) const {
 	return _data > other._data;
 }
 
-std::ostream& operator<<(std::ostream& out, const IpV4& ip)
-{
+std::ostream& operator<<(std::ostream& out, const IpV4& ip) {
 	size_t index = 0;
 	
 	while (index < IpV4::bytesNumber() - 1) {

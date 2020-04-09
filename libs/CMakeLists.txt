@@ -2,3 +2,4 @@
 
 add_subdirectory(StringAddOns)
 add_subdirectory(OperationResult)
+add_subdirectory(TypeTraits)

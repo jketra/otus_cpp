@@ -79,7 +79,7 @@ bool IpStorage::empty() const
 
 bool IpStorage::validateIp(const IpV4& ip) const
 {
-	for (unsigned i = 0; i < 4u; ++i) {
+	for (unsigned i = 0; i < IpV4::bytesNumber(); ++i) {
 		if (ip.byte(i) < _ipRestrictions.min.byte(i) || _ipRestrictions.max.byte(i) < ip.byte(i)) {
  			return false;
 		}

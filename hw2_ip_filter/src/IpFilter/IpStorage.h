@@ -3,6 +3,7 @@
 #include "IpV4.h"
 
 #include <OperationResult/OperationResult.h>
+#include <TypeTraits/TypeTraits.h>
 
 #include <set>
 #include <ostream>
@@ -15,7 +16,7 @@ namespace bl
 
 class IpStorage
 {
-	using Byte = typename IpV4::Byte;
+	using Byte = IpV4::Byte;
 	
 	struct IpBoundaries {
 		IpV4 min;
@@ -24,7 +25,7 @@ class IpStorage
 
 public:
 	using Container = std::multiset<IpV4>;
-	using Iterator  = typename Container::iterator;
+	using Iterator  = Container::iterator;
 	
 	IpStorage();
 
@@ -38,7 +39,7 @@ public:
 	void clear();
 	bool empty() const;
 
-	template<typename... Args>
+	template<typename... Args, typename = sfinae::CheckTypes<IpV4::Byte, Args...>>
 	std::tuple<Iterator, Iterator> filteredByFirstBytes(IpV4::Byte head, Args ...tail) {
 		static_assert(sizeof...(tail) < IpV4::bytesNumber(), "The number of input bytes mustn't exceed 4");
 

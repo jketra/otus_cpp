@@ -7,7 +7,14 @@ function(get_all_targets _result _dir)
 
 	get_property(_sub_targets DIRECTORY "${_dir}" PROPERTY BUILDSYSTEM_TARGETS)
 
-	set(${_result} ${${_result}} ${_sub_targets} PARENT_SCOPE)
+	foreach(_target IN LISTS _sub_targets)
+		get_target_property(target_type ${_target} TYPE)
+		if (NOT ${target_type} STREQUAL "INTERFACE_LIBRARY")
+			list(APPEND sub_targets ${_target})
+		endif()
+	endforeach()
+
+	set(${_result} ${${_result}} ${sub_targets} PARENT_SCOPE)
 endfunction()
 
 # Применение FOLDER фильтра на цели в каталоге _dir (для компоновки проектов по папкам в IDE).

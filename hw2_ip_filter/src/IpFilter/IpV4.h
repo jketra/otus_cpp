@@ -10,7 +10,7 @@ namespace bl
 
 class IpV4
 {
-	static constexpr size_t BYTE_NUMBER = 4u;
+	static constexpr size_t BYTES_NUMBER = 4u;
 public:
 	using Byte = int;
 
@@ -30,11 +30,11 @@ public:
 	friend std::ostream& operator<<(std::ostream& out, const IpV4& ip);
 
 	static constexpr size_t bytesNumber() {
-		return BYTE_NUMBER;
+		return BYTES_NUMBER;
 	}
 
 private:
-	std::array<Byte, BYTE_NUMBER> _data;
+	std::array<Byte, BYTES_NUMBER> _data;
 };
 
 }
