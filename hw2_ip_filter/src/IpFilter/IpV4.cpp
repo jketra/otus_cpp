@@ -33,7 +33,7 @@ IpV4::Byte IpV4::byte(size_t index) const {
 }
 
 bool IpV4::contains(Byte byte) const {
-	for (size_t index = 0; index < bytesNumber() - 1; ++index) {
+	for (size_t index = 0; index < bytesNumber(); ++index) {
 		if (_data[index] == byte) {
 			return true;
 		}

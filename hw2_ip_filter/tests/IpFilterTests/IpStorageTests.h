@@ -153,7 +153,16 @@ TEST_F(IpStorageTests, PrintFilteredByFirstBytes) {
 }
 
 TEST_F(IpStorageTests, PrintIpsContainsByte) {
-	setTestsIps();
+	_inputIps.emplace_back(bl::IpV4{ 1, 1, 1, 1 });
+	_inputIps.emplace_back(bl::IpV4{ 46, 1, 1, 1 });
+	_inputIps.emplace_back(bl::IpV4{ 1, 46, 1, 1 });
+	_inputIps.emplace_back(bl::IpV4{ 1, 1, 46, 1 });
+	_inputIps.emplace_back(bl::IpV4{ 1, 1, 1, 46 });
+	_inputIps.emplace_back(bl::IpV4{ 46, 46, 46, 46 });
+
+	for (const auto& ip : _inputIps) {
+		_ipStorage.add(ip);
+	}
 
 	int byteValue = 46;
 
