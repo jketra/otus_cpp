@@ -21,4 +21,4 @@ deploy:
   provider: script
   skip_cleanup: true
   script:
-  - curl -T OTUS_CPP-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb -ujketra:$BINTRAY_API_KEY "https://api.bintray.com/content/jketra/otus_cpp/$DEPLOYMENT_PROJECT_NAME/$TRAVIS_BUILD_NUMBER/$DEPLOYMENT_PROJECT_NAME-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=trusty;deb_component=main;deb_architecture=amd64;publish=$NEED_TO_PUBLISH"
+  - curl -T $DEPLOYMENT_PROJECT_NAME-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb -ujketra:$BINTRAY_API_KEY "https://api.bintray.com/content/jketra/otus_cpp/$DEPLOYMENT_PROJECT_NAME/$TRAVIS_BUILD_NUMBER/$DEPLOYMENT_PROJECT_NAME-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=trusty;deb_component=main;deb_architecture=amd64;publish=$NEED_TO_PUBLISH"
