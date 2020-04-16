@@ -29,9 +29,18 @@ public:
 	
 	IpStorage();
 
-	OperationResult add(const IpV4& ip);
-	OperationResult add(IpV4&& ip);
 	OperationResult add(const std::string& ipStr);
+
+	template<typename Ip, typename = sfinae::CheckType<IpV4, Ip>>
+	OperationResult add(Ip&& ip) {
+		if (validateIp(ip)) {
+			_storage.insert(std::forward<Ip>(ip));
+		return OperationResult::Success();
+		}
+
+		return std::move(OperationResult::Fail("Invalid IpV4: ") << ip);
+	}
+
 
 	const Container& getAllIps() const;
 	Container getIpsContainsByte(IpV4::Byte byte) const;

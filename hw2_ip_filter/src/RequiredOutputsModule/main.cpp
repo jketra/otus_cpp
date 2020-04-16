@@ -49,8 +49,8 @@ int main(int argc, char const *argv[])
 		for (std::string line; std::getline(inStream, line);)
 		{
 			std::vector<std::string> v = bl::split(line, '\t');
-			if (!v.at(0).empty()) {
-				auto result = ipStorage.add(v.at(0));
+			if ((!v.empty()) && (!v.front().empty())) {
+				auto result = ipStorage.add(v.front());
 				if (!result) {
 					std::cout << result;
 				}

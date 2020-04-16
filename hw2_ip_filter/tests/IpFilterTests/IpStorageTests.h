@@ -67,7 +67,6 @@ TEST_F(IpStorageTests, AddValidIpV4) {
 
 	EXPECT_EQ(_actOutput.str(), _expOutput.str());
 }
-
 TEST_F(IpStorageTests, AddValidString) {
 	auto result = _ipStorage.add("79.46.201.157");
 	ASSERT_TRUE(result) << result;

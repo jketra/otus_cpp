@@ -15,26 +15,6 @@ IpStorage::IpStorage() :
 {
 }
 
-OperationResult IpStorage::add(const IpV4& ip)
-{
-	if (validateIp(ip)) {
-		_storage.insert(ip);
-		return OperationResult::Success();
-	}
-
-	return std::move(OperationResult::Fail("Invalid IpV4: ") << ip);
-}
-
-OperationResult IpStorage::add(IpV4&& ip)
-{
-	if (validateIp(ip)) {
-		_storage.insert(std::forward<IpV4>(ip));
-		return OperationResult::Success();
-	}
-
-	return std::move(OperationResult::Fail("Invalid IpV4: ") << ip);
-}
-
 OperationResult IpStorage::add(const std::string& ipStr)
 {
 	auto bytes = bl::split(ipStr, '.');

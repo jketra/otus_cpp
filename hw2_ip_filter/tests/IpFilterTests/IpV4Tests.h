@@ -13,7 +13,7 @@ TEST(IpV4Tests, GetBytes) {
 
 	bl::IpV4 ip = bl::IpV4{ expValues[0], expValues[1], expValues[2], expValues[3] };
 
-	for (size_t i = 0; i < 4u; ++i) {
+	for (size_t i = 0; i < bl::IpV4::bytesNumber(); ++i) {
 		EXPECT_EQ(ip.byte(i), expValues[i]);
 	}
 }
