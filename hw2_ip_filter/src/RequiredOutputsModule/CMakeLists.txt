@@ -13,6 +13,8 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
 
 set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME ip_filter)
 
+post_buld_copy_executable(${CMAKE_CURRENT_BINARY_DIR} ${PROJECT_NAME} ip_filter)
+
 if (DEPLOY_IP_FILTER)
 	install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION ${BIN_DIR})
 endif()

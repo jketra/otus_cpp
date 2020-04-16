@@ -39,3 +39,16 @@ function(apply_folder_filter _parent_dir_name _dir)
 		endforeach()
 	endif()
 endfunction()
+
+function(post_buld_copy_executable _current_binary_dir _target_name _output_target_name)
+	if (WIN32)
+		set(FROM_DIR ${_current_binary_dir}/${CMAKE_CFG_INTDIR})
+	else()
+		set(FROM_DIR ${_current_binary_dir})
+	endif()
+
+	add_custom_command(TARGET ${_target_name} POST_BUILD
+		COMMAND ${CMAKE_COMMAND} -E copy
+		${FROM_DIR}/${_output_target_name}${CMAKE_EXECUTABLE_SUFFIX}
+		${CMAKE_BINARY_DIR}/bin/${_output_target_name}${CMAKE_EXECUTABLE_SUFFIX})
+endfunction()
