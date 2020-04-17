@@ -33,15 +33,13 @@ int main(int argc, char const *argv[])
 		// ВЫВОД В СТАНДАРТНЫЙ ПОТОК:
 
 		// 1. Полный список адресов после обратной сортировки.
-		//printer.print<DESC>(ipStorage.getAllIps());
+		printer.print<DESC>(ipStorage.getAllIps());
 
-		//// 2. Список адресов, первый байт которых равен 1. Порядок сортировки не меняется.
-		//printer.print<DESC>(ipStorage.filteredByFirstBytes(1));
+		// 2. Список адресов, первый байт которых равен 1. Порядок сортировки не меняется.
+		printer.print<DESC>(ipStorage.filteredByFirstBytes(1));
 
 		// 3. Список адресов, первый байт которых равен 46, а второй 70. Порядок сортировки не меняется.
 		printer.print<DESC>(ipStorage.filteredByFirstBytes(46, 70));
-
-		std::cout << "=============================" << std::endl;
 
 		// 4. Список адресов, любой байт которых равен 46. Порядок сортировки не меняется.
 		printer.print<DESC>(ipStorage.getIpsContainsByte(46));
