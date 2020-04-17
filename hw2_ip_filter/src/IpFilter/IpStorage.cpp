@@ -19,7 +19,7 @@ OperationResult IpStorage::add(const std::string& ipStr)
 {
 	auto bytes = bl::split(ipStr, '.');
 
-	if (bytes.size() == 4u) {
+	if (bytes.size() == IpV4::bytesNumber()) {
 		try {
 			return add(IpV4{ std::stoi(bytes[0]), std::stoi(bytes[1]), std::stoi(bytes[2]), std::stoi(bytes[3]) });
 		}
