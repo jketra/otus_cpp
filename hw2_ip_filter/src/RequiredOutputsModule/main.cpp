@@ -8,11 +8,8 @@
 #include <string>
 #include <iostream>
 
-int main(int argc, char const *argv[])
+int main(int, char const **)
 {
-	(void)argc;
-	(void)argv;
-	
 	try {
 		constexpr auto DESC = bl::PrintDirection::DESC;
 
