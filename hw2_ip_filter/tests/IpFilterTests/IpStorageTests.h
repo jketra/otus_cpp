@@ -1,9 +1,12 @@
 ﻿#pragma once
 
-#include "IpFilter/IpStoragePrinter.h"
-#include "IpFilter/IpStorage.h"
-#include "IpFilter/IpV4.h"
+#include <StringAddOns/StringFunctions.h>
 
+#include <IpFilter/IpStoragePrinter.h>
+#include <IpFilter/IpStorage.h>
+#include <IpFilter/IpV4.h>
+
+#include <fstream>
 #include <sstream>
 #include <vector>
 #include <string>
@@ -67,6 +70,7 @@ TEST_F(IpStorageTests, AddValidIpV4) {
 
 	EXPECT_EQ(_actOutput.str(), _expOutput.str());
 }
+
 TEST_F(IpStorageTests, AddValidString) {
 	auto result = _ipStorage.add("79.46.201.157");
 	ASSERT_TRUE(result) << result;
@@ -190,6 +194,51 @@ TEST_F(IpStorageTests, PrintIpsContainsByte) {
 	_printer.print<DESC>(resultIps);
 
 	EXPECT_EQ(_actOutput.str(), _expOutput.str());
+}
+
+TEST_F(IpStorageTests, ControlDataset) {
+	bl::IpStorage ipStorage;
+
+	std::ifstream inStream("test_data/control_dataset.tsv", std::ifstream::in);
+
+	ASSERT_TRUE(inStream) << "File control_dataset.tsv not found";
+
+	for (std::string line; std::getline(inStream, line);) {
+		std::vector<std::string> v = bl::split(line, '\t');
+		if ((!v.empty()) && (!v.front().empty())) {
+			auto result = ipStorage.add(v.front());
+			if (!result) {
+				std::cout << result;
+			}
+		}
+	}
+	
+	inStream.close();
+
+	// Вывод  в _actOutput:
+	//
+	// 1. Полный список адресов после обратной сортировки.
+	_printer.print<DESC>(ipStorage.getAllIps());
+	
+	// 2. Список адресов, первый байт которых равен 1. Порядок сортировки не меняется.
+	_printer.print<DESC>(ipStorage.filteredByFirstBytes(1));
+
+	// 3. Список адресов, первый байт которых равен 46, а второй 70. Порядок сортировки не меняется.
+	_printer.print<DESC>(ipStorage.filteredByFirstBytes(46, 70));
+
+	// 4. Список адресов, любой байт которых равен 46. Порядок сортировки не меняется.
+	_printer.print<DESC>(ipStorage.getIpsContainsByte(46));
+	
+	inStream.open("test_data/expected_ips.txt", std::ifstream::in);
+	ASSERT_TRUE(inStream) << "File expected_ips.txt not found";
+
+	for (std::string line; std::getline(inStream, line);) {
+		_expOutput << line << std::endl;
+	}
+
+	EXPECT_EQ(_actOutput.str(), _expOutput.str());
+	
+	inStream.close();
 }
 
 }
