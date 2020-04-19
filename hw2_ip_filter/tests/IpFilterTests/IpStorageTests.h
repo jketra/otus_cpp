@@ -201,7 +201,7 @@ TEST_F(IpStorageTests, ControlDataset) {
 
 	std::ifstream inStream("test_data/control_dataset.tsv", std::ifstream::in);
 
-	ASSERT_TRUE(inStream) << "File control_dataset.tsv not found";
+	ASSERT_TRUE(inStream.is_open()) << "File control_dataset.tsv not found";
 
 	for (std::string line; std::getline(inStream, line);) {
 		std::vector<std::string> v = bl::split(line, '\t');
@@ -230,7 +230,7 @@ TEST_F(IpStorageTests, ControlDataset) {
 	_printer.print<DESC>(ipStorage.getIpsContainsByte(46));
 	
 	inStream.open("test_data/expected_ips.txt", std::ifstream::in);
-	ASSERT_TRUE(inStream) << "File expected_ips.txt not found";
+	ASSERT_TRUE(inStream.is_open()) << "File expected_ips.txt not found";
 
 	for (std::string line; std::getline(inStream, line);) {
 		_expOutput << line << std::endl;
