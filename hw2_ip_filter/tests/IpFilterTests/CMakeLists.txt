@@ -7,6 +7,7 @@ set(_headers IpV4Tests.h
 			 IpStorageTests.h)
 
 file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/test_data DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/test_data DESTINATION ${BINARIES_DIR})
 
 add_executable(${PROJECT_NAME} ${_sources} ${_headers})
 

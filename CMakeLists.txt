@@ -6,12 +6,13 @@ if (WIN32)
 			STRING "$ENV{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake")
 		message(STATUS "Set CMake toolchain file ${CMAKE_TOOLCHAIN_FILE}")
 	endif()
-	set(BIN_DIR ${CMAKE_BINARY_DIR}/bin)
+	set(INSTALL_DIR ${CMAKE_BINARY_DIR}/bin)
 else()
-	set(BIN_DIR bin)
+	set(INSTALL_DIR bin)
 endif()
 
 set(CMAKE_MODULES_DIR "${CMAKE_SOURCE_DIR}/cmake_modules")
+set(BINARIES_DIR ${CMAKE_BINARY_DIR}/bin)
 
 include("${CMAKE_MODULES_DIR}/Functions.cmake")
 
