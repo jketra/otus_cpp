@@ -1,6 +1,6 @@
 ﻿cmake_minimum_required(VERSION 3.7)
 
-project(GoogleTests)
+project(CicdGoogleTests)
 
 set(_sources GoogleTest.cpp)
 set(_headers ProjectVersionTests.h)
