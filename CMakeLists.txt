@@ -52,6 +52,11 @@ if (TESTING_BOOST_TESTS)
 endif()
 if (TESTING_GTEST)
 	find_package(GTest REQUIRED)
+	if (WIN32)
+		file(COPY ${CMAKE_SOURCE_DIR}/libs/gtest/gtest.dll
+				  ${CMAKE_SOURCE_DIR}/libs/gtest/gtestd.dll 
+				  DESTINATION ${BINARIES_DIR})
+	endif()
 endif()
 enable_testing()
 
