@@ -20,11 +20,13 @@ include("${CMAKE_MODULES_DIR}/Functions.cmake")
 #
 set(CICD "CICD")
 set(IP_FILTER "IP_FILTER")
+set(PRINT_IP "PRINT_IP")
 
 # options
 #
 option(BUILD_${CICD} "Build Homework 1" ON)
 option(BUILD_${IP_FILTER} "Build Homework 2" ON)
+option(BUILD_${PRINT_IP} "Build Homework 4" ON)
 
 option(TESTING_GTEST "Build Google Tests" ON)
 option(TESTING_BOOST_TESTS "Build Boost Tests" OFF)
@@ -61,6 +63,10 @@ endif()
 
 if (BUILD_${IP_FILTER})
 	add_subdirectory(hw2_ip_filter)
+endif()
+
+if (BUILD_${PRINT_IP})
+	add_subdirectory(hw4_print_ip)
 endif()
 
 add_subdirectory(libs)
