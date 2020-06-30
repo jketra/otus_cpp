@@ -11,7 +11,7 @@
 
 namespace hw4 {
 
-template<typename T, typename = std::enable_if_t<std::is_integral_v<T>>>
+template<typename T, typename = std::enable_if_t<std::is_integral<T>::value>>
 void printIp(T ip) {
 	
 	Bits<T> mask;
