@@ -1,13 +1,17 @@
 ﻿#pragma once
 
-#include <iostream>
-#include <vector>
-#include <iterator>
-#include <type_traits>
-#include <string>
-#include <utility>
+#include "Bits.h"
 
 #include <TypeTraits/TypeTraits.h>
+
+#include <vector>
+#include <tuple>
+#include <string>
+
+#include <type_traits>
+#include <limits>
+
+#include <iostream>
 
 namespace hw4 {
 
@@ -20,7 +24,7 @@ void printIp(T ip) {
 	std::vector<uint8_t> result;
 	result.reserve(sizeof(T));
 
-	for (int k = 0; k < sizeof(T); ++k) {
+	for (unsigned k = 0; k < sizeof(T); ++k) {
 		T newValue = mask.value & ip;
 		newValue = newValue >> (k * 8);
 		result.emplace_back(static_cast<uint8_t>(newValue));
@@ -72,26 +76,6 @@ void print_tuple_impl(const Tuple& t, std::index_sequence<Indexes...>, const cha
 template<typename T, typename... Args, typename = sfinae::AreTypesSame<T, Args...>>
 void printIp(const std::tuple<T, Args...>& ip) {
 	print_tuple_impl(ip, std::index_sequence_for<T, Args...>{}, ".");
-	std::cout << std::endl;
-}
-
-template<typename T>
-union Bits {
-	T value;
-	uint8_t bits[sizeof(T)];
-};
-
-template<typename T>
-void show_bits(T a) {
-	Bits<T> b;
-	b.value = a;
-	
-	for (int j = sizeof(T) - 1; j >= 0; j--) {
-		for (int i = 128; i; i >>= 1)
-			if (i & b.bits[j]) std::cout << "1";
-			else std::cout << "0";
-		std::cout << ' ';
-	}
 	std::cout << std::endl;
 }
 
