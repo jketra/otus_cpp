@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/travis/build/jketra/otus_cpp/hw1_cicd/lib/version.cpp
+version.h
+/home/travis/build/jketra/otus_cpp/hw1_cicd/lib/version.h
+config.h
+/home/travis/build/jketra/otus_cpp/hw1_cicd/lib/config.h
+
+/home/travis/build/jketra/otus_cpp/hw1_cicd/lib/version.h
+
+hw1_cicd/config.h
+

@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/travis/build/jketra/otus_cpp/libs/OperationResult/OperationResult.cpp
+OperationResult.h
+/home/travis/build/jketra/otus_cpp/libs/OperationResult/OperationResult.h
+
+/home/travis/build/jketra/otus_cpp/libs/OperationResult/OperationResult.h
+string
+-
+iostream
+-
+sstream
+-
+utility
+-
+

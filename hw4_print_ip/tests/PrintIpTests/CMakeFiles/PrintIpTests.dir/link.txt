@@ -1,0 +1,1 @@
+/usr/bin/g++   -Wall -Wextra -pedantic   CMakeFiles/PrintIpTests.dir/PrintIpTests.cpp.o  -o PrintIpTests /usr/lib/libgtest.so ../../src/PrintIp/libPrintIp.a -lpthread 

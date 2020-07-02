@@ -1,0 +1,2 @@
+/usr/bin/ar qc libOperationResult.a  CMakeFiles/OperationResult.dir/OperationResult.cpp.o
+/usr/bin/ranlib libOperationResult.a

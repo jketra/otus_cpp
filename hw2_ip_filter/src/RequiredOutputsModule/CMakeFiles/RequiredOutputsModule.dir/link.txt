@@ -1,0 +1,1 @@
+/usr/bin/g++   -Wall -Wextra -pedantic   CMakeFiles/RequiredOutputsModule.dir/main.cpp.o  -o ip_filter ../IpFilter/libIpFilter.a ../../../libs/StringAddOns/libStringAddOns.a ../../../libs/OperationResult/libOperationResult.a 

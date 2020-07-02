@@ -1,0 +1,8 @@
+/home/travis/build/jketra/otus_cpp/gtest_temp/CMakeFiles/install/strip.dir
+/home/travis/build/jketra/otus_cpp/gtest_temp/CMakeFiles/install/local.dir
+/home/travis/build/jketra/otus_cpp/gtest_temp/CMakeFiles/install.dir
+/home/travis/build/jketra/otus_cpp/gtest_temp/CMakeFiles/list_install_components.dir
+/home/travis/build/jketra/otus_cpp/gtest_temp/CMakeFiles/gtest_main.dir
+/home/travis/build/jketra/otus_cpp/gtest_temp/CMakeFiles/edit_cache.dir
+/home/travis/build/jketra/otus_cpp/gtest_temp/CMakeFiles/gtest.dir
+/home/travis/build/jketra/otus_cpp/gtest_temp/CMakeFiles/rebuild_cache.dir

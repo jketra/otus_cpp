@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/travis/build/jketra/otus_cpp/hw1_cicd/tests/GoogleTests/GoogleTest.cpp
+ProjectVersionTests.h
+/home/travis/build/jketra/otus_cpp/hw1_cicd/tests/GoogleTests/ProjectVersionTests.h
+gtest/gtest.h
+-
+
+/home/travis/build/jketra/otus_cpp/hw1_cicd/tests/GoogleTests/ProjectVersionTests.h
+version.h
+/home/travis/build/jketra/otus_cpp/hw1_cicd/tests/GoogleTests/version.h
+gtest/gtest.h
+-
+
+hw1_cicd/lib/version.h
+
