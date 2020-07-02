@@ -5,8 +5,8 @@
 #include <sstream>
 #include <utility>
 
-namespace bl
-{
+/// Custom libraries.
+namespace hw_libs {
 
 class OperationResult {
 public:
@@ -40,15 +40,13 @@ private:
 };
 
 template<class T>
-OperationResult& operator<<(OperationResult& operationResult, const T& t)
-{
+OperationResult& operator<<(OperationResult& operationResult, const T& t) {
 	operationResult._message << t;
 	return operationResult;
 }
 
 template<class T>
-OperationResult operator<<(OperationResult&& operationResult, const T& t)
-{
+OperationResult operator<<(OperationResult&& operationResult, const T& t) {
 	operationResult._message << t;
 	return std::move(operationResult);
 }

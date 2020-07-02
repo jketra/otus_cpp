@@ -4,12 +4,12 @@
 
 #include <gtest/gtest.h>
 
-namespace test
-{
-	
+/// Unit-tests
+namespace test{
+
 TEST(ProjectVersionTests, PatchNumber)
 {
-	EXPECT_TRUE(info::getProjectVersion() > 0);
+	EXPECT_TRUE(hw1::getProjectVersion() > 0);
 }
 
 }

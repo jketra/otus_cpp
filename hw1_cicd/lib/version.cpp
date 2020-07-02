@@ -2,8 +2,7 @@
 
 #include "config.h"
 
-namespace info
-{
+namespace hw1 {
 
 int getProjectVersion()
 {

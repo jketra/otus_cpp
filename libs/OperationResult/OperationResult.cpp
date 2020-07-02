@@ -1,6 +1,6 @@
 ﻿#include "OperationResult.h"
 
-namespace bl
+namespace hw_libs
 {
 
 OperationResult::OperationResult(OperationResult&& other) :

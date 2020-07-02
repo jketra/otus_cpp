@@ -1,7 +1,7 @@
 ﻿#pragma once
 
-namespace info
-{
+/// First homework
+namespace hw1 {
 
 int getProjectVersion();
 

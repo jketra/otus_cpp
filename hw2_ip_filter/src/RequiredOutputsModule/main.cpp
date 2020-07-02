@@ -11,14 +11,14 @@
 int main(int, char const **)
 {
 	try {
-		constexpr auto DESC = bl::PrintDirection::DESC;
+		constexpr auto DESC = hw2::PrintDirection::DESC;
 
-		bl::IpStorage ipStorage;
-		bl::IpStoragePrinter printer(std::cout);
+		hw2::IpStorage ipStorage;
+		hw2::IpStoragePrinter printer(std::cout);
 
 		for (std::string line; std::getline(std::cin, line);)
 		{
-			std::vector<std::string> v = bl::split(line, '\t');
+			std::vector<std::string> v = hw_libs::split(line, '\t');
 			if ((!v.empty()) && (!v.front().empty())) {
 				auto result = ipStorage.add(v.front());
 				if (!result) {

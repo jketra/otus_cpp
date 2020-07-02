@@ -1,10 +1,8 @@
 ﻿#include "StringFunctions.h"
 
-namespace bl
-{
+namespace hw_libs {
 
-std::vector<std::string> split(const std::string &str, char delimiter)
-{
+std::vector<std::string> split(const std::string &str, char delimiter) {
 	std::vector<std::string> result;
 
 	std::string::size_type start = 0;

@@ -11,11 +11,10 @@
 #include <tuple>
 #include <algorithm>
 
-namespace bl
-{
+/// Second homework
+namespace hw2 {
 
-class IpStorage
-{
+class IpStorage {
 	using Byte = IpV4::Byte;
 	
 	struct IpBoundaries {
@@ -26,12 +25,13 @@ class IpStorage
 public:
 	using Container = std::multiset<IpV4>;
 	using Iterator  = Container::iterator;
+	using OperationResult = hw_libs::OperationResult;
 	
 	IpStorage();
 
 	OperationResult add(const std::string& ipStr);
 
-	template<typename Ip, typename = sfinae::CheckType<IpV4, Ip>>
+	template<typename Ip, typename = hw_libs::sfinae::CheckType<IpV4, Ip>>
 	OperationResult add(Ip&& ip) {
 		if (validateIp(ip)) {
 			_storage.insert(std::forward<Ip>(ip));
@@ -48,7 +48,7 @@ public:
 	void clear();
 	bool empty() const;
 
-	template<typename... Args, typename = sfinae::CheckTypes<IpV4::Byte, Args...>>
+	template<typename... Args, typename = hw_libs::sfinae::CheckTypes<IpV4::Byte, Args...>>
 	std::tuple<Iterator, Iterator> filteredByFirstBytes(IpV4::Byte head, Args ...tail) {
 		static_assert(sizeof...(tail) < IpV4::bytesNumber(), "The number of input bytes mustn't exceed 4");
 

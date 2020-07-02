@@ -13,6 +13,7 @@
 
 #include <iostream>
 
+/// Third homework
 namespace hw4 {
 
 template<typename T, typename = std::enable_if_t<std::is_integral<T>::value>>
@@ -47,7 +48,7 @@ void printIp(T ip) {
 
 void printIp(const std::string& ip);
 
-template<typename T, typename = sfinae::IsContainer<T>>
+template<typename T, typename = hw_libs::sfinae::IsContainer<T>>
 void printIp(const T& ip) {
 	if (ip.empty()) {
 		return;
@@ -73,7 +74,7 @@ void print_tuple_impl(const Tuple& t, std::index_sequence<Indexes...>, const cha
 	(void)tmp;
 }
 
-template<typename T, typename... Args, typename = sfinae::AreTypesSame<T, Args...>>
+template<typename T, typename... Args, typename = hw_libs::sfinae::AreTypesSame<T, Args...>>
 void printIp(const std::tuple<T, Args...>& ip) {
 	print_tuple_impl(ip, std::index_sequence_for<T, Args...>{}, ".");
 	std::cout << std::endl;

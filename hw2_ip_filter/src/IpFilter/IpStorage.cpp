@@ -7,17 +7,14 @@
 #include <algorithm>
 #include <sstream>
 
-namespace bl
-{
+namespace hw2 {
 
 IpStorage::IpStorage() :
-	_ipRestrictions{ { 0, 0, 0, 0 }, { 255, 255, 255, 255 } }
-{
+	_ipRestrictions{ { 0, 0, 0, 0 }, { 255, 255, 255, 255 } } {
 }
 
-OperationResult IpStorage::add(const std::string& ipStr)
-{
-	auto bytes = bl::split(ipStr, '.');
+hw_libs::OperationResult IpStorage::add(const std::string& ipStr) {
+	auto bytes = hw_libs::split(ipStr, '.');
 
 	if (bytes.size() == IpV4::bytesNumber()) {
 		try {
@@ -47,18 +44,15 @@ IpStorage::Container IpStorage::getIpsContainsByte(IpV4::Byte byte) const {
 	return std::move(result);
 }
 
-void IpStorage::clear()
-{
+void IpStorage::clear() {
 	_storage.clear();
 }
 
-bool IpStorage::empty() const
-{
+bool IpStorage::empty() const {
 	return _storage.empty();
 }
 
-bool IpStorage::validateIp(const IpV4& ip) const
-{
+bool IpStorage::validateIp(const IpV4& ip) const {
 	for (unsigned i = 0; i < IpV4::bytesNumber(); ++i) {
 		if (ip.byte(i) < _ipRestrictions.min.byte(i) || _ipRestrictions.max.byte(i) < ip.byte(i)) {
  			return false;

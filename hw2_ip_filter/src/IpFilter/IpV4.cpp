@@ -3,7 +3,7 @@
 #include <utility>
 #include <cassert>
 
-namespace bl
+namespace hw2
 {
 
 IpV4::IpV4(Byte first, Byte second, Byte third, Byte forth) :
