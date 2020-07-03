@@ -80,19 +80,19 @@ To build `OTUS_CPP` in Release mode using MSVC, you will need to additionally sp
 * Install all [dependencies](#dependencies) using your package manager.
 * For example, run the following commands for Ubuntu 18.04:
 	* Cmake
-```
-sudo apt-get install cmake -y
-```
+	```
+	sudo apt-get install cmake -y
+	```
 	* Boost.Test
-```
-sudo apt-get install libboost-test-dev -y
-```
+	```
+	sudo apt-get install libboost-test-dev -y
+	```
 	* GTest
-```
-sudo apt-get install libgtest-dev -y
-mkdir gtest_temp
-cd gtest_temp
-cmake -DBUILD_SHARED_LIBS=ON /usr/src/gtest/
-cmake --build .
-sudo cp *.so /usr/lib
-```
+	```
+	sudo apt-get install libgtest-dev -y
+	mkdir gtest_temp
+	cd gtest_temp
+	cmake -DBUILD_SHARED_LIBS=ON /usr/src/gtest/
+	cmake --build .
+	sudo cp *.so /usr/lib
+	```
