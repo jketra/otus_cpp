@@ -1,22 +1,22 @@
 Determining if the pthread_create exist failed with the following output:
 Change Dir: /home/travis/build/jketra/otus_cpp/gtest_temp/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_5dbc5/fast"
-/usr/bin/make -f CMakeFiles/cmTC_5dbc5.dir/build.make CMakeFiles/cmTC_5dbc5.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_6c7b1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6c7b1.dir/build.make CMakeFiles/cmTC_6c7b1.dir/build
 make[1]: Entering directory '/home/travis/build/jketra/otus_cpp/gtest_temp/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_5dbc5.dir/CheckSymbolExists.c.o
-/usr/bin/gcc    -o CMakeFiles/cmTC_5dbc5.dir/CheckSymbolExists.c.o   -c /home/travis/build/jketra/otus_cpp/gtest_temp/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_5dbc5
-/usr/local/cmake-3.12.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5dbc5.dir/link.txt --verbose=1
-/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_5dbc5.dir/CheckSymbolExists.c.o  -o cmTC_5dbc5 
-CMakeFiles/cmTC_5dbc5.dir/CheckSymbolExists.c.o: In function `main':
+Building C object CMakeFiles/cmTC_6c7b1.dir/CheckSymbolExists.c.o
+/usr/bin/gcc    -o CMakeFiles/cmTC_6c7b1.dir/CheckSymbolExists.c.o   -c /home/travis/build/jketra/otus_cpp/gtest_temp/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_6c7b1
+/usr/local/cmake-3.12.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6c7b1.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_6c7b1.dir/CheckSymbolExists.c.o  -o cmTC_6c7b1 
+CMakeFiles/cmTC_6c7b1.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_5dbc5.dir/build.make:86: recipe for target 'cmTC_5dbc5' failed
-make[1]: *** [cmTC_5dbc5] Error 1
+CMakeFiles/cmTC_6c7b1.dir/build.make:86: recipe for target 'cmTC_6c7b1' failed
+make[1]: *** [cmTC_6c7b1] Error 1
 make[1]: Leaving directory '/home/travis/build/jketra/otus_cpp/gtest_temp/CMakeFiles/CMakeTmp'
-Makefile:121: recipe for target 'cmTC_5dbc5/fast' failed
-make: *** [cmTC_5dbc5/fast] Error 2
+Makefile:121: recipe for target 'cmTC_6c7b1/fast' failed
+make: *** [cmTC_6c7b1/fast] Error 2
 
 File /home/travis/build/jketra/otus_cpp/gtest_temp/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
@@ -36,20 +36,20 @@ int main(int argc, char** argv)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/travis/build/jketra/otus_cpp/gtest_temp/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_5ba47/fast"
-/usr/bin/make -f CMakeFiles/cmTC_5ba47.dir/build.make CMakeFiles/cmTC_5ba47.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_a11f0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a11f0.dir/build.make CMakeFiles/cmTC_a11f0.dir/build
 make[1]: Entering directory '/home/travis/build/jketra/otus_cpp/gtest_temp/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_5ba47.dir/CheckFunctionExists.c.o
-/usr/bin/gcc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_5ba47.dir/CheckFunctionExists.c.o   -c /usr/local/cmake-3.12.4/share/cmake-3.12/Modules/CheckFunctionExists.c
-Linking C executable cmTC_5ba47
-/usr/local/cmake-3.12.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5ba47.dir/link.txt --verbose=1
-/usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_5ba47.dir/CheckFunctionExists.c.o  -o cmTC_5ba47 -lpthreads 
+Building C object CMakeFiles/cmTC_a11f0.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_a11f0.dir/CheckFunctionExists.c.o   -c /usr/local/cmake-3.12.4/share/cmake-3.12/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a11f0
+/usr/local/cmake-3.12.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a11f0.dir/link.txt --verbose=1
+/usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_a11f0.dir/CheckFunctionExists.c.o  -o cmTC_a11f0 -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_5ba47.dir/build.make:86: recipe for target 'cmTC_5ba47' failed
-make[1]: *** [cmTC_5ba47] Error 1
+CMakeFiles/cmTC_a11f0.dir/build.make:86: recipe for target 'cmTC_a11f0' failed
+make[1]: *** [cmTC_a11f0] Error 1
 make[1]: Leaving directory '/home/travis/build/jketra/otus_cpp/gtest_temp/CMakeFiles/CMakeTmp'
-Makefile:121: recipe for target 'cmTC_5ba47/fast' failed
-make: *** [cmTC_5ba47/fast] Error 2
+Makefile:121: recipe for target 'cmTC_a11f0/fast' failed
+make: *** [cmTC_a11f0/fast] Error 2
 
 

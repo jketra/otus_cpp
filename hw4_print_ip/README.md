@@ -1,15 +1,14 @@
 ## Homework 4: print ip
-1. One template function with different implementations via the SFINAE mechanism for printing conditional ip addresses.
-
-	Input/output examples:
+* Task:
+1. One template function with different implementations via the SFINAE mechanism for printing conditional ip addresses. Input/output examples:
 ```
-int{1234}					=> "0.0.4.210" (if sizeof(int) == 4)		
-std::string{"trololo"}		=> "trololo"	
-std::list, std::vector		=> dot separated container contents
-std::make_tuple(0, 1, 2, 3)	=> "0, 1, 2, 3"
+int{1234}                   => "0.0.4.210" (if sizeof(int) == 4)		
+std::string{"trololo"}      => "trololo"	
+std::list, std::vector      => dot separated container contents
+std::make_tuple(0, 1, 2, 3) => "0, 1, 2, 3"
 ```
-2. Documented this project
-3. Public thml-documantation on githab-pages.
+2. Documentation for this project.
+3. Publish thml-documantation on github-pages.
 
 * To build this project, enable the `BUILD_PRINT_IP` option during generation:
 ```
