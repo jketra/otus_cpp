@@ -6,10 +6,13 @@
 
 namespace hw4 {
 
+/// Print input value as his bits.
+/// @tparam T Input value type.
+/// @param[in] value Value to print as bits.
 template<typename T>
-void printBits(T a) {
+void printBits(T value) {
 	Bits<T> b;
-	b.value = a;
+	b.value = value;
 	
 	for (int j = sizeof(T) - 1; j >= 0; j--) {
 		for (int i = 128; i; i >>= 1)

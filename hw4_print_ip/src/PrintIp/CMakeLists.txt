@@ -2,7 +2,7 @@
 
 project(PrintIp)
 
-set(_headers PrintIp.h)
+set(_headers PrintIp.h Bits.h PrintBits.h)
 set(_sources PrintIp.cpp)
 
 add_library(${PROJECT_NAME} ${_headers} ${_sources})
