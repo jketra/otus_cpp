@@ -16,6 +16,9 @@
 /// Third homework
 namespace hw4 {
 
+/// Print integer value as ip (previously converted to bits).
+/// @tparam T Integer type.
+/// @param[in] ip The value to be converted and printed.
 template<typename T, typename = std::enable_if_t<std::is_integral<T>::value>>
 void printIp(T ip) {
 	
@@ -46,8 +49,13 @@ void printIp(T ip) {
 	std::cout << std::endl;
 }
 
+/// Print string value as ip.
+/// @param[in] ip The value to be printed.
 void printIp(const std::string& ip);
 
+/// Print the container as ip (dot separated container contents).
+/// @tparam T Container type.
+/// @param[in] ip The container to be printed.
 template<typename T, typename = hw_libs::sfinae::IsContainer<T>>
 void printIp(const T& ip) {
 	if (ip.empty()) {
@@ -68,12 +76,22 @@ void printIp(const T& ip) {
 	std::cout << std::endl;
 }
 
+/// Print the tuple.
+/// @tparam Tuple Tuple type.
+/// @tparam std::size_t... types of indexes.
+/// @param[in] value Tuple to print.
+/// @param[in] Indexes... Indexes of tuple values (for recursion).
+/// @param[in] delimiter Separator between tuple values.
 template<class Tuple, std::size_t... Indexes>
-void print_tuple_impl(const Tuple& t, std::index_sequence<Indexes...>, const char* delimeter) {
-	int tmp[]{0, (void(std::cout << (Indexes == 0 ? "" : delimeter) << std::get<Indexes>(t)), 0)...};
+void print_tuple_impl(const Tuple& value, std::index_sequence<Indexes...>, const char* delimiter) {
+	int tmp[]{0, (void(std::cout << (Indexes == 0 ? "" : delimiter) << std::get<Indexes>(value)), 0)...};
 	(void)tmp;
 }
 
+/// Print the tuple as ip if the tuple's values types match.
+/// @tparam T tuple's value type.
+/// @tparam ...Args tuple's values types.
+/// @param[in] ip Tuple to print as ip.
 template<typename T, typename... Args, typename = hw_libs::sfinae::AreTypesSame<T, Args...>>
 void printIp(const std::tuple<T, Args...>& ip) {
 	print_tuple_impl(ip, std::index_sequence_for<T, Args...>{}, ".");
