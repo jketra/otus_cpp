@@ -1,10 +1,10 @@
-Start testing: Jul 03 15:50 UTC
+Start testing: Jul 03 16:46 UTC
 ----------------------------------------------------------
 1/3 Testing: CicdGoogleTests
 1/3 Test: CicdGoogleTests
 Command: "/home/travis/build/jketra/otus_cpp/hw1_cicd/tests/GoogleTests/CicdGoogleTests"
 Directory: /home/travis/build/jketra/otus_cpp/hw1_cicd/tests/GoogleTests
-"CicdGoogleTests" start time: Jul 03 15:50 UTC
+"CicdGoogleTests" start time: Jul 03 16:46 UTC
 Output:
 ----------------------------------------------------------
 [==========] Running 1 test from 1 test case.
@@ -15,13 +15,13 @@ Output:
 [----------] 1 test from ProjectVersionTests (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test case ran. (1 ms total)
+[==========] 1 test from 1 test case ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"CicdGoogleTests" end time: Jul 03 15:50 UTC
+"CicdGoogleTests" end time: Jul 03 16:46 UTC
 "CicdGoogleTests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -29,7 +29,7 @@ Test Passed.
 2/3 Test: IpFilterTests
 Command: "/home/travis/build/jketra/otus_cpp/hw2_ip_filter/tests/IpFilterTests/IpFilterTests"
 Directory: /home/travis/build/jketra/otus_cpp/hw2_ip_filter/tests/IpFilterTests
-"IpFilterTests" start time: Jul 03 15:50 UTC
+"IpFilterTests" start time: Jul 03 16:46 UTC
 Output:
 ----------------------------------------------------------
 [==========] Running 10 tests from 2 test cases.
@@ -56,8 +56,8 @@ Output:
 [ RUN      ] IpStorageTests.PrintIpsContainsByte
 [       OK ] IpStorageTests.PrintIpsContainsByte (0 ms)
 [ RUN      ] IpStorageTests.ControlDataset
-[       OK ] IpStorageTests.ControlDataset (4 ms)
-[----------] 7 tests from IpStorageTests (6 ms total)
+[       OK ] IpStorageTests.ControlDataset (5 ms)
+[----------] 7 tests from IpStorageTests (7 ms total)
 
 [----------] 3 tests from IpV4Tests
 [ RUN      ] IpV4Tests.GetBytes
@@ -69,13 +69,13 @@ Output:
 [----------] 3 tests from IpV4Tests (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 10 tests from 2 test cases ran. (6 ms total)
+[==========] 10 tests from 2 test cases ran. (7 ms total)
 [  PASSED  ] 10 tests.
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"IpFilterTests" end time: Jul 03 15:50 UTC
+"IpFilterTests" end time: Jul 03 16:46 UTC
 "IpFilterTests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -83,7 +83,7 @@ Test Passed.
 3/3 Test: PrintIpTests
 Command: "/home/travis/build/jketra/otus_cpp/hw4_print_ip/tests/PrintIpTests/PrintIpTests"
 Directory: /home/travis/build/jketra/otus_cpp/hw4_print_ip/tests/PrintIpTests
-"PrintIpTests" start time: Jul 03 15:50 UTC
+"PrintIpTests" start time: Jul 03 16:46 UTC
 Output:
 ----------------------------------------------------------
 [==========] Running 1 test from 1 test case.
@@ -95,14 +95,14 @@ Output:
 [----------] 1 test from PrintIpTests (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test case ran. (1 ms total)
+[==========] 1 test from 1 test case ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"PrintIpTests" end time: Jul 03 15:50 UTC
+"PrintIpTests" end time: Jul 03 16:46 UTC
 "PrintIpTests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Jul 03 15:50 UTC
+End testing: Jul 03 16:46 UTC

@@ -33,6 +33,8 @@ CMAKE_BUILD_TYPE:STRING=
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
+CMAKE_CONFIGURATION_TYPES:STRING=Debug;Release
+
 //CXX compiler
 CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/g++
 
@@ -145,7 +147,7 @@ CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
 CMAKE_PROJECT_NAME:STATIC=OTUS_CPP
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION:STATIC=0.0.58
+CMAKE_PROJECT_VERSION:STATIC=0.0.59
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_MAJOR:STATIC=0
@@ -154,7 +156,7 @@ CMAKE_PROJECT_VERSION_MAJOR:STATIC=0
 CMAKE_PROJECT_VERSION_MINOR:STATIC=0
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_PATCH:STATIC=58
+CMAKE_PROJECT_VERSION_PATCH:STATIC=59
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_TWEAK:STATIC=
@@ -242,7 +244,7 @@ CicdGoogleTests_BINARY_DIR:STATIC=/home/travis/build/jketra/otus_cpp/hw1_cicd/te
 //Value Computed by CMake
 CicdGoogleTests_SOURCE_DIR:STATIC=/home/travis/build/jketra/otus_cpp/hw1_cicd/tests/GoogleTests
 
-//PRINT_IP
+//none
 DEPLOY_PROJECT:STRING=PRINT_IP
 
 //Path to a file.
@@ -333,10 +335,10 @@ StringAddOns_BINARY_DIR:STATIC=/home/travis/build/jketra/otus_cpp/libs/StringAdd
 StringAddOns_SOURCE_DIR:STATIC=/home/travis/build/jketra/otus_cpp/libs/StringAddOns
 
 //Build Boost Tests
-TESTING_BOOST_TESTS:BOOL=OFF
+TESTS_BOOST:BOOL=OFF
 
 //Build Google Tests
-TESTING_GTEST:BOOL=ON
+TESTS_GTEST:BOOL=ON
 
 //Value Computed by CMake
 TypeTraits_BINARY_DIR:STATIC=/home/travis/build/jketra/otus_cpp/libs/TypeTraits
