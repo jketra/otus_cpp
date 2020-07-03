@@ -1,3 +1,3 @@
 #pragma once
 
-#define PROJECT_VERSION_PATCH 53
+#define PROJECT_VERSION_PATCH 54
