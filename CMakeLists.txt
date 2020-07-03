@@ -11,6 +11,8 @@ else()
 	set(INSTALL_DIR bin)
 endif()
 
+set(CMAKE_CONFIGURATION_TYPES "Debug;Release" CACHE STRING "")
+
 set(CMAKE_MODULES_DIR "${CMAKE_SOURCE_DIR}/cmake_modules")
 set(BINARIES_DIR ${CMAKE_BINARY_DIR}/bin)
 
@@ -28,8 +30,8 @@ option(BUILD_${CICD} "Build Homework 1" ON)
 option(BUILD_${IP_FILTER} "Build Homework 2" ON)
 option(BUILD_${PRINT_IP} "Build Homework 4" ON)
 
-option(TESTING_GTEST "Build Google Tests" ON)
-option(TESTING_BOOST_TESTS "Build Boost Tests" OFF)
+option(TESTS_GTEST "Build Google Tests" ON)
+option(TESTS_BOOST "Build Boost Tests" OFF)
 
 # pre deploy
 #
@@ -47,10 +49,11 @@ include("${CMAKE_MODULES_DIR}/CompilerOptions.cmake")
 
 # tests
 #
-if (TESTING_BOOST_TESTS)
+if (TESTS_BOOST)
 	find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 endif()
-if (TESTING_GTEST)
+if (TESTS_GTEST)
+	enable_testing()
 	find_package(GTest REQUIRED)
 	if (WIN32)
 		file(COPY ${CMAKE_SOURCE_DIR}/libs/gtest/gtest.dll
@@ -58,7 +61,6 @@ if (TESTING_GTEST)
 				  DESTINATION ${BINARIES_DIR})
 	endif()
 endif()
-enable_testing()
 
 # directories
 #
@@ -83,13 +85,15 @@ apply_folder_filter("OTUS_CPP" ${CMAKE_CURRENT_SOURCE_DIR})
 
 # package
 #
-set(CPACK_GENERATOR DEB)
+if (NOT ${DEPLOY_PROJECT} STREQUAL "none")
+	set(CPACK_GENERATOR DEB)
 
-set(CPACK_PACKAGE_VERSION_MAJOR "${PROJECT_VERSION_MAJOR}")
-set(CPACK_PACKAGE_VERSION_MINOR "${PROJECT_VERSION_MINOR}")
-set(CPACK_PACKAGE_VERSION_PATCH "${PROJECT_VERSION_PATCH}")
-set(CPACK_PACKAGE_FILE_NAME "${DEPLOY_PROJECT}-${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${PROJECT_VERSION_PATCH}-Linux")
+	set(CPACK_PACKAGE_VERSION_MAJOR "${PROJECT_VERSION_MAJOR}")
+	set(CPACK_PACKAGE_VERSION_MINOR "${PROJECT_VERSION_MINOR}")
+	set(CPACK_PACKAGE_VERSION_PATCH "${PROJECT_VERSION_PATCH}")
+	set(CPACK_PACKAGE_FILE_NAME "${DEPLOY_PROJECT}-${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${PROJECT_VERSION_PATCH}-Linux")
 
-set(CPACK_PACKAGE_CONTACT js@goloschapova.com)
+	set(CPACK_PACKAGE_CONTACT js@goloschapova.com)
 
-include(CPack)
+	include(CPack)
+endif()
