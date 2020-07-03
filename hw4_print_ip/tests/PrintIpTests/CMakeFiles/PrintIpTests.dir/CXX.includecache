@@ -19,6 +19,10 @@ sstream
 -
 vector
 -
+list
+-
+tuple
+-
 string
 -
 gtest/gtest.h
