@@ -30,7 +30,7 @@ cmake -DCMAKE_BUILD_TYPE=Release ..
 cmake --build .
 ```
 
-Instead of `cmake -DCMAKE_BUILD_TYPE=Release ..` you can use another [Build options](#build-options).
+Instead of `-DCMAKE_BUILD_TYPE=Release` you can use another [Build options](#build-options).
 
 <a name="build-options"></a>
 ### Build options
@@ -38,11 +38,11 @@ You can use the following build options to configure the generated project:
 * `-DBUILD_CICD = ON|OFF` enable/disable a project that solves Homework 1.
 * `-DBUILD_IP_FILTER = ON|OFF` enable/disable a project that solves Homework 2.
 * `-DBUILD_PRINT_IP = ON|OFF` enable/disable a project that solves Homework 4.
-* `-DDEPLOY_PROJECT = "none"|"CICD"|"IP_FILETR"|"PRINT_IP" create package to installing chosen app after build.
+* `-DDEPLOY_PROJECT = "none"|"CICD"|"IP_FILETR"|"PRINT_IP"` create package to installing chosen app after build.
 * `-DCMAKE_BUILD_TYPE = Release|Debug` choose build type (can be omitted).
 
 Defaults:
-* All `Build_*` options are ON by default.
+* All `Build_*` options are `ON` by default.
 * `DEPLOY_PROJECT` is "none" by default.
 
 Example:
@@ -79,15 +79,16 @@ To build `OTUS_CPP` in Release mode using MSVC, you will need to additionally sp
 #### Linux
 * Install all [dependencies](#dependencies) using your package manager.
 * For example, run the following commands for Ubuntu 18.04:
-
+	* Cmake
 ```
-# CMake
 sudo apt-get install cmake -y
-
-# Boost.Test
+```
+	* Boost.Test
+```
 sudo apt-get install libboost-test-dev -y
-
-# GTest
+```
+	* GTest
+```
 sudo apt-get install libgtest-dev -y
 mkdir gtest_temp
 cd gtest_temp
