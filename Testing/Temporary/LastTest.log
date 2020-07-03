@@ -1,10 +1,10 @@
-Start testing: Jul 03 13:55 UTC
+Start testing: Jul 03 14:00 UTC
 ----------------------------------------------------------
 1/3 Testing: CicdGoogleTests
 1/3 Test: CicdGoogleTests
 Command: "/home/travis/build/jketra/otus_cpp/hw1_cicd/tests/GoogleTests/CicdGoogleTests"
 Directory: /home/travis/build/jketra/otus_cpp/hw1_cicd/tests/GoogleTests
-"CicdGoogleTests" start time: Jul 03 13:55 UTC
+"CicdGoogleTests" start time: Jul 03 14:00 UTC
 Output:
 ----------------------------------------------------------
 [==========] Running 1 test from 1 test case.
@@ -21,7 +21,7 @@ Output:
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"CicdGoogleTests" end time: Jul 03 13:55 UTC
+"CicdGoogleTests" end time: Jul 03 14:00 UTC
 "CicdGoogleTests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -29,7 +29,7 @@ Test Passed.
 2/3 Test: IpFilterTests
 Command: "/home/travis/build/jketra/otus_cpp/hw2_ip_filter/tests/IpFilterTests/IpFilterTests"
 Directory: /home/travis/build/jketra/otus_cpp/hw2_ip_filter/tests/IpFilterTests
-"IpFilterTests" start time: Jul 03 13:55 UTC
+"IpFilterTests" start time: Jul 03 14:00 UTC
 Output:
 ----------------------------------------------------------
 [==========] Running 10 tests from 2 test cases.
@@ -75,7 +75,7 @@ Output:
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"IpFilterTests" end time: Jul 03 13:55 UTC
+"IpFilterTests" end time: Jul 03 14:00 UTC
 "IpFilterTests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -83,7 +83,7 @@ Test Passed.
 3/3 Test: PrintIpTests
 Command: "/home/travis/build/jketra/otus_cpp/hw4_print_ip/tests/PrintIpTests/PrintIpTests"
 Directory: /home/travis/build/jketra/otus_cpp/hw4_print_ip/tests/PrintIpTests
-"PrintIpTests" start time: Jul 03 13:55 UTC
+"PrintIpTests" start time: Jul 03 14:00 UTC
 Output:
 ----------------------------------------------------------
 [==========] Running 1 test from 1 test case.
@@ -101,8 +101,8 @@ Output:
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"PrintIpTests" end time: Jul 03 13:55 UTC
+"PrintIpTests" end time: Jul 03 14:00 UTC
 "PrintIpTests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Jul 03 13:55 UTC
+End testing: Jul 03 14:00 UTC
