@@ -19,15 +19,15 @@ int main(int, char const **)
 	printIp(8875824491850138409);
 
 	// print string
-	printIp("trololo");	// type conversion
-	printIp(std::string{"trololo"});
+	hw4::printIp("const char*"); // type conversion
+	hw4::printIp(std::string{ "string" });
 
 	// print vector
 	printIp(std::vector<int>{ 19, 29, 40 });
 	printIp(std::vector<int>{ 29, 29, 29, 40 });
 	
 	// print list
-	printIp(std::list<std::string>{"list1", "noname", "sfinae"});
+	printIp(std::list<std::string>{"list", "vector", "map"});
 
 	// print tuple
 	printIp(std::make_tuple(10, 15, 20, 75));
