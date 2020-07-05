@@ -12,6 +12,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
+<g id="a_node1"><a xlink:title=" ">
 <polygon fill="#bfbfbf" stroke="#000000" points="0,-.5 0,-90.5 122,-90.5 122,-.5 0,-.5"/>
 <text text-anchor="middle" x="61" y="-78.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">hw2::IpStoragePrinter</text>
 <polyline fill="none" stroke="#000000" points="0,-71.5 122,-71.5 "/>
@@ -21,16 +22,21 @@
 <text text-anchor="start" x="8" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ print()</text>
 <text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ print()</text>
 <text text-anchor="start" x="8" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ print()</text>
+</a>
+</g>
 </g>
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
+<g id="a_node2"><a xlink:title=" ">
 <polygon fill="#ffffff" stroke="#bfbfbf" points="27,-138.5 27,-195.5 95,-195.5 95,-138.5 27,-138.5"/>
 <text text-anchor="middle" x="61" y="-183.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">ostream &amp;</text>
 <polyline fill="none" stroke="#bfbfbf" points="27,-176.5 95,-176.5 "/>
 <text text-anchor="middle" x="61" y="-164.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
 <polyline fill="none" stroke="#bfbfbf" points="27,-157.5 95,-157.5 "/>
 <text text-anchor="middle" x="61" y="-145.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+</a>
+</g>
 </g>
 <!-- Node2&#45;&gt;Node1 -->
 <g id="edge1" class="edge">

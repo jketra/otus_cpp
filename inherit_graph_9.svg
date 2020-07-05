@@ -12,7 +12,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="classhw__libs_1_1_operation_result.html" target="_top" xlink:title="hw_libs::OperationResult">
+<g id="a_node1"><a xlink:href="classhw__libs_1_1_operation_result.html" target="_top" xlink:title=" ">
 <polygon fill="#ffffff" stroke="#000000" points="0,-.5 0,-19.5 137,-19.5 137,-.5 0,-.5"/>
 <text text-anchor="middle" x="68.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">hw_libs::OperationResult</text>
 </a>

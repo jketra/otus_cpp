@@ -1,6 +1,15 @@
 <map id="test::IpStorageTests" name="test::IpStorageTests">
-<area shape="rect" id="node4" href="$classhw2_1_1_ip_storage_printer.html" title="{hw2::IpStoragePrinter\n||+ IpStoragePrinter()\l+ print()\l+ print()\l+ print()\l}" alt="" coords="259,623,421,745"/>
-<area shape="rect" id="node6" href="$classhw2_1_1_ip_storage.html" title="{hw2::IpStorage\n||+ IpStorage()\l+ add()\l+ add()\l+ getAllIps()\l+ getIpsContainsByte()\l+ clear()\l+ empty()\l+ filteredByFirstBytes()\l&#45; validateIp()\l}" alt="" coords="446,587,621,781"/>
-<area shape="rect" id="node8" href="$structhw2_1_1_ip_storage_1_1_ip_boundaries.html" title="{hw2::IpStorage::IpBoundaries\n||}" alt="" coords="597,447,809,524"/>
-<area shape="rect" id="node9" href="$classhw2_1_1_ip_v4.html" title="{hw2::IpV4\n||+ IpV4()\l+ IpV4()\l+ IpV4()\l+ byte()\l+ byte()\l+ contains()\l+ operator=()\l+ operator\&lt;()\l+ operator\&gt;()\l+ bytesNumber()\l}" alt="" coords="635,160,770,369"/>
+<area shape="rect" id="node1" title=" " alt="" coords="361,859,511,951"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,645,53,723"/>
+<area shape="rect" id="node3" title=" " alt="" coords="77,645,235,723"/>
+<area shape="rect" id="node4" href="$classhw2_1_1_ip_storage_printer.html" title=" " alt="" coords="259,623,421,745"/>
+<area shape="rect" id="node5" title=" " alt="" coords="295,447,385,524"/>
+<area shape="rect" id="node6" href="$classhw2_1_1_ip_storage.html" title=" " alt="" coords="446,587,621,781"/>
+<area shape="rect" id="node7" title=" " alt="" coords="438,447,573,524"/>
+<area shape="rect" id="node8" href="$structhw2_1_1_ip_storage_1_1_ip_boundaries.html" title=" " alt="" coords="597,447,809,524"/>
+<area shape="rect" id="node9" href="$classhw2_1_1_ip_v4.html" title=" " alt="" coords="635,160,770,369"/>
+<area shape="rect" id="node10" title=" " alt="" coords="528,13,696,90"/>
+<area shape="rect" id="node11" title=" " alt="" coords="720,5,869,97"/>
+<area shape="rect" id="node12" title=" " alt="" coords="645,645,750,723"/>
+<area shape="rect" id="node13" title=" " alt="" coords="773,645,904,723"/>
 </map>

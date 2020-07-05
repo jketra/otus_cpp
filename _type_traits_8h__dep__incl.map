@@ -1,14 +1,15 @@
 <map id="libs/TypeTraits/TypeTraits.h" name="libs/TypeTraits/TypeTraits.h">
-<area shape="rect" id="node2" href="$_ip_storage_8h.html" title="hw2_ip_filter/src/IpFilter\l/IpStorage.h" alt="" coords="338,80,514,121"/>
-<area shape="rect" id="node9" href="$_print_ip_8h.html" title="hw4_print_ip/src/PrintIp\l/PrintIp.h" alt="" coords="693,80,868,121"/>
-<area shape="rect" id="node3" href="$_ip_storage_8cpp.html" title="hw2_ip_filter/src/IpFilter\l/IpStorage.cpp" alt="" coords="138,169,314,211"/>
-<area shape="rect" id="node4" href="$_ip_storage_printer_8h.html" title="hw2_ip_filter/src/IpFilter\l/IpStoragePrinter.h" alt="" coords="338,169,514,211"/>
-<area shape="rect" id="node6" href="$hw2__ip__filter_2src_2_required_outputs_module_2main_8cpp.html" title="hw2_ip_filter/src/Required\lOutputsModule/main.cpp" alt="" coords="457,259,646,300"/>
-<area shape="rect" id="node7" href="$_ip_storage_tests_8h.html" title="hw2_ip_filter/tests\l/IpFilterTests/IpStorageTests.h" alt="" coords="5,259,220,300"/>
-<area shape="rect" id="node5" href="$_ip_storage_printer_8cpp.html" title="hw2_ip_filter/src/IpFilter\l/IpStoragePrinter.cpp" alt="" coords="257,259,433,300"/>
-<area shape="rect" id="node8" href="$_ip_filter_tests_8cpp.html" title="hw2_ip_filter/tests\l/IpFilterTests/IpFilterTests.cpp" alt="" coords="7,348,218,389"/>
-<area shape="rect" id="node10" href="$_print_ip_8cpp.html" title="hw4_print_ip/src/PrintIp\l/PrintIp.cpp" alt="" coords="1005,169,1180,211"/>
-<area shape="rect" id="node11" href="$example_8cpp.html" title="hw4_print_ip/src/PrintIp\lExample/example.cpp" alt="" coords="589,169,764,211"/>
-<area shape="rect" id="node12" href="$_print_ip_tests_8h.html" title="hw4_print_ip/tests\l/PrintIpTests/PrintIpTests.h" alt="" coords="789,169,981,211"/>
-<area shape="rect" id="node13" href="$_print_ip_tests_8cpp.html" title="hw4_print_ip/tests\l/PrintIpTests/PrintIpTests.cpp" alt="" coords="781,259,988,300"/>
+<area shape="rect" id="node1" title=" " alt="" coords="303,5,497,32"/>
+<area shape="rect" id="node2" href="$_ip_storage_8h.html" title=" " alt="" coords="220,80,388,107"/>
+<area shape="rect" id="node9" href="$_print_ip_8h.html" title=" " alt="" coords="412,80,580,107"/>
+<area shape="rect" id="node3" href="$_ip_storage_8cpp.html" title=" " alt="" coords="136,155,232,181"/>
+<area shape="rect" id="node4" href="$_ip_storage_printer_8h.html" title=" " alt="" coords="256,155,352,181"/>
+<area shape="rect" id="node6" href="$hw2__ip__filter_2src_2_required_outputs_module_2main_8cpp.html" title=" " alt="" coords="379,229,565,256"/>
+<area shape="rect" id="node7" href="$_ip_storage_tests_8h.html" title=" " alt="" coords="5,229,192,256"/>
+<area shape="rect" id="node5" href="$_ip_storage_printer_8cpp.html" title=" " alt="" coords="216,229,355,256"/>
+<area shape="rect" id="node8" href="$_ip_filter_tests_8cpp.html" title=" " alt="" coords="34,304,163,331"/>
+<area shape="rect" id="node10" href="$_print_ip_8cpp.html" title=" " alt="" coords="727,155,803,181"/>
+<area shape="rect" id="node11" href="$example_8cpp.html" title=" " alt="" coords="433,155,556,181"/>
+<area shape="rect" id="node12" href="$_print_ip_tests_8h.html" title=" " alt="" coords="580,155,703,181"/>
+<area shape="rect" id="node13" href="$_print_ip_tests_8cpp.html" title=" " alt="" coords="589,229,699,256"/>
 </map>

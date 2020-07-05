@@ -12,6 +12,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
+<g id="a_node1"><a xlink:title=" ">
 <polygon fill="#bfbfbf" stroke="#000000" points="80.5,-.5 80.5,-156.5 181.5,-156.5 181.5,-.5 80.5,-.5"/>
 <text text-anchor="middle" x="131" y="-144.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">hw2::IpV4</text>
 <polyline fill="none" stroke="#000000" points="80.5,-137.5 181.5,-137.5 "/>
@@ -27,16 +28,21 @@
 <text text-anchor="start" x="88.5" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ operator&lt;()</text>
 <text text-anchor="start" x="88.5" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ operator&gt;()</text>
 <text text-anchor="start" x="88.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ bytesNumber()</text>
+</a>
+</g>
 </g>
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
+<g id="a_node2"><a xlink:title=" ">
 <polygon fill="#ffffff" stroke="#bfbfbf" points="0,-210 0,-267 126,-267 126,-210 0,-210"/>
 <text text-anchor="middle" x="63" y="-255" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">static constexpr size_t</text>
 <polyline fill="none" stroke="#bfbfbf" points="0,-248 126,-248 "/>
 <text text-anchor="middle" x="63" y="-236" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
 <polyline fill="none" stroke="#bfbfbf" points="0,-229 126,-229 "/>
 <text text-anchor="middle" x="63" y="-217" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+</a>
+</g>
 </g>
 <!-- Node2&#45;&gt;Node1 -->
 <g id="edge1" class="edge">
@@ -48,6 +54,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
+<g id="a_node3"><a xlink:title=" ">
 <polygon fill="#ffffff" stroke="#bfbfbf" points="144,-204.5 144,-272.5 256,-272.5 256,-204.5 144,-204.5"/>
 <text text-anchor="start" x="152" y="-260.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">array&lt; Byte, BYTES</text>
 <text text-anchor="middle" x="200" y="-249.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_NUMBER &gt;</text>
@@ -55,6 +62,8 @@
 <text text-anchor="middle" x="200" y="-230.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
 <polyline fill="none" stroke="#bfbfbf" points="144,-223.5 256,-223.5 "/>
 <text text-anchor="middle" x="200" y="-211.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+</a>
+</g>
 </g>
 <!-- Node3&#45;&gt;Node1 -->
 <g id="edge2" class="edge">

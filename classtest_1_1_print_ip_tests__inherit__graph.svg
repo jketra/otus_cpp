@@ -9,9 +9,10 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 189)">
 <title>test::PrintIpTests</title>
 <polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-189 104,-189 104,4 -4,4"/>
-<!-- Node0 -->
+<!-- Node1 -->
 <g id="node1" class="node">
-<title>Node0</title>
+<title>Node1</title>
+<g id="a_node1"><a xlink:title="Tests for homework 4.">
 <polygon fill="#bfbfbf" stroke="#000000" points="0,-.5 0,-90.5 100,-90.5 100,-.5 0,-.5"/>
 <text text-anchor="middle" x="50" y="-78.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">test::PrintIpTests</text>
 <polyline fill="none" stroke="#000000" points="0,-71.5 100,-71.5 "/>
@@ -21,20 +22,25 @@
 <polyline fill="none" stroke="#000000" points="0,-30.5 100,-30.5 "/>
 <text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># PrintIpTests()</text>
 <text text-anchor="start" x="8" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># ~PrintIpTests()</text>
+</a>
 </g>
-<!-- Node1 -->
+</g>
+<!-- Node2 -->
 <g id="node2" class="node">
-<title>Node1</title>
+<title>Node2</title>
+<g id="a_node2"><a xlink:title=" ">
 <polygon fill="#ffffff" stroke="#bfbfbf" points="12,-127.5 12,-184.5 88,-184.5 88,-127.5 12,-127.5"/>
 <text text-anchor="middle" x="50" y="-172.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">testing::Test</text>
 <polyline fill="none" stroke="#bfbfbf" points="12,-165.5 88,-165.5 "/>
 <text text-anchor="middle" x="50" y="-153.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
 <polyline fill="none" stroke="#bfbfbf" points="12,-146.5 88,-146.5 "/>
 <text text-anchor="middle" x="50" y="-134.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+</a>
 </g>
-<!-- Node1&#45;&gt;Node0 -->
+</g>
+<!-- Node2&#45;&gt;Node1 -->
 <g id="edge1" class="edge">
-<title>Node1&#45;&gt;Node0</title>
+<title>Node2&#45;&gt;Node1</title>
 <path fill="none" stroke="#191970" d="M50,-117.1977C50,-108.667 50,-99.5607 50,-90.7995"/>
 <polygon fill="none" stroke="#191970" points="46.5001,-117.2559 50,-127.2559 53.5001,-117.2559 46.5001,-117.2559"/>
 </g>

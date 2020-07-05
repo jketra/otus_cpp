@@ -12,22 +12,28 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
+<g id="a_node1"><a xlink:title=" ">
 <polygon fill="#bfbfbf" stroke="#000000" points="9,-.5 9,-57.5 99,-57.5 99,-.5 9,-.5"/>
 <text text-anchor="middle" x="54" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">hw4::Bits&lt; T &gt;</text>
 <polyline fill="none" stroke="#000000" points="9,-38.5 99,-38.5 "/>
 <text text-anchor="middle" x="54" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
 <polyline fill="none" stroke="#000000" points="9,-19.5 99,-19.5 "/>
 <text text-anchor="middle" x="54" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+</a>
+</g>
 </g>
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
+<g id="a_node2"><a xlink:title=" ">
 <polygon fill="#ffffff" stroke="#bfbfbf" points="0,-105.5 0,-162.5 50,-162.5 50,-105.5 0,-105.5"/>
 <text text-anchor="middle" x="25" y="-150.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">uint8_t</text>
 <polyline fill="none" stroke="#bfbfbf" points="0,-143.5 50,-143.5 "/>
 <text text-anchor="middle" x="25" y="-131.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
 <polyline fill="none" stroke="#bfbfbf" points="0,-124.5 50,-124.5 "/>
 <text text-anchor="middle" x="25" y="-112.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+</a>
+</g>
 </g>
 <!-- Node2&#45;&gt;Node1 -->
 <g id="edge1" class="edge">
@@ -39,12 +45,15 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
+<g id="a_node3"><a xlink:title=" ">
 <polygon fill="#ffffff" stroke="#bfbfbf" points="68.5,-105.5 68.5,-162.5 97.5,-162.5 97.5,-105.5 68.5,-105.5"/>
 <text text-anchor="middle" x="83" y="-150.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">T</text>
 <polyline fill="none" stroke="#bfbfbf" points="68.5,-143.5 97.5,-143.5 "/>
 <text text-anchor="middle" x="83" y="-131.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
 <polyline fill="none" stroke="#bfbfbf" points="68.5,-124.5 97.5,-124.5 "/>
 <text text-anchor="middle" x="83" y="-112.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+</a>
+</g>
 </g>
 <!-- Node3&#45;&gt;Node1 -->
 <g id="edge2" class="edge">

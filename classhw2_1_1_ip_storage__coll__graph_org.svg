@@ -12,6 +12,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
+<g id="a_node1"><a xlink:title=" ">
 <polygon fill="#bfbfbf" stroke="#000000" points="40,-.5 40,-145.5 171,-145.5 171,-.5 40,-.5"/>
 <text text-anchor="middle" x="105.5" y="-133.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">hw2::IpStorage</text>
 <polyline fill="none" stroke="#000000" points="40,-126.5 171,-126.5 "/>
@@ -26,16 +27,21 @@
 <text text-anchor="start" x="48" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ empty()</text>
 <text text-anchor="start" x="48" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ filteredByFirstBytes()</text>
 <text text-anchor="start" x="48" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; validateIp()</text>
+</a>
+</g>
 </g>
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
+<g id="a_node2"><a xlink:title=" ">
 <polygon fill="#ffffff" stroke="#bfbfbf" points="0,-193.5 0,-250.5 101,-250.5 101,-193.5 0,-193.5"/>
 <text text-anchor="middle" x="50.5" y="-238.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">multiset&lt; IpV4 &gt;</text>
 <polyline fill="none" stroke="#bfbfbf" points="0,-231.5 101,-231.5 "/>
 <text text-anchor="middle" x="50.5" y="-219.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
 <polyline fill="none" stroke="#bfbfbf" points="0,-212.5 101,-212.5 "/>
 <text text-anchor="middle" x="50.5" y="-200.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+</a>
+</g>
 </g>
 <!-- Node2&#45;&gt;Node1 -->
 <g id="edge1" class="edge">
@@ -47,7 +53,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="structhw2_1_1_ip_storage_1_1_ip_boundaries.html" target="_top" xlink:title="{hw2::IpStorage::IpBoundaries\n||}">
+<g id="a_node3"><a xlink:href="structhw2_1_1_ip_storage_1_1_ip_boundaries.html" target="_top" xlink:title=" ">
 <polygon fill="#ffffff" stroke="#000000" points="119,-193.5 119,-250.5 278,-250.5 278,-193.5 119,-193.5"/>
 <text text-anchor="middle" x="198.5" y="-238.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">hw2::IpStorage::IpBoundaries</text>
 <polyline fill="none" stroke="#000000" points="119,-231.5 278,-231.5 "/>
@@ -67,7 +73,7 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="classhw2_1_1_ip_v4.html" target="_top" xlink:title="{hw2::IpV4\n||+ IpV4()\l+ IpV4()\l+ IpV4()\l+ byte()\l+ byte()\l+ contains()\l+ operator=()\l+ operator\&lt;()\l+ operator\&gt;()\l+ bytesNumber()\l}">
+<g id="a_node4"><a xlink:href="classhw2_1_1_ip_v4.html" target="_top" xlink:title=" ">
 <polygon fill="#ffffff" stroke="#000000" points="148,-309.5 148,-465.5 249,-465.5 249,-309.5 148,-309.5"/>
 <text text-anchor="middle" x="198.5" y="-453.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">hw2::IpV4</text>
 <polyline fill="none" stroke="#000000" points="148,-446.5 249,-446.5 "/>
@@ -97,12 +103,15 @@
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
+<g id="a_node5"><a xlink:title=" ">
 <polygon fill="#ffffff" stroke="#bfbfbf" points="67.5,-519 67.5,-576 193.5,-576 193.5,-519 67.5,-519"/>
 <text text-anchor="middle" x="130.5" y="-564" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">static constexpr size_t</text>
 <polyline fill="none" stroke="#bfbfbf" points="67.5,-557 193.5,-557 "/>
 <text text-anchor="middle" x="130.5" y="-545" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
 <polyline fill="none" stroke="#bfbfbf" points="67.5,-538 193.5,-538 "/>
 <text text-anchor="middle" x="130.5" y="-526" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+</a>
+</g>
 </g>
 <!-- Node5&#45;&gt;Node4 -->
 <g id="edge4" class="edge">
@@ -114,6 +123,7 @@
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
+<g id="a_node6"><a xlink:title=" ">
 <polygon fill="#ffffff" stroke="#bfbfbf" points="211.5,-513.5 211.5,-581.5 323.5,-581.5 323.5,-513.5 211.5,-513.5"/>
 <text text-anchor="start" x="219.5" y="-569.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">array&lt; Byte, BYTES</text>
 <text text-anchor="middle" x="267.5" y="-558.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_NUMBER &gt;</text>
@@ -121,6 +131,8 @@
 <text text-anchor="middle" x="267.5" y="-539.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
 <polyline fill="none" stroke="#bfbfbf" points="211.5,-532.5 323.5,-532.5 "/>
 <text text-anchor="middle" x="267.5" y="-520.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+</a>
+</g>
 </g>
 <!-- Node6&#45;&gt;Node4 -->
 <g id="edge5" class="edge">
