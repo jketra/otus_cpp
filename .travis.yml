@@ -1,6 +1,10 @@
 os: linux
 dist: bionic
 language: cpp
+addons:
+  apt:
+    packages:
+      - doxygen
 before_script:
 - sudo apt-get install libboost-test-dev -y
 - sudo apt-get install libgtest-dev -y
@@ -19,6 +23,7 @@ script:
 - cmake --build .
 - cmake --build . --target test
 - cmake --build . --target package
+- doxygen Doxyfile
 deploy:
   - provider: pages
     skip_cleanup: true
