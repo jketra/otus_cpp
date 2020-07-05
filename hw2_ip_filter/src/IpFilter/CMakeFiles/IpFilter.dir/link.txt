@@ -1,2 +1,0 @@
-/usr/bin/ar qc libIpFilter.a  CMakeFiles/IpFilter.dir/IpV4.cpp.o CMakeFiles/IpFilter.dir/IpStorage.cpp.o CMakeFiles/IpFilter.dir/IpStoragePrinter.cpp.o
-/usr/bin/ranlib libIpFilter.a

@@ -1,1 +1,0 @@
-/usr/bin/g++   -Wall -Wextra -pedantic   CMakeFiles/PrintIpExample.dir/example.cpp.o  -o print_ip ../PrintIp/libPrintIp.a 

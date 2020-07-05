@@ -1,1 +1,0 @@
-/usr/bin/g++   -Wall -Wextra -pedantic   CMakeFiles/IpFilterTests.dir/IpFilterTests.cpp.o  -o IpFilterTests /usr/lib/libgtest.so ../../src/IpFilter/libIpFilter.a ../../../libs/StringAddOns/libStringAddOns.a -lpthread ../../../libs/OperationResult/libOperationResult.a 

@@ -1,9 +1,0 @@
-Package: otus_cpp
-Version: 0.0.64
-Section: devel
-Priority: optional
-Architecture: amd64
-Installed-Size: 70
-Maintainer: js@goloschapova.com
-Description: OTUS_CPP built using CMake
-

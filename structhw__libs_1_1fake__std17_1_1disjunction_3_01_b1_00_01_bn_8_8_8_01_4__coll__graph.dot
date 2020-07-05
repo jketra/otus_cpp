@@ -1,0 +1,9 @@
+digraph "hw_libs::fake_std17::disjunction&lt; B1, Bn... &gt;"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node2 [label="{hw_libs::fake_std17\l::disjunction\< B1, Bn... \>\n||}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node3 [label="{std::conditional_t\l\< bool(B1::value), B1,\l disjunction\< Bn... \> \>\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

@@ -1,2 +1,0 @@
-/usr/bin/ar qc libProjectInfo.a  CMakeFiles/ProjectInfo.dir/version.cpp.o
-/usr/bin/ranlib libProjectInfo.a

@@ -1,1 +1,0 @@
-/usr/bin/g++   -Wall -Wextra -pedantic   CMakeFiles/CicdGoogleTests.dir/GoogleTest.cpp.o  -o CicdGoogleTests /usr/lib/libgtest.so ../../lib/libProjectInfo.a -lpthread 

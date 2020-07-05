@@ -1,4 +1,0 @@
-CicdGoogleTests 1 0.00328437
-IpFilterTests 1 0.0110804
-PrintIpTests 1 0.00384662
----

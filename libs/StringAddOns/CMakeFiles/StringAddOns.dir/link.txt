@@ -1,2 +1,0 @@
-/usr/bin/ar qc libStringAddOns.a  CMakeFiles/StringAddOns.dir/StringFunctions.cpp.o
-/usr/bin/ranlib libStringAddOns.a

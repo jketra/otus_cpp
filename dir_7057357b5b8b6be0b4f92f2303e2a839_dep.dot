@@ -1,0 +1,14 @@
+digraph "hw1_cicd" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_7057357b5b8b6be0b4f92f2303e2a839 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_7057357b5b8b6be0b4f92f2303e2a839.html"];
+    dir_7057357b5b8b6be0b4f92f2303e2a839 [shape=plaintext label="hw1_cicd"];
+    dir_526bea64bc7da40ce97067456d3137ec [shape=box label="lib" color="black" fillcolor="white" style="filled" URL="dir_526bea64bc7da40ce97067456d3137ec.html"];
+    dir_1194e9c2583559352c86203637d0946f [shape=box label="src" color="black" fillcolor="white" style="filled" URL="dir_1194e9c2583559352c86203637d0946f.html"];
+    dir_3a9fe4f552aa1ca4fb49e1bb36c95bd2 [shape=box label="tests" color="red" fillcolor="white" style="filled" URL="dir_3a9fe4f552aa1ca4fb49e1bb36c95bd2.html"];
+  }
+  dir_1194e9c2583559352c86203637d0946f->dir_526bea64bc7da40ce97067456d3137ec [headlabel="1", labeldistance=1.5 headhref="dir_000011_000010.html"];
+  dir_3a9fe4f552aa1ca4fb49e1bb36c95bd2->dir_526bea64bc7da40ce97067456d3137ec [headlabel="2", labeldistance=1.5 headhref="dir_000015_000010.html"];
+}
