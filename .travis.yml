@@ -1,3 +1,4 @@
+os: linux
 dist: bionic
 language: cpp
 before_script:
@@ -18,13 +19,6 @@ script:
 - cmake --build .
 - cmake --build . --target test
 - cmake --build . --target package
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
-  keep_history: true
-  on:
-    branch: master
 deploy:
   - provider: pages
     skip_cleanup: true
