@@ -10,9 +10,10 @@ before_script:
 - cmake -DBUILD_SHARED_LIBS=ON /usr/src/gtest/
 - cmake --build .
 - sudo cp *.so /usr/lib
+- rm -rf *
 - cd ../doxygen
 - sudo apt install graphviz -y
-- sudo apt install ./doxygen_1.8.19_amd64.deb -y
+- sudo apt install ./doxygen_1.8.19_amd64.deb
 - doxygen --version
 - cd ..
 script:
