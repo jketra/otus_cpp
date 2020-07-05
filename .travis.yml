@@ -1,23 +1,20 @@
 os: linux
 dist: bionic
 language: cpp
-addons:
-  apt:
-    packages:
-      - doxygen
-      - graphviz
 before_script:
 - sudo apt-get install libboost-test-dev -y
 - sudo apt-get install libgtest-dev -y
 - sudo apt-get install cmake -y
-- mkdir gtest_temp
-- cd gtest_temp
+- mkdir temp
+- cd temp
 - cmake -DBUILD_SHARED_LIBS=ON /usr/src/gtest/
 - cmake --build .
 - sudo cp *.so /usr/lib
-- cd ../
-- echo "deb http://archive.ubuntu.com/ubuntu xenial main universe" | sudo tee -a /etc/apt/sources.list
-- sudo apt-get update -qq
+- cd ../doxygen
+- sudo apt install graphviz -y
+- sudo apt install ./doxygen_1.8.19_amd64.deb -y
+- doxygen --version
+- cd ..
 script:
 - cmake -DDEPLOY_PROJECT=$DEPLOYMENT_PROJECT_NAME .
 - cmake --build .
