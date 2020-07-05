@@ -13,8 +13,14 @@
 
 #include <iostream>
 
-/// Third homework
+/// @defgroup homework_4 Print Ip Project
+
+/// @ingroup homework_4
+/// @brief Fourth homework
 namespace hw4 {
+
+/// @addtogroup homework_4
+/// @{
 
 /// Print integer value as ip (previously converted to bits).
 /// @tparam T Integer type.
@@ -80,7 +86,6 @@ void printIp(const T& ip) {
 /// @tparam Tuple Tuple type.
 /// @tparam std::size_t... types of indexes.
 /// @param[in] value Tuple to print.
-/// @param[in] Indexes... Indexes of tuple values (for recursion).
 /// @param[in] delimiter Separator between tuple values.
 template<class Tuple, std::size_t... Indexes>
 void print_tuple_impl(const Tuple& value, std::index_sequence<Indexes...>, const char* delimiter) {
@@ -97,5 +102,7 @@ void printIp(const std::tuple<T, Args...>& ip) {
 	print_tuple_impl(ip, std::index_sequence_for<T, Args...>{}, ".");
 	std::cout << std::endl;
 }
+
+/// @}
 
 }
