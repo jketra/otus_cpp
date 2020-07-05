@@ -841,7 +841,12 @@ RECURSIVE              = YES
 # run.
 
 EXCLUDE                = doxygen
-                         CMakeFiles
+                         /home/travis/build/jketra/otus_cpp/_CPack_Packages
+                         /home/travis/build/jketra/otus_cpp/bin
+                         /home/travis/build/jketra/otus_cpp/CMakeFiles
+                         /home/travis/build/jketra/otus_cpp/doxygen
+                         /home/travis/build/jketra/otus_cpp/temp
+                         /home/travis/build/jketra/otus_cpp/Testing
 
 # The EXCLUDE_SYMLINKS tag can be used to select whether or not files or
 # directories that are symbolic links (a Unix file system feature) are excluded
