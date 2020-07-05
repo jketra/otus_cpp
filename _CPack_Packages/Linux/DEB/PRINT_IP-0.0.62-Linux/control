@@ -1,5 +1,5 @@
 Package: otus_cpp
-Version: 0.0.61
+Version: 0.0.62
 Section: devel
 Priority: optional
 Architecture: amd64

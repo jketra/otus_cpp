@@ -6,6 +6,7 @@
 
 namespace hw4 {
 
+/// @ingroup homework_4
 /// Print input value as his bits.
 /// @tparam T Input value type.
 /// @param[in] value Value to print as bits.
