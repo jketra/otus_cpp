@@ -1,6 +1,6 @@
 # OTUS c++ homeworks
-
-OTUS_CPP is a set of small projects for practice after the theoretical lessons of the course.
+ 
+OTUS_CPP is a set of small projects for practice after the theoretical lessons of the course.  [![Build Status](https://travis-ci.org/jketra/otus_cpp.svg?branch=master)](https://travis-ci.org/jketra/otus_cpp)
 
 ## Table of Contents
 - [Dependencies](#dependencies)
@@ -23,7 +23,7 @@ OTUS_CPP is a set of small projects for practice after the theoretical lessons o
 In general, you need to install all `OTUS_CPP` [dependencies](#dependencies) as described in [Installing dependencies](#installing-dependencies).
 Then enter directory containing `OTUS_CPP` sources and compile them using CMake:
 
-```
+```sh
 mkdir build
 cd build
 cmake -DCMAKE_BUILD_TYPE=Release ..
@@ -50,7 +50,7 @@ Defaults:
 * `DEPLOY_PROJECT` is "none" by default.
 
 Example:
-```
+```sh
 cmake -DBUILD_CICD=OFF, -DBUILD_IP_FILTER=OFF, -DDEPLOY_PROJECT="PRINT_IP"
 ```
 
@@ -62,17 +62,17 @@ cmake -DBUILD_CICD=OFF, -DBUILD_IP_FILTER=OFF, -DDEPLOY_PROJECT="PRINT_IP"
 * Download and install Microsoft Visual Studio 2015 or later.
 * Install [vcpkg](https://github.com/Microsoft/vcpkg#quick-start).
 * Run the following commands to install `OTUS_CPP` dependencies using vcpkg:
-```
+```sh
 cd <path to vcpkg>
 .\vcpkg.exe install gtest:x64-windows gtest:x86-windows boost-test:x86-windows boost-test:x64-windows
 ```
 * Download and install [CMake](https://cmake.org/download/); choose "Add CMake to the system PATH" option while installing.
 * Build `OTUS_CPP` with CMake as explained in [building](#building) with an explicit path to toolchaine file
-```
+```sh
 cmake -DCMAKE_TOOLCHAIN_FILE=<path to vcpkg>/scripts/buildsystems/vcpkg.cmake ..
 ```
 * Or set the value of the `VCPKG_ROOT` environment variable to the `<path to vcpkg>`
-```
+```sh
 setx VCPKG_ROOT <path to vcpkg>
 ```
 
@@ -84,15 +84,18 @@ To build `OTUS_CPP` in Release mode using MSVC, you will need to additionally sp
 * Install all [dependencies](#dependencies) using your package manager.
 * For example, run the following commands for Ubuntu 18.04:
 	* Cmake
-	```
+	
+	```sh
 	sudo apt-get install cmake -y
 	```
 	* Boost.Test
-	```
+	
+	```sh
 	sudo apt-get install libboost-test-dev -y
 	```
 	* GTest
-	```
+	
+	```sh
 	sudo apt-get install libgtest-dev -y
 	mkdir gtest_temp
 	cd gtest_temp

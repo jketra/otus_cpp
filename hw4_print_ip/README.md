@@ -1,6 +1,7 @@
 ## Homework 4: print ip
 * Tasks:
 	- [x] One template function with different implementations via the SFINAE mechanism for printing conditional ip addresses. Input/output examples:
+	
 	```	
 	int{1234}                   => "0.0.4.210" (if sizeof(int) == 4)		
 	std::string{"trololo"}      => "trololo"	
