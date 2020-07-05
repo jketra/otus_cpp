@@ -840,12 +840,12 @@ RECURSIVE              = YES
 # Note that relative paths are relative to the directory from which doxygen is
 # run.
 
-EXCLUDE                = doxygen
-                         /home/travis/build/jketra/otus_cpp/_CPack_Packages
-                         /home/travis/build/jketra/otus_cpp/bin
-                         /home/travis/build/jketra/otus_cpp/CMakeFiles
-                         /home/travis/build/jketra/otus_cpp/doxygen
-                         /home/travis/build/jketra/otus_cpp/temp
+EXCLUDE                = doxygen \
+                         /home/travis/build/jketra/otus_cpp/_CPack_Packages \
+                         /home/travis/build/jketra/otus_cpp/bin \
+                         /home/travis/build/jketra/otus_cpp/CMakeFiles \
+                         /home/travis/build/jketra/otus_cpp/doxygen \
+                         /home/travis/build/jketra/otus_cpp/temp \
                          /home/travis/build/jketra/otus_cpp/Testing
 
 # The EXCLUDE_SYMLINKS tag can be used to select whether or not files or
