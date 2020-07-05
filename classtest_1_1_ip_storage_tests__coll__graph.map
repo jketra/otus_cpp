@@ -1,0 +1,6 @@
+<map id="test::IpStorageTests" name="test::IpStorageTests">
+<area shape="rect" id="node4" href="$classhw2_1_1_ip_storage_printer.html" title="{hw2::IpStoragePrinter\n||+ IpStoragePrinter()\l+ print()\l+ print()\l+ print()\l}" alt="" coords="259,623,421,745"/>
+<area shape="rect" id="node6" href="$classhw2_1_1_ip_storage.html" title="{hw2::IpStorage\n||+ IpStorage()\l+ add()\l+ add()\l+ getAllIps()\l+ getIpsContainsByte()\l+ clear()\l+ empty()\l+ filteredByFirstBytes()\l&#45; validateIp()\l}" alt="" coords="446,587,621,781"/>
+<area shape="rect" id="node8" href="$structhw2_1_1_ip_storage_1_1_ip_boundaries.html" title="{hw2::IpStorage::IpBoundaries\n||}" alt="" coords="597,447,809,524"/>
+<area shape="rect" id="node9" href="$classhw2_1_1_ip_v4.html" title="{hw2::IpV4\n||+ IpV4()\l+ IpV4()\l+ IpV4()\l+ byte()\l+ byte()\l+ contains()\l+ operator=()\l+ operator\&lt;()\l+ operator\&gt;()\l+ bytesNumber()\l}" alt="" coords="635,160,770,369"/>
+</map>
