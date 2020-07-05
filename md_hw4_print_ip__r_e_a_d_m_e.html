@@ -51,17 +51,16 @@
 <div class="title">Homework 4: print ip </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><ul>
-<li><p class="startli">Tasks:</p><ul>
+<div class="textblock"><p>Tasks:</p><ul>
 <li>[x] One template function with different implementations via the SFINAE mechanism for printing conditional ip addresses. Input/output examples:</li>
 </ul>
-<p class="startli">``` int{1234} =&gt; "0.0.4.210" (if sizeof(int) == 4) <br  />
- std::string{"trololo"} =&gt; "trololo" <br  />
- std::list, std::vector =&gt; dot separated container contents std::make_tuple(0, 1, 2, 3) =&gt; "0, 1, 2, 3" ```</p><ul>
+<div class="fragment"><div class="line">int{1234}                   =&gt; &quot;0.0.4.210&quot; (if sizeof(int) == 4)</div>
+<div class="line">std::string{&quot;trololo&quot;}      =&gt; &quot;trololo&quot;</div>
+<div class="line">std::list, std::vector      =&gt; dot separated container contents</div>
+<div class="line">std::make_tuple(0, 1, 2, 3) =&gt; &quot;0, 1, 2, 3&quot;</div>
+</div><!-- fragment --><ul>
 <li>[x] Documentation for this project.</li>
 <li>[x] Publish thml-documentation on github-pages.</li>
-</ul>
-</li>
 <li>To build this project, enable the <code>BUILD_PRINT_IP</code> option during generation: <div class="fragment"><div class="line">cmake -DBUILD_PRINT_IP=ON</div>
 </div><!-- fragment --></li>
 <li>To create a package to install the app from this project, use <code>DEPLOY_PROJECT</code>: <div class="fragment"><div class="line">cmake -DBUILD_PRINT_IP=ON -DDEPLOY_PROJECT=&quot;PRINT_IP&quot;</div>
@@ -79,7 +78,7 @@
 </div>
 </div>
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jul 5 2020 22:57:01 for OTUS C++ Homeworks by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 5 2020 23:18:43 for OTUS C++ Homeworks by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.19
 </small></address>
