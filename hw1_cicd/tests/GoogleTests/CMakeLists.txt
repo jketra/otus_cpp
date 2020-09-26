@@ -16,4 +16,4 @@ target_include_directories(${PROJECT_NAME} PRIVATE "${PROJECT_HOME_DIRECTORY}/li
 
 add_test(${PROJECT_NAME} ${PROJECT_NAME})
 
-post_buld_copy_executable(${CMAKE_CURRENT_BINARY_DIR} ${PROJECT_NAME} ${PROJECT_NAME})
+post_build_copy_executable(${CMAKE_CURRENT_BINARY_DIR} ${PROJECT_NAME} ${PROJECT_NAME})
