@@ -12,7 +12,7 @@ target_link_libraries(${PROJECT_NAME}
 
 set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME print_ip)
 
-post_buld_copy_executable(${CMAKE_CURRENT_BINARY_DIR} ${PROJECT_NAME} print_ip)
+post_build_copy_executable(${CMAKE_CURRENT_BINARY_DIR} ${PROJECT_NAME} print_ip)
 
 if (DEPLOY_PRINT_IP)
 	install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION ${INSTALL_DIR})

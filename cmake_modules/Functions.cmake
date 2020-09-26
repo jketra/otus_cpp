@@ -40,7 +40,7 @@ function(apply_folder_filter _parent_dir_name _dir)
 	endif()
 endfunction()
 
-function(post_buld_copy_executable _current_binary_dir _target_name _output_target_name)
+function(post_build_copy_executable _current_binary_dir _target_name _output_target_name)
 	if (WIN32)
 		set(FROM_DIR ${_current_binary_dir}/${CMAKE_CFG_INTDIR})
 	else()
