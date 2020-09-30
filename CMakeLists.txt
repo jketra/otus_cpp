@@ -26,9 +26,9 @@ set(PRINT_IP "PRINT_IP")
 
 # options
 #
-option(BUILD_${CICD} "Build Homework 1" ON)
-option(BUILD_${IP_FILTER} "Build Homework 2" ON)
-option(BUILD_${PRINT_IP} "Build Homework 4" ON)
+option(BUILD_${CICD} "Build Homework CICD" ON)
+option(BUILD_${IP_FILTER} "Build Homework IP_FILTER" ON)
+option(BUILD_${PRINT_IP} "Build Homework PRINT_IP" ON)
 
 option(TESTS_GTEST "Build Google Tests" ON)
 option(TESTS_BOOST "Build Boost Tests" OFF)
@@ -65,15 +65,15 @@ endif()
 # directories
 #
 if (BUILD_${CICD})
-	add_subdirectory(hw1_cicd)
+	add_subdirectory(hw0_cicd)
 endif()
 
 if (BUILD_${IP_FILTER})
-	add_subdirectory(hw2_ip_filter)
+	add_subdirectory(hw1_ip_filter)
 endif()
 
 if (BUILD_${PRINT_IP})
-	add_subdirectory(hw4_print_ip)
+	add_subdirectory(hw3_print_ip)
 endif()
 
 add_subdirectory(libs)
