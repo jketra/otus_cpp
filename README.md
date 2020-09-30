@@ -36,7 +36,7 @@ Instead of `-DCMAKE_BUILD_TYPE=Release` you can use another [Build options](#bui
 ### Build options
 You can use the following build options to configure the generated project:
 * `BUILD_CICD = ON|OFF` enable/disable a project that solves [Homework 1.1](https://github.com/jketra/otus_cpp/tree/master/hw0_cicd).
-* `BUILD_IP_FILTER = ON|OFF` enable/disable a project that solves [Homework 1.2](https://github.com/jketra/otus_cpp/tree/master/hw1_cicd).
+* `BUILD_IP_FILTER = ON|OFF` enable/disable a project that solves [Homework 1.2](https://github.com/jketra/otus_cpp/tree/master/hw1_ip_filter).
 * `BUILD_PRINT_IP = ON|OFF` enable/disable a project that solves [Homework 3](https://github.com/jketra/otus_cpp/tree/master/hw3_print_ip).
 * `DEPLOY_PROJECT = "none"|"CICD"|"IP_FILETR"|"PRINT_IP"` create package to installing chosen app after build.
 * `TESTS_GTEST = ON|OFF` enable/disable unit tests based on GTest.
