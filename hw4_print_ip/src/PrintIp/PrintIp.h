@@ -13,13 +13,13 @@
 
 #include <iostream>
 
-/// @defgroup homework_4 Print Ip Project
+/// @defgroup homework_3 Print Ip Project
 
-/// @ingroup homework_4
+/// @ingroup homework_3
 /// @brief Fourth homework
-namespace hw4 {
+namespace hw3 {
 
-/// @addtogroup homework_4
+/// @addtogroup homework_3
 /// @{
 
 /// Print integer value as ip (previously converted to bits).

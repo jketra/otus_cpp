@@ -9,7 +9,7 @@ namespace test{
 
 TEST(ProjectVersionTests, PatchNumber)
 {
-	EXPECT_TRUE(hw1::getProjectVersion() > 0);
+	EXPECT_TRUE(hw0::getProjectVersion() > 0);
 }
 
 }

@@ -7,7 +7,7 @@
 #include <algorithm>
 #include <sstream>
 
-namespace hw2 {
+namespace hw1 {
 
 IpStorage::IpStorage() :
 	_ipRestrictions{ { 0, 0, 0, 0 }, { 255, 255, 255, 255 } } {

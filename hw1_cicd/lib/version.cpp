@@ -2,10 +2,9 @@
 
 #include "config.h"
 
-namespace hw1 {
+namespace hw0 {
 
-int getProjectVersion()
-{
+int getProjectVersion() {
 	return PROJECT_VERSION_PATCH;
 }
 

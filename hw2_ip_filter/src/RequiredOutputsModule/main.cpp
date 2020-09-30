@@ -11,10 +11,10 @@
 int main(int, char const **)
 {
 	try {
-		constexpr auto DESC = hw2::PrintDirection::DESC;
+		constexpr auto DESC = hw1::PrintDirection::DESC;
 
-		hw2::IpStorage ipStorage;
-		hw2::IpStoragePrinter printer(std::cout);
+		hw1::IpStorage ipStorage;
+		hw1::IpStoragePrinter printer(std::cout);
 
 		for (std::string line; std::getline(std::cin, line);)
 		{

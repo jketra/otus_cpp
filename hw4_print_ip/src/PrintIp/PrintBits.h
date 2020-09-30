@@ -4,9 +4,9 @@
 
 #include <iostream>
 
-namespace hw4 {
+namespace hw3 {
 
-/// @ingroup homework_4
+/// @ingroup homework_3
 /// Print input value as his bits.
 /// @tparam T Input value type.
 /// @param[in] value Value to print as bits.

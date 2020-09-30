@@ -5,7 +5,7 @@
 #include <string>
 #include <ostream>
 
-namespace hw2
+namespace hw1
 {
 
 class IpV4

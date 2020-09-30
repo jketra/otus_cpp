@@ -24,15 +24,15 @@ protected:
 	{}
 	
 	void setTestsIps() {
-		_inputIps.emplace_back(hw2::IpV4{ 79, 46, 201, 157 });
-		_inputIps.emplace_back(hw2::IpV4{ 66, 169, 196, 128 });
-		_inputIps.emplace_back(hw2::IpV4{ 46, 70, 225, 39 });
-		_inputIps.emplace_back(hw2::IpV4{ 46, 70, 147, 26 });
-		_inputIps.emplace_back(hw2::IpV4{ 197, 48, 89, 171 });
-		_inputIps.emplace_back(hw2::IpV4{ 46, 70, 147, 26 });
-		_inputIps.emplace_back(hw2::IpV4{ 104, 222, 164, 236 });
-		_inputIps.emplace_back(hw2::IpV4{ 1, 29, 168, 70 });
-		_inputIps.emplace_back(hw2::IpV4{ 1, 158, 70, 188 });
+		_inputIps.emplace_back(hw1::IpV4{ 79, 46, 201, 157 });
+		_inputIps.emplace_back(hw1::IpV4{ 66, 169, 196, 128 });
+		_inputIps.emplace_back(hw1::IpV4{ 46, 70, 225, 39 });
+		_inputIps.emplace_back(hw1::IpV4{ 46, 70, 147, 26 });
+		_inputIps.emplace_back(hw1::IpV4{ 197, 48, 89, 171 });
+		_inputIps.emplace_back(hw1::IpV4{ 46, 70, 147, 26 });
+		_inputIps.emplace_back(hw1::IpV4{ 104, 222, 164, 236 });
+		_inputIps.emplace_back(hw1::IpV4{ 1, 29, 168, 70 });
+		_inputIps.emplace_back(hw1::IpV4{ 1, 158, 70, 188 });
 
 		for (const auto& ip : _inputIps) {
 			_ipStorage.add(ip);
@@ -42,23 +42,23 @@ protected:
 	std::stringstream _actOutput;
 	std::stringstream _expOutput;
 
-	hw2::IpStorage _ipStorage;
+	hw1::IpStorage _ipStorage;
 
-	const static auto ASC { hw2::PrintDirection::ASC };
-	const static auto DESC{ hw2::PrintDirection::DESC };
-	hw2::IpStoragePrinter _printer;
+	const static auto ASC { hw1::PrintDirection::ASC };
+	const static auto DESC{ hw1::PrintDirection::DESC };
+	hw1::IpStoragePrinter _printer;
 
-	std::vector<hw2::IpV4> _inputIps;
+	std::vector<hw1::IpV4> _inputIps;
 };
 
 TEST_F(IpStorageTests, AddValidIpV4) {
-	auto result = _ipStorage.add(hw2::IpV4{ 79, 46, 201, 157 });
+	auto result = _ipStorage.add(hw1::IpV4{ 79, 46, 201, 157 });
 	ASSERT_TRUE(result) << result;
 
-	result = _ipStorage.add(hw2::IpV4{ 0, 0, 0, 0 });
+	result = _ipStorage.add(hw1::IpV4{ 0, 0, 0, 0 });
 	ASSERT_TRUE(result) << result;
 
-	result = _ipStorage.add(hw2::IpV4{ 255, 255, 255, 255 });
+	result = _ipStorage.add(hw1::IpV4{ 255, 255, 255, 255 });
 	ASSERT_TRUE(result) << result;
 
 	_expOutput << "0.0.0.0\n" << "79.46.201.157\n" << "255.255.255.255\n"
@@ -89,11 +89,11 @@ TEST_F(IpStorageTests, AddValidString) {
 }
 
 TEST_F(IpStorageTests, AddInvalidIpV4) {
-	auto result = _ipStorage.add(hw2::IpV4{ 20, -1, 0, 0 });
+	auto result = _ipStorage.add(hw1::IpV4{ 20, -1, 0, 0 });
 	std::cout << "-- " << result;
 	ASSERT_FALSE(result);
 
-	result = _ipStorage.add(hw2::IpV4{ 0, 0, 256, 0 });
+	result = _ipStorage.add(hw1::IpV4{ 0, 0, 256, 0 });
 	std::cout << "-- " << result;
 	ASSERT_FALSE(result);
 
@@ -134,17 +134,17 @@ TEST_F(IpStorageTests, PrintFilteredByFirstBytes) {
 	int firstByte = 46;
 	int secondByte = 70;
 
-	std::vector<hw2::IpV4> expIps;
+	std::vector<hw1::IpV4> expIps;
 
 	std::copy_if(_inputIps.begin(), _inputIps.end(), std::back_inserter(expIps),
-		[&firstByte, &secondByte](const hw2::IpV4& ip) { return ip.byte(0) == firstByte && ip.byte(1) == secondByte; });
+		[&firstByte, &secondByte](const hw1::IpV4& ip) { return ip.byte(0) == firstByte && ip.byte(1) == secondByte; });
 	
-	std::sort(expIps.begin(), expIps.end(), std::less<hw2::IpV4>());
+	std::sort(expIps.begin(), expIps.end(), std::less<hw1::IpV4>());
 	for (const auto& ip : expIps) {
 		_expOutput << ip << '\n';
 	}
 
-	std::sort(expIps.begin(), expIps.end(), std::greater<hw2::IpV4>());
+	std::sort(expIps.begin(), expIps.end(), std::greater<hw1::IpV4>());
 	for (const auto& ip : expIps) {
 		_expOutput << ip << '\n';
 	}
@@ -157,12 +157,12 @@ TEST_F(IpStorageTests, PrintFilteredByFirstBytes) {
 }
 
 TEST_F(IpStorageTests, PrintIpsContainsByte) {
-	_inputIps.emplace_back(hw2::IpV4{ 1, 1, 1, 1 });
-	_inputIps.emplace_back(hw2::IpV4{ 46, 1, 1, 1 });
-	_inputIps.emplace_back(hw2::IpV4{ 1, 46, 1, 1 });
-	_inputIps.emplace_back(hw2::IpV4{ 1, 1, 46, 1 });
-	_inputIps.emplace_back(hw2::IpV4{ 1, 1, 1, 46 });
-	_inputIps.emplace_back(hw2::IpV4{ 46, 46, 46, 46 });
+	_inputIps.emplace_back(hw1::IpV4{ 1, 1, 1, 1 });
+	_inputIps.emplace_back(hw1::IpV4{ 46, 1, 1, 1 });
+	_inputIps.emplace_back(hw1::IpV4{ 1, 46, 1, 1 });
+	_inputIps.emplace_back(hw1::IpV4{ 1, 1, 46, 1 });
+	_inputIps.emplace_back(hw1::IpV4{ 1, 1, 1, 46 });
+	_inputIps.emplace_back(hw1::IpV4{ 46, 46, 46, 46 });
 
 	for (const auto& ip : _inputIps) {
 		_ipStorage.add(ip);
@@ -170,20 +170,20 @@ TEST_F(IpStorageTests, PrintIpsContainsByte) {
 
 	int byteValue = 46;
 
-	std::vector<hw2::IpV4> expIps;
+	std::vector<hw1::IpV4> expIps;
 
 	std::copy_if(_inputIps.begin(), _inputIps.end(), std::back_inserter(expIps),
-		[&byteValue](const hw2::IpV4& ip) { 
+		[&byteValue](const hw1::IpV4& ip) { 
 			return ip.byte(0) == byteValue || ip.byte(1) == byteValue || 
 			ip.byte(2) == byteValue || ip.byte(3) == byteValue; 
 		});
 
-	std::sort(expIps.begin(), expIps.end(), std::less<hw2::IpV4>());
+	std::sort(expIps.begin(), expIps.end(), std::less<hw1::IpV4>());
 	for (const auto& ip : expIps) {
 		_expOutput << ip << '\n';
 	}
 
-	std::sort(expIps.begin(), expIps.end(), std::greater<hw2::IpV4>());
+	std::sort(expIps.begin(), expIps.end(), std::greater<hw1::IpV4>());
 	for (const auto& ip : expIps) {
 		_expOutput << ip << '\n';
 	}
@@ -197,7 +197,7 @@ TEST_F(IpStorageTests, PrintIpsContainsByte) {
 }
 
 TEST_F(IpStorageTests, ControlDataset) {
-	hw2::IpStorage ipStorage;
+	hw1::IpStorage ipStorage;
 
 	std::ifstream inStream("test_data/control_dataset.tsv", std::ifstream::in);
 

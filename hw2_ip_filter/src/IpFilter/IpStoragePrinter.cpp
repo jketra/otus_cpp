@@ -1,6 +1,6 @@
 #include "IpStoragePrinter.h"
 
-namespace hw2 {
+namespace hw1 {
 
 IpStoragePrinter::IpStoragePrinter(std::ostream& out) : _out(out) {}
 

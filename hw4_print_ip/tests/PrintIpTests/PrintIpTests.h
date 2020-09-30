@@ -12,7 +12,7 @@
 
 namespace test {
 
-/// Tests for homework 4.
+/// Tests for homework 3.
 class PrintIpTests : public ::testing::Test {
 // protected for GTest
 protected:
@@ -36,10 +36,10 @@ protected:
 
 /// Test for integer input parameter.
 TEST_F(PrintIpTests, IntegerInput) {
-	hw4::printIp(char(-1));
-	hw4::printIp(short(0));
-	hw4::printIp(2130706433);
-	hw4::printIp(8875824491850138409);
+	hw3::printIp(char(-1));
+	hw3::printIp(short(0));
+	hw3::printIp(2130706433);
+	hw3::printIp(8875824491850138409);
 
 	_expOutput << "255" << std::endl;
 	_expOutput << "0.0" << std::endl;
@@ -51,9 +51,9 @@ TEST_F(PrintIpTests, IntegerInput) {
 
 /// Test for string as input parameter.
 TEST_F(PrintIpTests, StringInput) {
-	hw4::printIp("42.42.42.42");
-	hw4::printIp("const char*");
-	hw4::printIp(std::string{ "string" });
+	hw3::printIp("42.42.42.42");
+	hw3::printIp("const char*");
+	hw3::printIp(std::string{ "string" });
 
 	_expOutput << "42.42.42.42" << std::endl;
 	_expOutput << "const char*" << std::endl;
@@ -64,10 +64,10 @@ TEST_F(PrintIpTests, StringInput) {
 
 /// Test for container as input parameter (vector, list).
 TEST_F(PrintIpTests, ContainerInput) {
-	hw4::printIp(std::vector<int>{});
-	hw4::printIp(std::vector<int>{ 19 });
-	hw4::printIp(std::vector<int>{ 29, 29, 29, 40 });
-	hw4::printIp(std::list<std::string>{"list", "vector", "map"});
+	hw3::printIp(std::vector<int>{});
+	hw3::printIp(std::vector<int>{ 19 });
+	hw3::printIp(std::vector<int>{ 29, 29, 29, 40 });
+	hw3::printIp(std::list<std::string>{"list", "vector", "map"});
 
 	_expOutput << "19" << std::endl;
 	_expOutput << "29.29.29.40" << std::endl;
@@ -78,9 +78,9 @@ TEST_F(PrintIpTests, ContainerInput) {
 
 /// Test for tuple as input parameter.
 TEST_F(PrintIpTests, TupleInput) {
-	hw4::printIp(std::make_tuple(0));
-	hw4::printIp(std::make_tuple(10, 15, 20, 75));
-	hw4::printIp(std::make_tuple(10, 20));
+	hw3::printIp(std::make_tuple(0));
+	hw3::printIp(std::make_tuple(10, 15, 20, 75));
+	hw3::printIp(std::make_tuple(10, 20));
 
 	_expOutput << "0" << std::endl;
 	_expOutput << "10.15.20.75" << std::endl;

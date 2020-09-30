@@ -12,7 +12,7 @@ BOOST_AUTO_TEST_SUITE(ProjectVersionTests)
 
 	BOOST_AUTO_TEST_CASE(PatchNumber)
 	{
-	    BOOST_CHECK(info::getProjectVersion() > 0);
+	    BOOST_CHECK(hw0::getProjectVersion() > 0);
 	}
 
 }

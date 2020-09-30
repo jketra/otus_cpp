@@ -12,7 +12,7 @@
 #include <algorithm>
 
 /// Second homework
-namespace hw2 {
+namespace hw1 {
 
 class IpStorage {
 	using Byte = IpV4::Byte;

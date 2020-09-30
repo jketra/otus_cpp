@@ -2,9 +2,9 @@
 
 #include <stdint.h>
 
-namespace hw4 {
+namespace hw3 {
 
-/// @ingroup homework_4
+/// @ingroup homework_3
 /// Union for converting values to bits.
 /// @tparam T Type of converting value.
 template<typename T>

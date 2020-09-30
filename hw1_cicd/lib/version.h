@@ -1,7 +1,7 @@
 ﻿#pragma once
 
 /// First homework
-namespace hw1 {
+namespace hw0 {
 
 int getProjectVersion();
 

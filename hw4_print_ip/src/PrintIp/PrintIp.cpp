@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-namespace hw4 {
+namespace hw3 {
 
 void printIp(const std::string& ip) {
 	std::cout << ip << std::endl;

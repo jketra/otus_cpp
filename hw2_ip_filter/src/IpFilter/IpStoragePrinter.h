@@ -5,7 +5,7 @@
 #include <ostream>
 #include <tuple>
 
-namespace hw2 {
+namespace hw1 {
 
 enum class PrintDirection {
 	ASC,

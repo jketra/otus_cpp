@@ -8,7 +8,7 @@
 
 int main(int, char const **)
 {
-	using namespace hw4;
+	using namespace hw3;
 	
 	system("chcp 1251");
 
@@ -19,8 +19,8 @@ int main(int, char const **)
 	printIp(8875824491850138409);
 
 	// print string
-	hw4::printIp("const char*"); // type conversion
-	hw4::printIp(std::string{ "string" });
+	printIp("const char*"); // type conversion
+	printIp(std::string{ "string" });
 
 	// print vector
 	printIp(std::vector<int>{ 19, 29, 40 });
