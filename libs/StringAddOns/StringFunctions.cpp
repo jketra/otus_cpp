@@ -7,8 +7,7 @@ std::vector<std::string> split(const std::string &str, char delimiter) {
 
 	std::string::size_type start = 0;
 	std::string::size_type stop = str.find_first_of(delimiter);
-	while (stop != std::string::npos)
-	{
+	while (stop != std::string::npos) {
 		result.emplace_back(str.substr(start, stop - start));
 
 		start = stop + 1;

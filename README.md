@@ -13,7 +13,7 @@ OTUS_CPP is a set of small projects for practice after the theoretical lessons o
 `OTUS_CPP` depends on:
 
 * C++14 compatible compiler (GCC 4.9+, MSVC 19.0+ (Visual Studio 2015+))
-* CMake (3.0.2+, build only)
+* CMake (3.7.0+, build only)
 * GTest (optional, for tests)
 * Boost tests (optional, for part of the tests of the frist homework)
 
@@ -35,9 +35,9 @@ Instead of `-DCMAKE_BUILD_TYPE=Release` you can use another [Build options](#bui
 <a name="build-options"></a>
 ### Build options
 You can use the following build options to configure the generated project:
-* `BUILD_CICD = ON|OFF` enable/disable a project that solves [Homework 1](https://github.com/jketra/otus_cpp/tree/master/hw1_cicd).
-* `BUILD_IP_FILTER = ON|OFF` enable/disable a project that solves [Homework 2](https://github.com/jketra/otus_cpp/tree/master/hw1_cicd).
-* `BUILD_PRINT_IP = ON|OFF` enable/disable a project that solves [Homework 4](https://github.com/jketra/otus_cpp/tree/master/hw4_print_ip).
+* `BUILD_CICD = ON|OFF` enable/disable a project that solves [Homework 1.1](https://github.com/jketra/otus_cpp/tree/master/hw0_cicd).
+* `BUILD_IP_FILTER = ON|OFF` enable/disable a project that solves [Homework 1.2](https://github.com/jketra/otus_cpp/tree/master/hw1_cicd).
+* `BUILD_PRINT_IP = ON|OFF` enable/disable a project that solves [Homework 3](https://github.com/jketra/otus_cpp/tree/master/hw3_print_ip).
 * `DEPLOY_PROJECT = "none"|"CICD"|"IP_FILETR"|"PRINT_IP"` create package to installing chosen app after build.
 * `TESTS_GTEST = ON|OFF` enable/disable unit tests based on GTest.
 * `TESTS_BOOST = ON|OFF` enable/disable unit tests based on Boost.Test (just for homework 1).

@@ -16,7 +16,7 @@
 /// @defgroup homework_3 Print Ip Project
 
 /// @ingroup homework_3
-/// @brief Fourth homework
+/// Print Ip homework.
 namespace hw3 {
 
 /// @addtogroup homework_3

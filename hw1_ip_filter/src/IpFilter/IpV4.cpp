@@ -3,17 +3,14 @@
 #include <utility>
 #include <cassert>
 
-namespace hw1
-{
+namespace hw1 {
 
 IpV4::IpV4(Byte first, Byte second, Byte third, Byte forth) :
-	_data{ first, second, third, forth }
-{
+	_data{ first, second, third, forth } {
 }
 
 IpV4::IpV4(const IpV4& other) :
-	_data(other._data)
-{
+	_data(other._data) {
 }
 
 IpV4::IpV4(IpV4&& other) :

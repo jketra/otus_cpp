@@ -8,16 +8,14 @@
 #include <string>
 #include <iostream>
 
-int main(int, char const **)
-{
+int main(int, char const **) {
 	try {
 		constexpr auto DESC = hw1::PrintDirection::DESC;
 
 		hw1::IpStorage ipStorage;
 		hw1::IpStoragePrinter printer(std::cout);
 
-		for (std::string line; std::getline(std::cin, line);)
-		{
+		for (std::string line; std::getline(std::cin, line);) {
 			std::vector<std::string> v = hw_libs::split(line, '\t');
 			if ((!v.empty()) && (!v.front().empty())) {
 				auto result = ipStorage.add(v.front());
@@ -41,8 +39,7 @@ int main(int, char const **)
 		// 4. Список адресов, любой байт которых равен 46. Порядок сортировки не меняется.
 		printer.print<DESC>(ipStorage.getIpsContainsByte(46));
 	}
-	catch (const std::exception &e)
-	{
+	catch (const std::exception &e) {
 		std::cerr << e.what() << std::endl;
 	}
 

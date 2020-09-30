@@ -1,4 +1,4 @@
-## Homework 4: print ip
+## Homework 3: print ip
 Tasks:
 - [x] One template function with different implementations via the SFINAE mechanism for printing conditional ip addresses. Input/output examples:
 

@@ -1,19 +1,17 @@
 ﻿#include "OperationResult.h"
 
-namespace hw_libs
-{
+namespace hw_libs {
 
 OperationResult::OperationResult(OperationResult&& other) :
 	_isSuccess(other._isSuccess),
-	_message(std::move(other._message))
-{}
+	_message(std::move(other._message)){
+}
 
 OperationResult OperationResult::Success() {
 	return OperationResult(true);
 }
 
-OperationResult OperationResult::Fail()
-{
+OperationResult OperationResult::Fail() {
 	return OperationResult(false);
 }
 
@@ -32,8 +30,8 @@ const OperationResult& OperationResult::operator=(OperationResult&& other) {
 }
 
 OperationResult::OperationResult(bool isSuccess) :
-	_isSuccess(isSuccess)
-{}
+	_isSuccess(isSuccess) {
+}
 
 OperationResult::OperationResult(const std::string& message) :
 	_isSuccess(false) {

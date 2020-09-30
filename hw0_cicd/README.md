@@ -1,4 +1,4 @@
-## Homework 1: ci/cd
+## Homework 1.1: ci/cd
 
 * To build this project, enable the `BUILD_CICD` option during generation:
 ```

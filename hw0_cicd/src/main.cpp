@@ -2,8 +2,7 @@
 
 #include <iostream>
 
-int main (int, char **)
-{
+int main (int, char **) {
 	std::cout << "Hello, World!" << std::endl;
 	std::cout << "Version: " << hw0::getProjectVersion() << std::endl;
 

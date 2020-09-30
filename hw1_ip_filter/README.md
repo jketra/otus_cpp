@@ -1,4 +1,4 @@
-## Homework 2: ip filter
+## Homework 1.2: ip filter
 
 * To build this project, enable the `BUILD_IP_FILTER` option during generation:
 ```

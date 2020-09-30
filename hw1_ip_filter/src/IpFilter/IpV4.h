@@ -5,12 +5,10 @@
 #include <string>
 #include <ostream>
 
-namespace hw1
-{
+namespace hw1 {
 
-class IpV4
-{
-	static constexpr size_t BYTES_NUMBER = 4u;
+class IpV4 {
+	static constexpr size_t _bytesNumber = 4u;
 public:
 	using Byte = int;
 
@@ -30,11 +28,11 @@ public:
 	friend std::ostream& operator<<(std::ostream& out, const IpV4& ip);
 
 	static constexpr size_t bytesNumber() {
-		return BYTES_NUMBER;
+		return _bytesNumber;
 	}
 
 private:
-	std::array<Byte, BYTES_NUMBER> _data;
+	std::array<Byte, _bytesNumber> _data;
 };
 
 }
