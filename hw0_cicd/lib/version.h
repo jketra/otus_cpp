@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-/// CICD homework
+/// The first part of the first homework (cicd).
 namespace hw0 {
 
 int getProjectVersion();

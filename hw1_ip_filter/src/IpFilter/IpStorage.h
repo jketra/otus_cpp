@@ -11,7 +11,7 @@
 #include <tuple>
 #include <algorithm>
 
-/// IpFilter homework
+/// The second part of the first homework (ip filter).
 namespace hw1 {
 
 class IpStorage {
