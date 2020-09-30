@@ -13,13 +13,13 @@
 <g id="node1" class="node">
 <title>Node1</title>
 <g id="a_node1"><a xlink:title=" ">
-<polygon fill="#bfbfbf" stroke="#000000" points="266.5,-.5 266.5,-68.5 379.5,-68.5 379.5,-.5 266.5,-.5"/>
-<text text-anchor="middle" x="323" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">test::IpStorageTests</text>
-<polyline fill="none" stroke="#000000" points="266.5,-49.5 379.5,-49.5 "/>
-<text text-anchor="middle" x="323" y="-37.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
-<polyline fill="none" stroke="#000000" points="266.5,-30.5 379.5,-30.5 "/>
-<text text-anchor="start" x="274.5" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># IpStorageTests()</text>
-<text text-anchor="start" x="274.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># setTestsIps()</text>
+<polygon fill="#bfbfbf" stroke="#000000" points="282.5,-.5 282.5,-68.5 395.5,-68.5 395.5,-.5 282.5,-.5"/>
+<text text-anchor="middle" x="339" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">test::IpStorageTests</text>
+<polyline fill="none" stroke="#000000" points="282.5,-49.5 395.5,-49.5 "/>
+<text text-anchor="middle" x="339" y="-37.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<polyline fill="none" stroke="#000000" points="282.5,-30.5 395.5,-30.5 "/>
+<text text-anchor="start" x="290.5" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># IpStorageTests()</text>
+<text text-anchor="start" x="290.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># setTestsIps()</text>
 </a>
 </g>
 </g>
@@ -39,252 +39,252 @@
 <!-- Node2&#45;&gt;Node1 -->
 <g id="edge1" class="edge">
 <title>Node2&#45;&gt;Node1</title>
-<path fill="none" stroke="#191970" d="M25.2058,-161.6647C29.2156,-149.2299 35.4213,-136.2673 45,-127 105.5927,-68.3774 204.2618,-46.8899 266.3005,-39.0255"/>
-<polygon fill="none" stroke="#191970" points="21.7938,-160.8681 22.4382,-171.4433 28.5293,-162.7744 21.7938,-160.8681"/>
+<path fill="none" stroke="#191970" d="M25.12,-161.5753C29.1227,-149.133 35.3457,-136.1885 45,-127 79.3508,-94.3068 207.0756,-62.5421 282.4058,-46.093"/>
+<polygon fill="none" stroke="#191970" points="21.705,-160.7904 22.3629,-171.3648 28.4429,-162.6881 21.705,-160.7904"/>
 </g>
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:title=" ">
-<polygon fill="#ffffff" stroke="#bfbfbf" points="54,-171.5 54,-228.5 172,-228.5 172,-171.5 54,-171.5"/>
-<text text-anchor="middle" x="113" y="-216.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">vector&lt; hw2::IpV4 &gt;</text>
-<polyline fill="none" stroke="#bfbfbf" points="54,-209.5 172,-209.5 "/>
-<text text-anchor="middle" x="113" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
-<polyline fill="none" stroke="#bfbfbf" points="54,-190.5 172,-190.5 "/>
-<text text-anchor="middle" x="113" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<g id="a_node3"><a xlink:href="classhw1_1_1_ip_storage_printer.html" target="_top" xlink:title=" ">
+<polygon fill="#ffffff" stroke="#000000" points="54,-155 54,-245 176,-245 176,-155 54,-155"/>
+<text text-anchor="middle" x="115" y="-233" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">hw1::IpStoragePrinter</text>
+<polyline fill="none" stroke="#000000" points="54,-226 176,-226 "/>
+<text text-anchor="middle" x="115" y="-214" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<polyline fill="none" stroke="#000000" points="54,-207 176,-207 "/>
+<text text-anchor="start" x="62" y="-195" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ IpStoragePrinter()</text>
+<text text-anchor="start" x="62" y="-184" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ print()</text>
+<text text-anchor="start" x="62" y="-173" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ print()</text>
+<text text-anchor="start" x="62" y="-162" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ print()</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node1 -->
 <g id="edge2" class="edge">
 <title>Node3&#45;&gt;Node1</title>
-<path fill="none" stroke="#404040" d="M135.0225,-171.2816C154.9708,-146.6558 186.1877,-111.3925 219,-87 230.1734,-78.6938 242.8573,-71.0586 255.4316,-64.3342"/>
-<polygon fill="none" stroke="#404040" points="255.7499,-64.17 259.2465,-57.8633 266.4129,-58.6654 262.9162,-64.972 255.7499,-64.17"/>
-<text text-anchor="middle" x="247" y="-95.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> #_inputIps</text>
+<path fill="none" stroke="#404040" d="M150.4037,-154.9332C169.7689,-132.4176 195.2305,-105.9991 222,-87 236.8991,-76.4257 254.2687,-67.236 270.9939,-59.6298"/>
+<polygon fill="none" stroke="#404040" points="271.4401,-59.4344 275.3309,-53.363 282.4318,-54.6194 278.5409,-60.6908 271.4401,-59.4344"/>
+<text text-anchor="middle" x="246.5" y="-95.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> #_printer</text>
 </g>
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="classhw2_1_1_ip_storage_printer.html" target="_top" xlink:title=" ">
-<polygon fill="#ffffff" stroke="#000000" points="190,-155 190,-245 312,-245 312,-155 190,-155"/>
-<text text-anchor="middle" x="251" y="-233" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">hw2::IpStoragePrinter</text>
-<polyline fill="none" stroke="#000000" points="190,-226 312,-226 "/>
-<text text-anchor="middle" x="251" y="-214" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
-<polyline fill="none" stroke="#000000" points="190,-207 312,-207 "/>
-<text text-anchor="start" x="198" y="-195" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ IpStoragePrinter()</text>
-<text text-anchor="start" x="198" y="-184" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ print()</text>
-<text text-anchor="start" x="198" y="-173" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ print()</text>
-<text text-anchor="start" x="198" y="-162" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ print()</text>
+<g id="a_node4"><a xlink:title=" ">
+<polygon fill="#ffffff" stroke="#bfbfbf" points="81,-320.5 81,-377.5 149,-377.5 149,-320.5 81,-320.5"/>
+<text text-anchor="middle" x="115" y="-365.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">ostream &amp;</text>
+<polyline fill="none" stroke="#bfbfbf" points="81,-358.5 149,-358.5 "/>
+<text text-anchor="middle" x="115" y="-346.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<polyline fill="none" stroke="#bfbfbf" points="81,-339.5 149,-339.5 "/>
+<text text-anchor="middle" x="115" y="-327.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
 </a>
 </g>
 </g>
-<!-- Node4&#45;&gt;Node1 -->
+<!-- Node4&#45;&gt;Node3 -->
 <g id="edge3" class="edge">
-<title>Node4&#45;&gt;Node1</title>
-<path fill="none" stroke="#404040" d="M263.3029,-154.9791C269.7861,-133.8524 278.5665,-108.6237 289,-87 290.2542,-84.4006 291.6145,-81.7751 293.0452,-79.1569"/>
-<polygon fill="none" stroke="#404040" points="293.1988,-78.8928 292.7584,-71.6952 299.2331,-68.5203 299.6734,-75.718 293.1988,-78.8928"/>
-<text text-anchor="middle" x="313.5" y="-95.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> #_printer</text>
+<title>Node4&#45;&gt;Node3</title>
+<path fill="none" stroke="#404040" d="M115,-320.2713C115,-302.3738 115,-278.7221 115,-257.1315"/>
+<polygon fill="none" stroke="#404040" points="115.0001,-257.0587 111,-251.0587 115,-245.0587 119,-251.0586 115.0001,-257.0587"/>
+<text text-anchor="middle" x="129" y="-294" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> &#45;_out</text>
 </g>
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:title=" ">
-<polygon fill="#ffffff" stroke="#bfbfbf" points="217,-320.5 217,-377.5 285,-377.5 285,-320.5 217,-320.5"/>
-<text text-anchor="middle" x="251" y="-365.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">ostream &amp;</text>
-<polyline fill="none" stroke="#bfbfbf" points="217,-358.5 285,-358.5 "/>
-<text text-anchor="middle" x="251" y="-346.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
-<polyline fill="none" stroke="#bfbfbf" points="217,-339.5 285,-339.5 "/>
-<text text-anchor="middle" x="251" y="-327.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<g id="a_node5"><a xlink:href="classhw1_1_1_ip_storage.html" target="_top" xlink:title=" ">
+<polygon fill="#ffffff" stroke="#000000" points="194.5,-127.5 194.5,-272.5 325.5,-272.5 325.5,-127.5 194.5,-127.5"/>
+<text text-anchor="middle" x="260" y="-260.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">hw1::IpStorage</text>
+<polyline fill="none" stroke="#000000" points="194.5,-253.5 325.5,-253.5 "/>
+<text text-anchor="middle" x="260" y="-241.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<polyline fill="none" stroke="#000000" points="194.5,-234.5 325.5,-234.5 "/>
+<text text-anchor="start" x="202.5" y="-222.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ IpStorage()</text>
+<text text-anchor="start" x="202.5" y="-211.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ add()</text>
+<text text-anchor="start" x="202.5" y="-200.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ add()</text>
+<text text-anchor="start" x="202.5" y="-189.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ getAllIps()</text>
+<text text-anchor="start" x="202.5" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ getIpsContainsByte()</text>
+<text text-anchor="start" x="202.5" y="-167.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ clear()</text>
+<text text-anchor="start" x="202.5" y="-156.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ empty()</text>
+<text text-anchor="start" x="202.5" y="-145.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ filteredByFirstBytes()</text>
+<text text-anchor="start" x="202.5" y="-134.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; validateIp()</text>
 </a>
 </g>
 </g>
-<!-- Node5&#45;&gt;Node4 -->
+<!-- Node5&#45;&gt;Node1 -->
 <g id="edge4" class="edge">
-<title>Node5&#45;&gt;Node4</title>
-<path fill="none" stroke="#404040" d="M251,-320.2713C251,-302.3738 251,-278.7221 251,-257.1315"/>
-<polygon fill="none" stroke="#404040" points="251.0001,-257.0587 247,-251.0587 251,-245.0587 255,-251.0586 251.0001,-257.0587"/>
-<text text-anchor="middle" x="265" y="-294" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> &#45;_out</text>
+<title>Node5&#45;&gt;Node1</title>
+<path fill="none" stroke="#404040" d="M269.4909,-127.478C273.1075,-113.4999 278.1021,-99.3722 285,-87 286.7012,-83.9486 288.6356,-80.9623 290.7359,-78.0607"/>
+<polygon fill="none" stroke="#404040" points="290.8777,-77.8851 291.5364,-70.7042 298.4183,-68.5503 297.7596,-75.7313 290.8777,-77.8851"/>
+<text text-anchor="middle" x="317" y="-95.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> #_ipStorage</text>
 </g>
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
-<g id="a_node6"><a xlink:href="classhw2_1_1_ip_storage.html" target="_top" xlink:title=" ">
-<polygon fill="#ffffff" stroke="#000000" points="330.5,-127.5 330.5,-272.5 461.5,-272.5 461.5,-127.5 330.5,-127.5"/>
-<text text-anchor="middle" x="396" y="-260.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">hw2::IpStorage</text>
-<polyline fill="none" stroke="#000000" points="330.5,-253.5 461.5,-253.5 "/>
-<text text-anchor="middle" x="396" y="-241.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
-<polyline fill="none" stroke="#000000" points="330.5,-234.5 461.5,-234.5 "/>
-<text text-anchor="start" x="338.5" y="-222.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ IpStorage()</text>
-<text text-anchor="start" x="338.5" y="-211.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ add()</text>
-<text text-anchor="start" x="338.5" y="-200.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ add()</text>
-<text text-anchor="start" x="338.5" y="-189.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ getAllIps()</text>
-<text text-anchor="start" x="338.5" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ getIpsContainsByte()</text>
-<text text-anchor="start" x="338.5" y="-167.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ clear()</text>
-<text text-anchor="start" x="338.5" y="-156.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ empty()</text>
-<text text-anchor="start" x="338.5" y="-145.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ filteredByFirstBytes()</text>
-<text text-anchor="start" x="338.5" y="-134.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; validateIp()</text>
+<g id="a_node6"><a xlink:title=" ">
+<polygon fill="#ffffff" stroke="#bfbfbf" points="188.5,-320.5 188.5,-377.5 289.5,-377.5 289.5,-320.5 188.5,-320.5"/>
+<text text-anchor="middle" x="239" y="-365.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">multiset&lt; IpV4 &gt;</text>
+<polyline fill="none" stroke="#bfbfbf" points="188.5,-358.5 289.5,-358.5 "/>
+<text text-anchor="middle" x="239" y="-346.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<polyline fill="none" stroke="#bfbfbf" points="188.5,-339.5 289.5,-339.5 "/>
+<text text-anchor="middle" x="239" y="-327.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
 </a>
 </g>
 </g>
-<!-- Node6&#45;&gt;Node1 -->
+<!-- Node6&#45;&gt;Node5 -->
 <g id="edge5" class="edge">
-<title>Node6&#45;&gt;Node1</title>
-<path fill="none" stroke="#404040" d="M363.9811,-127.4093C356.8473,-111.236 349.4816,-94.537 342.9964,-79.8342"/>
-<polygon fill="none" stroke="#404040" points="342.8483,-79.4984 336.767,-75.623 338.0054,-68.519 344.0866,-72.3944 342.8483,-79.4984"/>
-<text text-anchor="middle" x="387" y="-95.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> #_ipStorage</text>
+<title>Node6&#45;&gt;Node5</title>
+<path fill="none" stroke="#404040" d="M243.049,-320.2713C244.5273,-309.7825 246.2841,-297.3175 248.0978,-284.4492"/>
+<polygon fill="none" stroke="#404040" points="248.0982,-284.4457 244.9747,-277.9461 249.773,-272.5631 252.8964,-279.0627 248.0982,-284.4457"/>
+<text text-anchor="middle" x="272.5" y="-294" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> &#45;_storage</text>
 </g>
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
-<g id="a_node7"><a xlink:title=" ">
-<polygon fill="#ffffff" stroke="#bfbfbf" points="324.5,-320.5 324.5,-377.5 425.5,-377.5 425.5,-320.5 324.5,-320.5"/>
-<text text-anchor="middle" x="375" y="-365.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">multiset&lt; IpV4 &gt;</text>
-<polyline fill="none" stroke="#bfbfbf" points="324.5,-358.5 425.5,-358.5 "/>
-<text text-anchor="middle" x="375" y="-346.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
-<polyline fill="none" stroke="#bfbfbf" points="324.5,-339.5 425.5,-339.5 "/>
-<text text-anchor="middle" x="375" y="-327.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<g id="a_node7"><a xlink:href="structhw1_1_1_ip_storage_1_1_ip_boundaries.html" target="_top" xlink:title=" ">
+<polygon fill="#ffffff" stroke="#000000" points="307.5,-320.5 307.5,-377.5 466.5,-377.5 466.5,-320.5 307.5,-320.5"/>
+<text text-anchor="middle" x="387" y="-365.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">hw1::IpStorage::IpBoundaries</text>
+<polyline fill="none" stroke="#000000" points="307.5,-358.5 466.5,-358.5 "/>
+<text text-anchor="middle" x="387" y="-346.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<polyline fill="none" stroke="#000000" points="307.5,-339.5 466.5,-339.5 "/>
+<text text-anchor="middle" x="387" y="-327.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
 </a>
 </g>
 </g>
-<!-- Node7&#45;&gt;Node6 -->
+<!-- Node7&#45;&gt;Node5 -->
 <g id="edge6" class="edge">
-<title>Node7&#45;&gt;Node6</title>
-<path fill="none" stroke="#404040" d="M379.049,-320.2713C380.5273,-309.7825 382.2841,-297.3175 384.0978,-284.4492"/>
-<polygon fill="none" stroke="#404040" points="384.0982,-284.4457 380.9747,-277.9461 385.773,-272.5631 388.8964,-279.0627 384.0982,-284.4457"/>
-<text text-anchor="middle" x="407.5" y="-294" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> &#45;_storage</text>
+<title>Node7&#45;&gt;Node5</title>
+<path fill="none" stroke="#404040" d="M362.5131,-320.2713C353.0257,-309.1403 341.6412,-295.7837 329.962,-282.0814"/>
+<polygon fill="none" stroke="#404040" points="329.6334,-281.6958 322.697,-279.7242 321.8491,-272.5631 328.7855,-274.5347 329.6334,-281.6958"/>
+<text text-anchor="middle" x="384.5" y="-294" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> &#45;_ipRestrictions</text>
 </g>
 <!-- Node8 -->
 <g id="node8" class="node">
 <title>Node8</title>
-<g id="a_node8"><a xlink:href="structhw2_1_1_ip_storage_1_1_ip_boundaries.html" target="_top" xlink:title=" ">
-<polygon fill="#ffffff" stroke="#000000" points="443.5,-320.5 443.5,-377.5 602.5,-377.5 602.5,-320.5 443.5,-320.5"/>
-<text text-anchor="middle" x="523" y="-365.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">hw2::IpStorage::IpBoundaries</text>
-<polyline fill="none" stroke="#000000" points="443.5,-358.5 602.5,-358.5 "/>
-<text text-anchor="middle" x="523" y="-346.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
-<polyline fill="none" stroke="#000000" points="443.5,-339.5 602.5,-339.5 "/>
-<text text-anchor="middle" x="523" y="-327.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<g id="a_node8"><a xlink:href="classhw1_1_1_ip_v4.html" target="_top" xlink:title=" ">
+<polygon fill="#ffffff" stroke="#000000" points="336.5,-436.5 336.5,-592.5 437.5,-592.5 437.5,-436.5 336.5,-436.5"/>
+<text text-anchor="middle" x="387" y="-580.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">hw1::IpV4</text>
+<polyline fill="none" stroke="#000000" points="336.5,-573.5 437.5,-573.5 "/>
+<text text-anchor="middle" x="387" y="-561.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<polyline fill="none" stroke="#000000" points="336.5,-554.5 437.5,-554.5 "/>
+<text text-anchor="start" x="344.5" y="-542.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ IpV4()</text>
+<text text-anchor="start" x="344.5" y="-531.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ IpV4()</text>
+<text text-anchor="start" x="344.5" y="-520.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ IpV4()</text>
+<text text-anchor="start" x="344.5" y="-509.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ byte()</text>
+<text text-anchor="start" x="344.5" y="-498.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ byte()</text>
+<text text-anchor="start" x="344.5" y="-487.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ contains()</text>
+<text text-anchor="start" x="344.5" y="-476.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ operator=()</text>
+<text text-anchor="start" x="344.5" y="-465.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ operator&lt;()</text>
+<text text-anchor="start" x="344.5" y="-454.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ operator&gt;()</text>
+<text text-anchor="start" x="344.5" y="-443.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ bytesNumber()</text>
 </a>
 </g>
 </g>
-<!-- Node8&#45;&gt;Node6 -->
+<!-- Node8&#45;&gt;Node7 -->
 <g id="edge7" class="edge">
-<title>Node8&#45;&gt;Node6</title>
-<path fill="none" stroke="#404040" d="M498.5131,-320.2713C489.0257,-309.1403 477.6412,-295.7837 465.962,-282.0814"/>
-<polygon fill="none" stroke="#404040" points="465.6334,-281.6958 458.697,-279.7242 457.8491,-272.5631 464.7855,-274.5347 465.6334,-281.6958"/>
-<text text-anchor="middle" x="520.5" y="-294" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> &#45;_ipRestrictions</text>
+<title>Node8&#45;&gt;Node7</title>
+<path fill="none" stroke="#404040" d="M387,-436.112C387,-420.1203 387,-403.9109 387,-389.8814"/>
+<polygon fill="none" stroke="#404040" points="387.0001,-389.6788 383,-383.6788 387,-377.6788 391,-383.6787 387.0001,-389.6788"/>
+<text text-anchor="middle" x="402.5" y="-410" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> +min</text>
+<text text-anchor="middle" x="402.5" y="-399" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+max</text>
 </g>
 <!-- Node9 -->
 <g id="node9" class="node">
 <title>Node9</title>
-<g id="a_node9"><a xlink:href="classhw2_1_1_ip_v4.html" target="_top" xlink:title=" ">
-<polygon fill="#ffffff" stroke="#000000" points="472.5,-436.5 472.5,-592.5 573.5,-592.5 573.5,-436.5 472.5,-436.5"/>
-<text text-anchor="middle" x="523" y="-580.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">hw2::IpV4</text>
-<polyline fill="none" stroke="#000000" points="472.5,-573.5 573.5,-573.5 "/>
-<text text-anchor="middle" x="523" y="-561.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
-<polyline fill="none" stroke="#000000" points="472.5,-554.5 573.5,-554.5 "/>
-<text text-anchor="start" x="480.5" y="-542.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ IpV4()</text>
-<text text-anchor="start" x="480.5" y="-531.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ IpV4()</text>
-<text text-anchor="start" x="480.5" y="-520.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ IpV4()</text>
-<text text-anchor="start" x="480.5" y="-509.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ byte()</text>
-<text text-anchor="start" x="480.5" y="-498.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ byte()</text>
-<text text-anchor="start" x="480.5" y="-487.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ contains()</text>
-<text text-anchor="start" x="480.5" y="-476.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ operator=()</text>
-<text text-anchor="start" x="480.5" y="-465.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ operator&lt;()</text>
-<text text-anchor="start" x="480.5" y="-454.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ operator&gt;()</text>
-<text text-anchor="start" x="480.5" y="-443.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ bytesNumber()</text>
+<g id="a_node9"><a xlink:title=" ">
+<polygon fill="#ffffff" stroke="#bfbfbf" points="256,-646 256,-703 382,-703 382,-646 256,-646"/>
+<text text-anchor="middle" x="319" y="-691" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">static constexpr size_t</text>
+<polyline fill="none" stroke="#bfbfbf" points="256,-684 382,-684 "/>
+<text text-anchor="middle" x="319" y="-672" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<polyline fill="none" stroke="#bfbfbf" points="256,-665 382,-665 "/>
+<text text-anchor="middle" x="319" y="-653" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
 </a>
 </g>
 </g>
 <!-- Node9&#45;&gt;Node8 -->
 <g id="edge8" class="edge">
 <title>Node9&#45;&gt;Node8</title>
-<path fill="none" stroke="#404040" d="M523,-436.112C523,-420.1203 523,-403.9109 523,-389.8814"/>
-<polygon fill="none" stroke="#404040" points="523.0001,-389.6788 519,-383.6788 523,-377.6788 527,-383.6787 523.0001,-389.6788"/>
-<text text-anchor="middle" x="538.5" y="-410" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> +min</text>
-<text text-anchor="middle" x="538.5" y="-399" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+max</text>
+<path fill="none" stroke="#404040" d="M331.157,-645.8952C336.2907,-633.8161 342.5764,-619.026 349.0559,-603.7802"/>
+<polygon fill="none" stroke="#404040" points="349.1007,-603.6746 347.7663,-596.5881 353.7945,-592.6306 355.1289,-599.7172 349.1007,-603.6746"/>
+<text text-anchor="middle" x="386.5" y="-614" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> &#45;BYTES_NUMBER</text>
 </g>
 <!-- Node10 -->
 <g id="node10" class="node">
 <title>Node10</title>
 <g id="a_node10"><a xlink:title=" ">
-<polygon fill="#ffffff" stroke="#bfbfbf" points="392,-646 392,-703 518,-703 518,-646 392,-646"/>
-<text text-anchor="middle" x="455" y="-691" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">static constexpr size_t</text>
-<polyline fill="none" stroke="#bfbfbf" points="392,-684 518,-684 "/>
-<text text-anchor="middle" x="455" y="-672" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
-<polyline fill="none" stroke="#bfbfbf" points="392,-665 518,-665 "/>
-<text text-anchor="middle" x="455" y="-653" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<polygon fill="#ffffff" stroke="#bfbfbf" points="400,-640.5 400,-708.5 512,-708.5 512,-640.5 400,-640.5"/>
+<text text-anchor="start" x="408" y="-696.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">array&lt; Byte, BYTES</text>
+<text text-anchor="middle" x="456" y="-685.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_NUMBER &gt;</text>
+<polyline fill="none" stroke="#bfbfbf" points="400,-678.5 512,-678.5 "/>
+<text text-anchor="middle" x="456" y="-666.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<polyline fill="none" stroke="#bfbfbf" points="400,-659.5 512,-659.5 "/>
+<text text-anchor="middle" x="456" y="-647.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
 </a>
 </g>
 </g>
-<!-- Node10&#45;&gt;Node9 -->
+<!-- Node10&#45;&gt;Node8 -->
 <g id="edge9" class="edge">
-<title>Node10&#45;&gt;Node9</title>
-<path fill="none" stroke="#404040" d="M467.157,-645.8952C472.2907,-633.8161 478.5764,-619.026 485.0559,-603.7802"/>
-<polygon fill="none" stroke="#404040" points="485.1007,-603.6746 483.7663,-596.5881 489.7945,-592.6306 491.1289,-599.7172 485.1007,-603.6746"/>
-<text text-anchor="middle" x="522.5" y="-614" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> &#45;BYTES_NUMBER</text>
+<title>Node10&#45;&gt;Node8</title>
+<path fill="none" stroke="#404040" d="M444.31,-640.3207C440.8536,-630.7591 436.9363,-620.4108 433,-611 432.0208,-608.6591 431.0151,-606.293 429.9883,-603.911"/>
+<polygon fill="none" stroke="#404040" points="429.8817,-603.6685 423.8049,-599.7861 425.0514,-592.6836 431.1282,-596.5659 429.8817,-603.6685"/>
+<text text-anchor="middle" x="454" y="-614" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> &#45;_data</text>
 </g>
 <!-- Node11 -->
 <g id="node11" class="node">
 <title>Node11</title>
 <g id="a_node11"><a xlink:title=" ">
-<polygon fill="#ffffff" stroke="#bfbfbf" points="536,-640.5 536,-708.5 648,-708.5 648,-640.5 536,-640.5"/>
-<text text-anchor="start" x="544" y="-696.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">array&lt; Byte, BYTES</text>
-<text text-anchor="middle" x="592" y="-685.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_NUMBER &gt;</text>
-<polyline fill="none" stroke="#bfbfbf" points="536,-678.5 648,-678.5 "/>
-<text text-anchor="middle" x="592" y="-666.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
-<polyline fill="none" stroke="#bfbfbf" points="536,-659.5 648,-659.5 "/>
-<text text-anchor="middle" x="592" y="-647.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<polygon fill="#ffffff" stroke="#bfbfbf" points="343.5,-171.5 343.5,-228.5 422.5,-228.5 422.5,-171.5 343.5,-171.5"/>
+<text text-anchor="middle" x="383" y="-216.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">stringstream</text>
+<polyline fill="none" stroke="#bfbfbf" points="343.5,-209.5 422.5,-209.5 "/>
+<text text-anchor="middle" x="383" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<polyline fill="none" stroke="#bfbfbf" points="343.5,-190.5 422.5,-190.5 "/>
+<text text-anchor="middle" x="383" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
 </a>
 </g>
 </g>
-<!-- Node11&#45;&gt;Node9 -->
+<!-- Node11&#45;&gt;Node1 -->
 <g id="edge10" class="edge">
-<title>Node11&#45;&gt;Node9</title>
-<path fill="none" stroke="#404040" d="M580.31,-640.3207C576.8536,-630.7591 572.9363,-620.4108 569,-611 568.0208,-608.6591 567.0151,-606.293 565.9883,-603.911"/>
-<polygon fill="none" stroke="#404040" points="565.8817,-603.6685 559.8049,-599.7861 561.0514,-592.6836 567.1282,-596.5659 565.8817,-603.6685"/>
-<text text-anchor="middle" x="590" y="-614" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> &#45;_data</text>
+<title>Node11&#45;&gt;Node1</title>
+<path fill="none" stroke="#404040" d="M375.3358,-171.1721C368.7002,-146.2134 358.9829,-109.6629 351.2665,-80.6388"/>
+<polygon fill="none" stroke="#404040" points="351.1801,-80.3136 345.7727,-75.5427 348.0968,-68.7164 353.5042,-73.4872 351.1801,-80.3136"/>
+<text text-anchor="middle" x="392" y="-101" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> #_expOutput</text>
+<text text-anchor="middle" x="392" y="-90" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">#_actOutput</text>
 </g>
 <!-- Node12 -->
 <g id="node12" class="node">
 <title>Node12</title>
 <g id="a_node12"><a xlink:title=" ">
-<polygon fill="#ffffff" stroke="#bfbfbf" points="479.5,-171.5 479.5,-228.5 558.5,-228.5 558.5,-171.5 479.5,-171.5"/>
-<text text-anchor="middle" x="519" y="-216.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">stringstream</text>
-<polyline fill="none" stroke="#bfbfbf" points="479.5,-209.5 558.5,-209.5 "/>
-<text text-anchor="middle" x="519" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
-<polyline fill="none" stroke="#bfbfbf" points="479.5,-190.5 558.5,-190.5 "/>
-<text text-anchor="middle" x="519" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<polygon fill="#ffffff" stroke="#bfbfbf" points="440,-171.5 440,-228.5 538,-228.5 538,-171.5 440,-171.5"/>
+<text text-anchor="middle" x="489" y="-216.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">static const auto</text>
+<polyline fill="none" stroke="#bfbfbf" points="440,-209.5 538,-209.5 "/>
+<text text-anchor="middle" x="489" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<polyline fill="none" stroke="#bfbfbf" points="440,-190.5 538,-190.5 "/>
+<text text-anchor="middle" x="489" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
 </a>
 </g>
 </g>
 <!-- Node12&#45;&gt;Node1 -->
 <g id="edge11" class="edge">
 <title>Node12&#45;&gt;Node1</title>
-<path fill="none" stroke="#404040" d="M502.8015,-171.2247C494.2385,-157.1845 483.0215,-140.464 471,-127 448.7306,-102.0584 418.1598,-81.4317 390.5823,-66.0345"/>
-<polygon fill="none" stroke="#404040" points="390.3345,-65.9002 383.1534,-66.5574 379.7848,-60.1814 386.9659,-59.5242 390.3345,-65.9002"/>
-<text text-anchor="middle" x="484" y="-101" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> #_expOutput</text>
-<text text-anchor="middle" x="484" y="-90" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">#_actOutput</text>
+<path fill="none" stroke="#404040" d="M479.2264,-171.2268C469.7155,-146.566 453.2808,-111.2819 430,-87 422.9233,-79.619 414.5819,-72.953 405.8691,-67.0428"/>
+<polygon fill="none" stroke="#404040" points="405.6456,-66.9005 398.4361,-67.0513 395.5239,-60.4543 402.7335,-60.3035 405.6456,-66.9005"/>
+<text text-anchor="middle" x="466" y="-101" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> #DESC</text>
+<text text-anchor="middle" x="466" y="-90" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">#ASC</text>
 </g>
 <!-- Node13 -->
 <g id="node13" class="node">
 <title>Node13</title>
 <g id="a_node13"><a xlink:title=" ">
-<polygon fill="#ffffff" stroke="#bfbfbf" points="576,-171.5 576,-228.5 674,-228.5 674,-171.5 576,-171.5"/>
-<text text-anchor="middle" x="625" y="-216.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">static const auto</text>
-<polyline fill="none" stroke="#bfbfbf" points="576,-209.5 674,-209.5 "/>
-<text text-anchor="middle" x="625" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
-<polyline fill="none" stroke="#bfbfbf" points="576,-190.5 674,-190.5 "/>
-<text text-anchor="middle" x="625" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<polygon fill="#ffffff" stroke="#bfbfbf" points="556,-171.5 556,-228.5 674,-228.5 674,-171.5 556,-171.5"/>
+<text text-anchor="middle" x="615" y="-216.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">vector&lt; hw1::IpV4 &gt;</text>
+<polyline fill="none" stroke="#bfbfbf" points="556,-209.5 674,-209.5 "/>
+<text text-anchor="middle" x="615" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<polyline fill="none" stroke="#bfbfbf" points="556,-190.5 674,-190.5 "/>
+<text text-anchor="middle" x="615" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
 </a>
 </g>
 </g>
 <!-- Node13&#45;&gt;Node1 -->
 <g id="edge12" class="edge">
 <title>Node13&#45;&gt;Node1</title>
-<path fill="none" stroke="#404040" d="M607.3995,-171.3734C589.4216,-144.8236 558.9507,-106.5595 522,-87 481.3614,-65.4884 431.2938,-52.3376 391.5459,-44.5776"/>
-<polygon fill="none" stroke="#404040" points="391.3595,-44.5429 384.727,-47.373 379.5636,-42.3392 386.1961,-39.5091 391.3595,-44.5429"/>
-<text text-anchor="middle" x="571" y="-101" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> #DESC</text>
-<text text-anchor="middle" x="571" y="-90" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">#ASC</text>
+<path fill="none" stroke="#404040" d="M590.8229,-171.2306C578.3901,-157.1919 562.5998,-140.4709 547,-127 523.2999,-106.5342 516.9152,-101.1874 489,-87 463.2978,-73.9373 433.5857,-62.7913 407.4196,-54.1737"/>
+<polygon fill="none" stroke="#404040" points="407.0973,-54.07 400.1605,-56.0399 395.6741,-50.3943 402.6109,-48.4244 407.0973,-54.07"/>
+<text text-anchor="middle" x="553" y="-95.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> #_inputIps</text>
 </g>
 </g>
 </svg>

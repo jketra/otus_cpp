@@ -67,16 +67,16 @@
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacehw4.html">hw4</a> {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacehw3.html">hw3</a> {</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="group__homework__4.html#gaccac767479bafba80841333d89f06644">   14</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__homework__4.html#gaccac767479bafba80841333d89f06644">printBits</a>(T value) {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="unionhw4_1_1_bits.html">Bits&lt;T&gt;</a> b;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    b.<a class="code" href="unionhw4_1_1_bits.html#a0fe4b43206d866cfdb76d6c7e941ff77">value</a> = value;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="group__homework__3.html#ga53a1d1f776f2b8d68ae445525289a28a">   14</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__homework__3.html#ga53a1d1f776f2b8d68ae445525289a28a">printBits</a>(T value) {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="unionhw3_1_1_bits.html">Bits&lt;T&gt;</a> b;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    b.<a class="code" href="unionhw3_1_1_bits.html#a640d90c101e37fae030bff61dbe0b056">value</a> = value;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    </div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = <span class="keyword">sizeof</span>(T) - 1; j &gt;= 0; j--) {</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 128; i; i &gt;&gt;= 1)</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keywordflow">if</span> (i &amp; b.<a class="code" href="unionhw4_1_1_bits.html#a6d27a52c1a0b627e922c4fafa454ba17">bits</a>[j]) std::cout &lt;&lt; <span class="stringliteral">&quot;1&quot;</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keywordflow">if</span> (i &amp; b.<a class="code" href="unionhw3_1_1_bits.html#af3a3143b0dd5a9dbf5ed22062855c1ff">bits</a>[j]) std::cout &lt;&lt; <span class="stringliteral">&quot;1&quot;</span>;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keywordflow">else</span> std::cout &lt;&lt; <span class="stringliteral">&quot;0&quot;</span>;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        std::cout &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div>
@@ -86,11 +86,11 @@
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="a_bits_8h_html"><div class="ttname"><a href="_bits_8h.html">Bits.h</a></div></div>
-<div class="ttc" id="aunionhw4_1_1_bits_html_a6d27a52c1a0b627e922c4fafa454ba17"><div class="ttname"><a href="unionhw4_1_1_bits.html#a6d27a52c1a0b627e922c4fafa454ba17">hw4::Bits::bits</a></div><div class="ttdeci">uint8_t bits[sizeof(T)]</div><div class="ttdoc">Representation of the main value in bit form.</div><div class="ttdef"><b>Definition:</b> Bits.h:13</div></div>
-<div class="ttc" id="aunionhw4_1_1_bits_html"><div class="ttname"><a href="unionhw4_1_1_bits.html">hw4::Bits</a></div><div class="ttdef"><b>Definition:</b> Bits.h:11</div></div>
-<div class="ttc" id="aunionhw4_1_1_bits_html_a0fe4b43206d866cfdb76d6c7e941ff77"><div class="ttname"><a href="unionhw4_1_1_bits.html#a0fe4b43206d866cfdb76d6c7e941ff77">hw4::Bits::value</a></div><div class="ttdeci">T value</div><div class="ttdoc">Main value.</div><div class="ttdef"><b>Definition:</b> Bits.h:12</div></div>
-<div class="ttc" id="anamespacehw4_html"><div class="ttname"><a href="namespacehw4.html">hw4</a></div><div class="ttdoc">Fourth homework.</div><div class="ttdef"><b>Definition:</b> Bits.h:5</div></div>
-<div class="ttc" id="agroup__homework__4_html_gaccac767479bafba80841333d89f06644"><div class="ttname"><a href="group__homework__4.html#gaccac767479bafba80841333d89f06644">hw4::printBits</a></div><div class="ttdeci">void printBits(T value)</div><div class="ttdef"><b>Definition:</b> PrintBits.h:14</div></div>
+<div class="ttc" id="aunionhw3_1_1_bits_html_a640d90c101e37fae030bff61dbe0b056"><div class="ttname"><a href="unionhw3_1_1_bits.html#a640d90c101e37fae030bff61dbe0b056">hw3::Bits::value</a></div><div class="ttdeci">T value</div><div class="ttdoc">Main value.</div><div class="ttdef"><b>Definition:</b> Bits.h:12</div></div>
+<div class="ttc" id="aunionhw3_1_1_bits_html"><div class="ttname"><a href="unionhw3_1_1_bits.html">hw3::Bits</a></div><div class="ttdef"><b>Definition:</b> Bits.h:11</div></div>
+<div class="ttc" id="agroup__homework__3_html_ga53a1d1f776f2b8d68ae445525289a28a"><div class="ttname"><a href="group__homework__3.html#ga53a1d1f776f2b8d68ae445525289a28a">hw3::printBits</a></div><div class="ttdeci">void printBits(T value)</div><div class="ttdef"><b>Definition:</b> PrintBits.h:14</div></div>
+<div class="ttc" id="aunionhw3_1_1_bits_html_af3a3143b0dd5a9dbf5ed22062855c1ff"><div class="ttname"><a href="unionhw3_1_1_bits.html#af3a3143b0dd5a9dbf5ed22062855c1ff">hw3::Bits::bits</a></div><div class="ttdeci">uint8_t bits[sizeof(T)]</div><div class="ttdoc">Representation of the main value in bit form.</div><div class="ttdef"><b>Definition:</b> Bits.h:13</div></div>
+<div class="ttc" id="anamespacehw3_html"><div class="ttname"><a href="namespacehw3.html">hw3</a></div><div class="ttdoc">Fourth homework.</div><div class="ttdef"><b>Definition:</b> Bits.h:5</div></div>
 <!-- Copyright 2016 Velron -->
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->
@@ -100,7 +100,7 @@
 </div>
 </div>
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Sep 26 2020 13:20:28 for OTUS C++ Homeworks by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 30 2020 19:01:48 for OTUS C++ Homeworks by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.19
 </small></address>

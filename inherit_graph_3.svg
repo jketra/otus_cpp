@@ -12,9 +12,9 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="classhw2_1_1_ip_storage_printer.html" target="_top" xlink:title=" ">
+<g id="a_node1"><a xlink:href="classhw1_1_1_ip_storage_printer.html" target="_top" xlink:title=" ">
 <polygon fill="#ffffff" stroke="#000000" points="0,-.5 0,-19.5 122,-19.5 122,-.5 0,-.5"/>
-<text text-anchor="middle" x="61" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">hw2::IpStoragePrinter</text>
+<text text-anchor="middle" x="61" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">hw1::IpStoragePrinter</text>
 </a>
 </g>
 </g>
