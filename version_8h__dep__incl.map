@@ -1,7 +1,7 @@
-<map id="hw1_cicd/lib/version.h" name="hw1_cicd/lib/version.h">
+<map id="hw0_cicd/lib/version.h" name="hw0_cicd/lib/version.h">
 <area shape="rect" id="node1" title=" " alt="" coords="123,5,290,32"/>
 <area shape="rect" id="node2" href="$version_8cpp.html" title=" " alt="" coords="5,80,88,107"/>
-<area shape="rect" id="node3" href="$hw1__cicd_2src_2main_8cpp.html" title=" " alt="" coords="112,80,195,107"/>
+<area shape="rect" id="node3" href="$hw0__cicd_2src_2main_8cpp.html" title=" " alt="" coords="112,80,195,107"/>
 <area shape="rect" id="node4" href="$_project_version_tests_8cpp.html" title=" " alt="" coords="219,80,301,107"/>
 <area shape="rect" id="node5" href="$_project_version_tests_8h.html" title=" " alt="" coords="325,80,408,107"/>
 <area shape="rect" id="node6" href="$_google_test_8cpp.html" title=" " alt="" coords="287,155,447,181"/>
