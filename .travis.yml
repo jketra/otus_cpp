@@ -17,7 +17,7 @@ before_script:
 - doxygen --version
 - cd ..
 script:
-- cmake -DDEPLOY_PROJECT=$DEPLOYMENT_PROJECT_NAME .
+- cmake -DDEPLOY_PROJECT=$DEPLOYMENT_PROJECT_NAME -DTESTS_BOOST=ON .
 - cmake --build .
 - cmake --build . --target test
 - cmake --build . --target package
