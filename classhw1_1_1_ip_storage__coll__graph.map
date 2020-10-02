@@ -1,8 +1,7 @@
 <map id="hw1::IpStorage" name="hw1::IpStorage">
-<area shape="rect" id="node1" title=" " alt="" coords="59,572,233,767"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,432,140,509"/>
-<area shape="rect" id="node3" href="$structhw1_1_1_ip_storage_1_1_ip_boundaries.html" title=" " alt="" coords="164,432,376,509"/>
-<area shape="rect" id="node4" href="$classhw1_1_1_ip_v4.html" title=" " alt="" coords="203,145,337,355"/>
-<area shape="rect" id="node5" title=" " alt="" coords="78,5,246,83"/>
-<area shape="rect" id="node6" title=" " alt="" coords="270,5,489,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="59,631,233,825"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,491,140,568"/>
+<area shape="rect" id="node3" href="$structhw1_1_1_ip_storage_1_1_ip_boundaries.html" title=" " alt="" coords="164,491,376,568"/>
+<area shape="rect" id="node4" href="$classhw1_1_1_generic_ip.html" title=" " alt="" coords="187,145,353,413"/>
+<area shape="rect" id="node5" title=" " alt="" coords="161,5,379,83"/>
 </map>
