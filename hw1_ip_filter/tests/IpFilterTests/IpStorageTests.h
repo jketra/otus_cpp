@@ -24,15 +24,15 @@ protected:
 	{}
 	
 	void setTestsIps() {
-		_inputIps.emplace_back(hw1::IpV4{ 79, 46, 201, 157 });
-		_inputIps.emplace_back(hw1::IpV4{ 66, 169, 196, 128 });
-		_inputIps.emplace_back(hw1::IpV4{ 46, 70, 225, 39 });
-		_inputIps.emplace_back(hw1::IpV4{ 46, 70, 147, 26 });
-		_inputIps.emplace_back(hw1::IpV4{ 197, 48, 89, 171 });
-		_inputIps.emplace_back(hw1::IpV4{ 46, 70, 147, 26 });
-		_inputIps.emplace_back(hw1::IpV4{ 104, 222, 164, 236 });
-		_inputIps.emplace_back(hw1::IpV4{ 1, 29, 168, 70 });
-		_inputIps.emplace_back(hw1::IpV4{ 1, 158, 70, 188 });
+		_inputIps.emplace_back( 79, 46, 201, 157 );
+		_inputIps.emplace_back( 66, 169, 196, 128 );
+		_inputIps.emplace_back( 46, 70, 225, 39 );
+		_inputIps.emplace_back( 46, 70, 147, 26 );
+		_inputIps.emplace_back( 197, 48, 89, 171 );
+		_inputIps.emplace_back( 46, 70, 147, 26 );
+		_inputIps.emplace_back( 104, 222, 164, 236 );
+		_inputIps.emplace_back( 1, 29, 168, 70 );
+		_inputIps.emplace_back( 1, 158, 70, 188 );
 
 		for (const auto& ip : _inputIps) {
 			_ipStorage.add(ip);
@@ -157,12 +157,12 @@ TEST_F(IpStorageTests, PrintFilteredByFirstBytes) {
 }
 
 TEST_F(IpStorageTests, PrintIpsContainsByte) {
-	_inputIps.emplace_back(hw1::IpV4{ 1, 1, 1, 1 });
-	_inputIps.emplace_back(hw1::IpV4{ 46, 1, 1, 1 });
-	_inputIps.emplace_back(hw1::IpV4{ 1, 46, 1, 1 });
-	_inputIps.emplace_back(hw1::IpV4{ 1, 1, 46, 1 });
-	_inputIps.emplace_back(hw1::IpV4{ 1, 1, 1, 46 });
-	_inputIps.emplace_back(hw1::IpV4{ 46, 46, 46, 46 });
+	_inputIps.emplace_back( 1, 1, 1, 1 );
+	_inputIps.emplace_back( 46, 1, 1, 1 );
+	_inputIps.emplace_back( 1, 46, 1, 1 );
+	_inputIps.emplace_back( 1, 1, 46, 1 );
+	_inputIps.emplace_back( 1, 1, 1, 46 );
+	_inputIps.emplace_back( 46, 46, 46, 46 );
 
 	for (const auto& ip : _inputIps) {
 		_ipStorage.add(ip);
