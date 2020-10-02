@@ -2,10 +2,10 @@
 
 project(IpFilter)
 
-set(_sources IpV4.cpp
-			 IpStorage.cpp
+set(_sources IpStorage.cpp
 			 IpStoragePrinter.cpp)
-set(_headers IpV4.h
+set(_headers GenericIp.h
+			 IpV4.h
 			 IpStorage.h
 			 IpStoragePrinter.h)
 
