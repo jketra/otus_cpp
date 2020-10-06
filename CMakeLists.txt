@@ -22,12 +22,14 @@ include("${CMAKE_MODULES_DIR}/Functions.cmake")
 #
 set(CICD "CICD")
 set(IP_FILTER "IP_FILTER")
+set(ALLOCATOR "ALLOCATOR")
 set(PRINT_IP "PRINT_IP")
 
 # options
 #
 option(BUILD_${CICD} "Build Homework CICD" ON)
 option(BUILD_${IP_FILTER} "Build Homework IP_FILTER" ON)
+option(BUILD_${ALLOCATOR} "Build Homework ALLOCATOR" ON)
 option(BUILD_${PRINT_IP} "Build Homework PRINT_IP" ON)
 
 option(TESTS_GTEST "Build Google Tests" ON)
@@ -55,11 +57,12 @@ endif()
 if (TESTS_GTEST)
 	enable_testing()
 	find_package(GTest REQUIRED)
-	if (WIN32)
-		file(COPY ${CMAKE_SOURCE_DIR}/libs/gtest/gtest.dll
-				  ${CMAKE_SOURCE_DIR}/libs/gtest/gtestd.dll 
-				  DESTINATION ${BINARIES_DIR})
-	endif()
+	#TODO Копировать dll в зависимости от разрядности из папок vcpkg
+	#if (WIN32)
+	#	file(COPY ${CMAKE_SOURCE_DIR}/libs/gtest/gtest.dll
+	#			  ${CMAKE_SOURCE_DIR}/libs/gtest/gtestd.dll 
+	#			  DESTINATION ${BINARIES_DIR})
+	#endif()
 endif()
 
 # directories
@@ -70,6 +73,10 @@ endif()
 
 if (BUILD_${IP_FILTER})
 	add_subdirectory(hw1_ip_filter)
+endif()
+
+if (BUILD_${ALLOCATOR})
+	add_subdirectory(hw2_allocator)
 endif()
 
 if (BUILD_${PRINT_IP})
