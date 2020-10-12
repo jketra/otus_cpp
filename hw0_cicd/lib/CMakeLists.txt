@@ -9,5 +9,5 @@ add_library(${PROJECT_NAME} ${_sources} ${_headers})
 
 # to include config.h
 target_include_directories(${PROJECT_NAME}
-	PRIVATE "${CMAKE_BINARY_DIR}/hw1_cicd"
+	PRIVATE "${CMAKE_BINARY_DIR}/hw0_cicd"
 )
