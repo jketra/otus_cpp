@@ -35,17 +35,18 @@ public:
 		print<_printDirection>(begin, end);
 	}
 
-	template<PrintDirection _printDirection = PrintDirection::ASC>
-	void print(Iterator begin, Iterator end) const;
-
-	template<>
-	void print<PrintDirection::ASC>(Iterator begin, Iterator end) const {
-		std::copy(begin, end, std::ostream_iterator<Ip>{ _out, "\n" });
-	}
-
-	template<>
-	void print<PrintDirection::DESC>(Iterator begin, Iterator end) const {
-		std::reverse_copy(begin, end, std::ostream_iterator<Ip>{ _out, "\n" });
+	template<PrintDirection _printDirection>
+	void print(Iterator begin, Iterator end) const {
+	    switch(_printDirection) {
+	        case PrintDirection::ASC :
+                std::copy(begin, end, std::ostream_iterator<Ip>{ _out, "\n" });
+                break;
+	        case PrintDirection::DESC :
+                std::reverse_copy(begin, end, std::ostream_iterator<Ip>{ _out, "\n" });
+                break;
+            default:
+                _out << "[ERROR]: " << "unknown print direction.\n";
+	    }
 	}
 
 private:
