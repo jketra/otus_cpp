@@ -22,6 +22,10 @@ script:
 - cmake --build . --target test
 - cmake --build . --target package
 - doxygen Doxyfile
+branches:
+  only:
+    - gh-pages
+    - master
 deploy:
   - provider: pages
     skip_cleanup: true
