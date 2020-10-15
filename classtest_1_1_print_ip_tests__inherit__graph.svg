@@ -29,11 +29,11 @@
 <g id="node2" class="node">
 <title>Node2</title>
 <g id="a_node2"><a xlink:title=" ">
-<polygon fill="#ffffff" stroke="#bfbfbf" points="12,-127.5 12,-184.5 88,-184.5 88,-127.5 12,-127.5"/>
-<text text-anchor="middle" x="50" y="-172.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">testing::Test</text>
-<polyline fill="none" stroke="#bfbfbf" points="12,-165.5 88,-165.5 "/>
+<polygon fill="#ffffff" stroke="#bfbfbf" points="32,-127.5 32,-184.5 68,-184.5 68,-127.5 32,-127.5"/>
+<text text-anchor="middle" x="50" y="-172.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Test</text>
+<polyline fill="none" stroke="#bfbfbf" points="32,-165.5 68,-165.5 "/>
 <text text-anchor="middle" x="50" y="-153.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
-<polyline fill="none" stroke="#bfbfbf" points="12,-146.5 88,-146.5 "/>
+<polyline fill="none" stroke="#bfbfbf" points="32,-146.5 68,-146.5 "/>
 <text text-anchor="middle" x="50" y="-134.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
 </a>
 </g>

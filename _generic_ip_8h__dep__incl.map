@@ -1,12 +1,13 @@
 <map id="hw1_ip_filter/src/IpFilter/GenericIp.h" name="hw1_ip_filter/src/IpFilter/GenericIp.h">
-<area shape="rect" id="node1" title=" " alt="" coords="340,5,516,47"/>
-<area shape="rect" id="node2" href="$_ip_v4_8h.html" title=" " alt="" coords="380,95,476,121"/>
-<area shape="rect" id="node3" href="$_ip_storage_8h.html" title=" " alt="" coords="329,169,391,196"/>
-<area shape="rect" id="node7" href="$hw1__ip__filter_2src_2_required_outputs_module_2main_8cpp.html" title=" " alt="" coords="5,319,192,345"/>
-<area shape="rect" id="node8" href="$_ip_storage_tests_8h.html" title=" " alt="" coords="379,319,565,345"/>
-<area shape="rect" id="node10" href="$_ip_v4_tests_8h.html" title=" " alt="" coords="538,169,649,196"/>
-<area shape="rect" id="node4" href="$_ip_storage_8cpp.html" title=" " alt="" coords="312,244,408,271"/>
-<area shape="rect" id="node5" href="$_ip_storage_printer_8h.html" title=" " alt="" coords="192,244,288,271"/>
-<area shape="rect" id="node6" href="$_ip_storage_printer_8cpp.html" title=" " alt="" coords="216,319,355,345"/>
-<area shape="rect" id="node9" href="$_ip_filter_tests_8cpp.html" title=" " alt="" coords="473,393,602,420"/>
+<area shape="rect" id="node1" title=" " alt="" coords="363,5,539,47"/>
+<area shape="rect" id="node2" href="$_ip_functions_8h.html" title=" " alt="" coords="378,244,474,271"/>
+<area shape="rect" id="node8" href="$_ip_v4_8h.html" title=" " alt="" coords="293,95,389,121"/>
+<area shape="rect" id="node3" href="$_ip_storage_8h.html" title=" " alt="" coords="287,319,394,345"/>
+<area shape="rect" id="node4" href="$_ip_storage_printer_8h.html" title=" " alt="" coords="287,393,383,420"/>
+<area shape="rect" id="node5" href="$hw1__ip__filter_2src_2_ip_filter_example_2main_8cpp.html" title=" " alt="" coords="117,468,303,495"/>
+<area shape="rect" id="node6" href="$_ip_storage_tests_8h.html" title=" " alt="" coords="327,468,514,495"/>
+<area shape="rect" id="node7" href="$_ip_filter_tests_8cpp.html" title=" " alt="" coords="173,543,303,569"/>
+<area shape="rect" id="node9" href="$_restrictions_8h.html" title=" " alt="" coords="309,169,372,196"/>
+<area shape="rect" id="node11" href="$_ip_v4_tests_8h.html" title=" " alt="" coords="5,319,116,345"/>
+<area shape="rect" id="node10" href="$_restrictions_8cpp.html" title=" " alt="" coords="192,244,303,271"/>
 </map>
