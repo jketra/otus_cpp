@@ -1,8 +1,8 @@
 ﻿#include <StringAddOns/StringFunctions.h>
 
-#include <IpFilter/IpStoragePrinter.h>
-#include <IpFilter/IpStorage.h>
 #include <IpFilter/IpV4.h>
+#include <IpFilter/IpStorage.h>
+#include <IpFilter/IpStoragePrinter.h>
 
 #include <vector>
 #include <string>
@@ -10,10 +10,11 @@
 
 int main(int, char const **) {
 	try {
-		constexpr auto DESC = hw1::PrintDirection::DESC;
+		using namespace hw1;
+		constexpr auto DESC = PrintDirection::DESC;
 
-		hw1::IpStorage ipStorage;
-		hw1::IpStoragePrinter printer(std::cout);
+		IpStorage<IpV4> ipStorage;
+		IpStoragePrinter<IpStorage<IpV4>> printer(std::cout);
 
 		for (std::string line; std::getline(std::cin, line);) {
 			std::vector<std::string> v = hw_libs::split(line, '\t');

@@ -4,6 +4,7 @@
 
 #include <ostream>
 #include <tuple>
+#include <algorithm>
 
 namespace hw1 {
 
@@ -12,27 +13,40 @@ enum class PrintDirection {
 	DESC
 };
 
+template <typename IpStorageType>
 class IpStoragePrinter {
-	using Container = IpStorage::Container;
-	using Iterator = IpStorage::Iterator;
+	using Container = typename IpStorageType::Container;
+	using Iterator = typename IpStorageType::Iterator;
+	using Ip = typename IpStorageType::Ip;
 
 public:
-	IpStoragePrinter(std::ostream& out);
+	IpStoragePrinter(std::ostream& out) :
+	    _out(out) {}
 
-	template<PrintDirection printDirection_ = PrintDirection::ASC>
+	template<PrintDirection _printDirection = PrintDirection::ASC>
 	void print(const Container& container) const {
-		print<printDirection_>(std::begin(container), std::end(container));
+		print<_printDirection>(std::begin(container), std::end(container));
 	}
 
-	template<PrintDirection printDirection_ = PrintDirection::ASC>
+	template<PrintDirection _printDirection = PrintDirection::ASC>
 	void print(const std::tuple<Iterator, Iterator>& boundaries) const {
 		Iterator begin, end;
 		std::tie(begin, end) = boundaries;
-		print<printDirection_>(begin, end);
+		print<_printDirection>(begin, end);
 	}
 
-	template<PrintDirection printDirection_ = PrintDirection::ASC>
+	template<PrintDirection _printDirection = PrintDirection::ASC>
 	void print(Iterator begin, Iterator end) const;
+
+	template<>
+	void print<PrintDirection::ASC>(Iterator begin, Iterator end) const {
+		std::copy(begin, end, std::ostream_iterator<Ip>{ _out, "\n" });
+	}
+
+	template<>
+	void print<PrintDirection::DESC>(Iterator begin, Iterator end) const {
+		std::reverse_copy(begin, end, std::ostream_iterator<Ip>{ _out, "\n" });
+	}
 
 private:
 	std::ostream& _out;

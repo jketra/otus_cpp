@@ -19,7 +19,6 @@ class IpStorageTests : public ::testing::Test {
 // protected for GTest
 protected:
 	IpStorageTests() :
-		_ipStorage(),
 		_printer(_actOutput)
 	{}
 	
@@ -42,11 +41,10 @@ protected:
 	std::stringstream _actOutput;
 	std::stringstream _expOutput;
 
-	hw1::IpStorage _ipStorage;
+	hw1::IpStorage<hw1::IpV4> _ipStorage;
 
-	const static auto ASC { hw1::PrintDirection::ASC };
 	const static auto DESC{ hw1::PrintDirection::DESC };
-	hw1::IpStoragePrinter _printer;
+	hw1::IpStoragePrinter<hw1::IpStorage<hw1::IpV4>> _printer;
 
 	std::vector<hw1::IpV4> _inputIps;
 };
@@ -139,12 +137,12 @@ TEST_F(IpStorageTests, PrintFilteredByFirstBytes) {
 	std::copy_if(_inputIps.begin(), _inputIps.end(), std::back_inserter(expIps),
 		[&firstByte, &secondByte](const hw1::IpV4& ip) { return ip.byte(0) == firstByte && ip.byte(1) == secondByte; });
 	
-	std::sort(expIps.begin(), expIps.end(), std::less<hw1::IpV4>());
+	std::sort(expIps.begin(), expIps.end(), std::less<>());
 	for (const auto& ip : expIps) {
 		_expOutput << ip << '\n';
 	}
 
-	std::sort(expIps.begin(), expIps.end(), std::greater<hw1::IpV4>());
+	std::sort(expIps.begin(), expIps.end(), std::greater<>());
 	for (const auto& ip : expIps) {
 		_expOutput << ip << '\n';
 	}
@@ -178,12 +176,12 @@ TEST_F(IpStorageTests, PrintIpsContainsByte) {
 			ip.byte(2) == byteValue || ip.byte(3) == byteValue; 
 		});
 
-	std::sort(expIps.begin(), expIps.end(), std::less<hw1::IpV4>());
+	std::sort(expIps.begin(), expIps.end(), std::less<>());
 	for (const auto& ip : expIps) {
 		_expOutput << ip << '\n';
 	}
 
-	std::sort(expIps.begin(), expIps.end(), std::greater<hw1::IpV4>());
+	std::sort(expIps.begin(), expIps.end(), std::greater<>());
 	for (const auto& ip : expIps) {
 		_expOutput << ip << '\n';
 	}
@@ -197,7 +195,7 @@ TEST_F(IpStorageTests, PrintIpsContainsByte) {
 }
 
 TEST_F(IpStorageTests, ControlDataset) {
-	hw1::IpStorage ipStorage;
+	hw1::IpStorage<hw1::IpV4> ipStorage;
 
 	std::ifstream inStream("test_data/control_dataset.tsv", std::ifstream::in);
 

@@ -2,12 +2,16 @@
 
 project(IpFilter)
 
-set(_sources IpStorage.cpp
-			 IpStoragePrinter.cpp)
-set(_headers GenericIp.h
-			 IpV4.h
-			 IpStorage.h
-			 IpStoragePrinter.h)
+set(_sources
+		Restrictions.cpp)
+set(_headers
+		Boundaries.h
+		GenericIp.h
+		IpFunctions.h
+		IpStorage.h
+		IpStoragePrinter.h
+		IpV4.h
+		Restrictions.h)
 
 add_library(${PROJECT_NAME} ${_sources} ${_headers})
 

@@ -1,12 +1,12 @@
 ﻿#pragma once
 
-#include "IpV4.h"
+#include "IpFunctions.h"
+#include "Restrictions.h"
 
 #include <OperationResult/OperationResult.h>
 #include <TypeTraits/TypeTraits.h>
 
 #include <set>
-#include <ostream>
 #include <iterator>
 #include <tuple>
 #include <algorithm>
@@ -14,63 +14,77 @@
 /// The second part of the first homework (ip filter).
 namespace hw1 {
 
+template <typename IpType>
 class IpStorage {
-	using Byte = IpV4::Byte;
-	
-	struct IpBoundaries {
-		IpV4 min;
-		IpV4 max;
-	};
-
+	using IpRestrictions = Restrictions<IpType>;
+	using Byte = typename IpType::Byte;
 public:
-	using Container = std::multiset<IpV4>;
-	using Iterator  = Container::iterator;
+	using Ip = IpType;
+	using Container = std::multiset<Ip>;
+	using Iterator  = typename Container::iterator;
 	using OperationResult = hw_libs::OperationResult;
-	
-	IpStorage();
 
-	OperationResult add(const std::string& ipStr);
+	IpStorage() = default;
 
-	template<typename Ip, typename = hw_libs::sfinae::CheckType<IpV4, Ip>>
-	OperationResult add(Ip&& ip) {
-		if (validateIp(ip)) {
-			_storage.insert(std::forward<Ip>(ip));
-		return OperationResult::Success();
+	OperationResult add(const std::string& ipStr) {
+		Ip ip;
+		auto result = stringToIp(ipStr, ip);
+
+		if (!result) {
+			return std::move(result);
 		}
 
-		return std::move(OperationResult::Fail("Invalid IpV4: ") << ip);
+		return add(std::move(ip));
+	}
+
+	template<typename T, typename = hw_libs::sfinae::CheckType<Ip, T>>
+	OperationResult add(T&& ip) {
+		if (validateIp(ip)) {
+			_storage.insert(std::forward<T>(ip));
+		    return OperationResult::Success();
+		}
+
+		return std::move(OperationResult::Fail("Invalid Ip: ") << ip);
 	}
 
 
-	const Container& getAllIps() const;
-	Container getIpsContainsByte(IpV4::Byte byte) const;
+	const Container& getAllIps() const {
+		return _storage;
+	}
 
-	void clear();
-	bool empty() const;
+	Container getIpsContainsByte(Byte byte) const {
+		Container result;
+		std::vector<IpV4> vet;
+		std::copy_if(std::begin(_storage), std::end(_storage), std::inserter(result, std::begin(result)),
+			[&byte](const IpV4& ip) { return ip.contains(byte); });
 
-	template<typename... Args, typename = hw_libs::sfinae::CheckTypes<IpV4::Byte, Args...>>
-	std::tuple<Iterator, Iterator> filteredByFirstBytes(IpV4::Byte head, Args ...tail) {
-		static_assert(sizeof...(tail) < IpV4::bytesNumber(), "The number of input bytes mustn't exceed 4");
+		return std::move(result);
+	}
 
-		std::array<IpV4::Byte, sizeof...(tail) + 1u> filteringBytes{ head, tail... };
+	bool empty() const {
+		return _storage.empty();
+	}
+
+	template<typename... Args, typename = hw_libs::sfinae::CheckTypes<Byte, Args...>>
+	std::tuple<Iterator, Iterator> filteredByFirstBytes(Byte head, Args ...tail) {
+		static_assert(sizeof...(tail) < Ip::bytesNumber(), "The number of input bytes mustn't exceed 4");
+
+		std::array<Byte, sizeof...(tail) + 1u> filteringBytes{ head, tail... };
 		
-		IpBoundaries ipBoundaries = _ipRestrictions;
+		auto boundaries = IpRestrictions::boundaries;
 		for (unsigned i = 0; i < filteringBytes.size(); ++i) {
-			ipBoundaries.min.byte(i) = filteringBytes[i];
-			ipBoundaries.max.byte(i) = filteringBytes[i];
+			boundaries.min.byte(i) = filteringBytes[i];
+			boundaries.max.byte(i) = filteringBytes[i];
 		}
 
-		auto begin = std::lower_bound(std::begin(_storage), std::end(_storage), ipBoundaries.min);
-		auto end = std::upper_bound(std::begin(_storage), std::end(_storage), ipBoundaries.max);
+		auto begin = std::lower_bound(std::begin(_storage), std::end(_storage), boundaries.min);
+		auto end = std::upper_bound(std::begin(_storage), std::end(_storage), boundaries.max);
 
 		return std::make_tuple(begin, end);
 	}
 
 private:
-	bool validateIp(const IpV4& ip) const;
-
 	Container _storage;
-	const IpBoundaries _ipRestrictions;
 };
 
 }

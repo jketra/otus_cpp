@@ -12,8 +12,8 @@ namespace hw1 {
 template<size_t _bytesNumber>
 class GenericIp;
 
-template<size_t bytesNumber>
-std::ostream& operator<<(std::ostream& out, const GenericIp<bytesNumber>& ip);
+template<size_t _bytesNumber>
+std::ostream& operator<<(std::ostream& out, const GenericIp<_bytesNumber>& ip);
 
 template<size_t _bytesNumber>
 class GenericIp {
@@ -23,28 +23,19 @@ private:
 	using Data = std::array<Byte, _bytesNumber>;
 
 public:
-
 	GenericIp() = default;
-
-	GenericIp(const Data& array) :
-		_data(array) {
-	}
-
-	GenericIp(Data&& array) :
-		_data(std::forward<Data>(array)) {
-	}
 
 	template<typename... Bytes, typename = hw_libs::sfinae::AreTypesSame<Byte, Bytes...>,
 			 typename = std::enable_if_t<sizeof...(Bytes) == _bytesNumber>>
-	GenericIp(Bytes... bytes) :
+	explicit GenericIp(Bytes... bytes) noexcept :
 		_data{ bytes... } {
 	}
 
-	GenericIp(const GenericIp& other) :
+	GenericIp(const GenericIp& other) noexcept :
 		_data(other._data) {
 	}
 	
-	GenericIp(GenericIp&& other) :
+	GenericIp(GenericIp&& other) noexcept :
 		_data(std::move(other._data)) {
 	}
 
@@ -66,7 +57,7 @@ public:
 		return false;
 	}
 
-	const GenericIp& operator=(const GenericIp& other) {
+	GenericIp& operator=(const GenericIp& other) {
 		_data = other._data;
 		return *this;
 	}
@@ -93,12 +84,11 @@ private:
 	Data _data;
 };
 
-template<size_t bytesNumber>
-std::ostream& operator<<(std::ostream& out, const GenericIp<bytesNumber>& ip)
-{
+template<size_t _bytesNumber>
+std::ostream& operator<<(std::ostream& out, const GenericIp<_bytesNumber>& ip) {
 	size_t index = 0;
 
-	while (index < bytesNumber - 1) {
+	while (index < _bytesNumber - 1) {
 		out << ip._data[index++] << '.';
 	}
 
