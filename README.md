@@ -15,7 +15,7 @@ OTUS_CPP is a set of small projects for practice after the theoretical lessons o
 * C++14 compatible compiler (GCC 4.9+, MSVC 19.0+ (Visual Studio 2015+))
 * CMake (3.7.0+, build only)
 * GTest (optional, for tests)
-* Boost tests (optional, for part of the tests of the frist homework)
+* Boost tests (optional, for part of the tests of the first homework)
 
 <a name="building"></a>
 ## Building

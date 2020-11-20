@@ -55,11 +55,6 @@ endif()
 if (TESTS_GTEST)
 	enable_testing()
 	find_package(GTest REQUIRED)
-	if (WIN32)
-		file(COPY ${CMAKE_SOURCE_DIR}/libs/gtest/gtest.dll
-				  ${CMAKE_SOURCE_DIR}/libs/gtest/gtestd.dll 
-				  DESTINATION ${BINARIES_DIR})
-	endif()
 endif()
 
 # directories
