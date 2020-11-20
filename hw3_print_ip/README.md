@@ -9,7 +9,7 @@ std::list, std::vector      => dot separated container contents
 std::make_tuple(0, 1, 2, 3) => "0, 1, 2, 3"
 ```
 - [x] Documentation for this project.
-- [x] Publish thml-documentation on github-pages.
+- [x] Publish html-documentation on github-pages.
 
 * To build this project, enable the `BUILD_PRINT_IP` option during generation:
 ```

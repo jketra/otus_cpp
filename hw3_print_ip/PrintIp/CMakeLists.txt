@@ -3,12 +3,14 @@
 project(PrintIp)
 
 set(_headers PrintIp.h Bits.h PrintBits.h)
-set(_sources PrintIp.cpp)
 
-add_library(${PROJECT_NAME} ${_headers} ${_sources})
+add_library(${PROJECT_NAME} INTERFACE)
+
+add_custom_target(${PROJECT_NAME}_lib SOURCES ${_headers})
+add_dependencies(${PROJECT_NAME} ${PROJECT_NAME}_lib)
 
 target_link_libraries(${PROJECT_NAME}
-	PUBLIC TypeTraits
+        INTERFACE TypeTraits
 )
 
-target_include_directories(${PROJECT_NAME} INTERFACE ../src)
+target_include_directories(${PROJECT_NAME} INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/..)

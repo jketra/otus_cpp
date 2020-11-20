@@ -8,8 +8,8 @@ set(_headers PrintIpTests.h)
 add_executable(${PROJECT_NAME} ${_sources} ${_headers})
 
 target_link_libraries(${PROJECT_NAME} PRIVATE
-	GTest::GTest
-	PrintIp
+    GTest::GTest
+    PrintIp
 )
 
 add_test(${PROJECT_NAME} ${PROJECT_NAME})

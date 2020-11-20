@@ -6,5 +6,5 @@ add_subdirectory(PrintIp)
 add_subdirectory(PrintIpExample)
 
 if (TESTS_GTEST)
-	add_subdirectory(PrintIpTests)
+    add_subdirectory(PrintIpTests)
 endif()
