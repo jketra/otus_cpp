@@ -11,8 +11,8 @@ int main(int, char const **)
 		std::cout << "Homework 2: Allocator" << std::endl;
 
         auto v = std::vector<int, hw2::ReserveAllocator<int>>{};
-        //    v.reserve(5);
-        for (size_t i = 0; i < 1 /* 5 */; ++i) {
+        v.reserve(5);
+        for (size_t i = 0; i < 5; ++i) {
             v.emplace_back(i);
             std::cout << "---" << std::endl;
         }
