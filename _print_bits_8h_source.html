@@ -73,17 +73,20 @@
 <div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="group__homework__3.html#ga53a1d1f776f2b8d68ae445525289a28a">   14</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__homework__3.html#ga53a1d1f776f2b8d68ae445525289a28a">printBits</a>(T value) {</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="unionhw3_1_1_bits.html">Bits&lt;T&gt;</a> b;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    b.<a class="code" href="unionhw3_1_1_bits.html#a640d90c101e37fae030bff61dbe0b056">value</a> = value;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = <span class="keyword">sizeof</span>(T) - 1; j &gt;= 0; j--) {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 128; i; i &gt;&gt;= 1)</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keywordflow">if</span> (i &amp; b.<a class="code" href="unionhw3_1_1_bits.html#af3a3143b0dd5a9dbf5ed22062855c1ff">bits</a>[j]) std::cout &lt;&lt; <span class="stringliteral">&quot;1&quot;</span>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keywordflow">else</span> std::cout &lt;&lt; <span class="stringliteral">&quot;0&quot;</span>;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        std::cout &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    std::cout &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 128; i; i &gt;&gt;= 1) {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keywordflow">if</span> (i &amp; b.<a class="code" href="unionhw3_1_1_bits.html#af3a3143b0dd5a9dbf5ed22062855c1ff">bits</a>[j])</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                std::cout &lt;&lt; <span class="stringliteral">&quot;1&quot;</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                std::cout &lt;&lt; <span class="stringliteral">&quot;0&quot;</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        std::cout &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    std::cout &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="a_bits_8h_html"><div class="ttname"><a href="_bits_8h.html">Bits.h</a></div></div>
 <div class="ttc" id="aunionhw3_1_1_bits_html_a640d90c101e37fae030bff61dbe0b056"><div class="ttname"><a href="unionhw3_1_1_bits.html#a640d90c101e37fae030bff61dbe0b056">hw3::Bits::value</a></div><div class="ttdeci">T value</div><div class="ttdoc">Main value.</div><div class="ttdef"><b>Definition:</b> Bits.h:12</div></div>
@@ -100,7 +103,7 @@
 </div>
 </div>
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Nov 21 2020 01:29:24 for OTUS C++ Homeworks by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Nov 21 2020 10:13:27 for OTUS C++ Homeworks by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.19
 </small></address>
