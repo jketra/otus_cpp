@@ -74,6 +74,7 @@
       <li><a href="#index_g"><span>g</span></a></li>
       <li><a href="#index_i"><span>i</span></a></li>
       <li><a href="#index_m"><span>m</span></a></li>
+      <li><a href="#index_n"><span>n</span></a></li>
       <li><a href="#index_o"><span>o</span></a></li>
       <li><a href="#index_p"><span>p</span></a></li>
       <li><a href="#index_s"><span>s</span></a></li>
@@ -90,6 +91,9 @@
 : <a class="el" href="classtest_1_1_ip_storage_tests.html#a471c4fac730085ae62e3ee8df470868c">test::IpStorageTests</a>
 , <a class="el" href="classtest_1_1_print_ip_tests.html#a35374740d22643120e73893eb2a7c84f">test::PrintIpTests</a>
 </li>
+<li>_allocator
+: <a class="el" href="classhw2_1_1_list.html#a82125169ad2427d6433a46d1d6c6ca1c">hw2::List&lt; T, Allocator &gt;</a>
+</li>
 <li>_coutbuf
 : <a class="el" href="classtest_1_1_print_ip_tests.html#a32819d3ad310fa6caef164f77160c505">test::PrintIpTests</a>
 </li>
@@ -99,6 +103,9 @@
 <li>_expOutput
 : <a class="el" href="classtest_1_1_ip_storage_tests.html#a2d9565a8c9db17cc45f5eb0108cfecdb">test::IpStorageTests</a>
 , <a class="el" href="classtest_1_1_print_ip_tests.html#a982cc31ba44540b57f43c279c4907560">test::PrintIpTests</a>
+</li>
+<li>_head
+: <a class="el" href="classhw2_1_1_list.html#a2fd42b19b6dc3e9a65b32dfb6a85940a">hw2::List&lt; T, Allocator &gt;</a>
 </li>
 <li>_inputIps
 : <a class="el" href="classtest_1_1_ip_storage_tests.html#aac6b39ea9ebc7be52e8ecd31992a327e">test::IpStorageTests</a>
@@ -121,6 +128,9 @@
 <li>_storage
 : <a class="el" href="classhw1_1_1_ip_storage.html#a07f3228dcca9642d033a1571235e70b8">hw1::IpStorage&lt; IpType &gt;</a>
 </li>
+<li>_tail
+: <a class="el" href="classhw2_1_1_list.html#a74cb5c4a7ecc7b2318ec0125d58672ef">hw2::List&lt; T, Allocator &gt;</a>
+</li>
 </ul>
 
 
@@ -128,24 +138,34 @@
 <li>add()
 : <a class="el" href="classhw1_1_1_ip_storage.html#ad5ca7d155b17a8f3ee38cc5dab60498c">hw1::IpStorage&lt; IpType &gt;</a>
 </li>
+<li>alloc_traits
+: <a class="el" href="classhw2_1_1_list.html#a7a0414e601e4c70804da859bcea68843">hw2::List&lt; T, Allocator &gt;</a>
+</li>
+<li>allocate()
+: <a class="el" href="structhw2_1_1_reserve_allocator.html#a5a6e895d109f1743dcff575a4366a3cd">hw2::ReserveAllocator&lt; T &gt;</a>
+</li>
+<li>allocator_type
+: <a class="el" href="classhw2_1_1_list.html#ae3a41d9b296f4ceb9b3fb245fba31fc3">hw2::List&lt; T, Allocator &gt;</a>
+</li>
 </ul>
 
 
 <h3><a id="index_b"></a>- b -</h3><ul>
+<li>begin()
+: <a class="el" href="classhw2_1_1_list.html#aa199acb3cf6f0408d335112a084f9cd0">hw2::List&lt; T, Allocator &gt;</a>
+</li>
 <li>bits
 : <a class="el" href="unionhw3_1_1_bits.html#af3a3143b0dd5a9dbf5ed22062855c1ff">hw3::Bits&lt; T &gt;</a>
 </li>
 <li>boundaries
 : <a class="el" href="structhw1_1_1_restrictions_3_01_ip_v4_01_4.html#af5cdbefb2aadf11fc90ac17f887b434f">hw1::Restrictions&lt; IpV4 &gt;</a>
 </li>
+<li>byte()
+: <a class="el" href="classhw1_1_1_generic_ip.html#a0c53dde1b50ea2a38822e3358cb6050d">hw1::GenericIp&lt; _bytesNumber &gt;</a>
+</li>
 <li>Byte
 : <a class="el" href="classhw1_1_1_generic_ip.html#af7a3aa2b9266fe88bb5cc0b2d2990c7e">hw1::GenericIp&lt; _bytesNumber &gt;</a>
-</li>
-<li>byte()
-: <a class="el" href="classhw1_1_1_generic_ip.html#aef5d83d4596715631fe0c1e27cf77c11">hw1::GenericIp&lt; _bytesNumber &gt;</a>
-</li>
-<li>Byte
-: <a class="el" href="classhw1_1_1_ip_storage.html#ae3f520b8034724b5879db72322c847a3">hw1::IpStorage&lt; IpType &gt;</a>
+, <a class="el" href="classhw1_1_1_ip_storage.html#ae3f520b8034724b5879db72322c847a3">hw1::IpStorage&lt; IpType &gt;</a>
 </li>
 <li>bytesNumber()
 : <a class="el" href="classhw1_1_1_generic_ip.html#a8a0023e72639db76b4b5b32b27d24035">hw1::GenericIp&lt; _bytesNumber &gt;</a>
@@ -154,6 +174,15 @@
 
 
 <h3><a id="index_c"></a>- c -</h3><ul>
+<li>const_pointer
+: <a class="el" href="structhw2_1_1_reserve_allocator.html#a082ab4d88a9c38268e6a06c4039a94dc">hw2::ReserveAllocator&lt; T &gt;</a>
+</li>
+<li>const_void_pointer
+: <a class="el" href="structhw2_1_1_reserve_allocator.html#a7d0c5263d2db2deb419a75baf2b57ada">hw2::ReserveAllocator&lt; T &gt;</a>
+</li>
+<li>construct()
+: <a class="el" href="structhw2_1_1_reserve_allocator.html#a6c0ce042499a639d26e3305eaa9c9f4f">hw2::ReserveAllocator&lt; T &gt;</a>
+</li>
 <li>Container
 : <a class="el" href="classhw1_1_1_ip_storage.html#a6094c9b2425ccc05a45f63e92d369bde">hw1::IpStorage&lt; IpType &gt;</a>
 , <a class="el" href="classhw1_1_1_ip_storage_printer.html#a84afc0184abb0a189d1776b250d7c069">hw1::IpStoragePrinter&lt; IpStorageType &gt;</a>
@@ -168,8 +197,14 @@
 <li>Data
 : <a class="el" href="classhw1_1_1_generic_ip.html#af00703e7278004043095f8daf5d58aa8">hw1::GenericIp&lt; _bytesNumber &gt;</a>
 </li>
+<li>deallocate()
+: <a class="el" href="structhw2_1_1_reserve_allocator.html#a6d8c8f3e152005a22c994d04ebdea707">hw2::ReserveAllocator&lt; T &gt;</a>
+</li>
 <li>DESC
 : <a class="el" href="classtest_1_1_ip_storage_tests.html#a2d25782c58d4b7ecf770eb3aee7b3280">test::IpStorageTests</a>
+</li>
+<li>destroy()
+: <a class="el" href="structhw2_1_1_reserve_allocator.html#ae51e702092cd3e6ed6b8267d7b6dc9cf">hw2::ReserveAllocator&lt; T &gt;</a>
 </li>
 </ul>
 
@@ -177,6 +212,9 @@
 <h3><a id="index_e"></a>- e -</h3><ul>
 <li>empty()
 : <a class="el" href="classhw1_1_1_ip_storage.html#a1e58790cd3f2b457cbd6c382a70be30c">hw1::IpStorage&lt; IpType &gt;</a>
+</li>
+<li>end()
+: <a class="el" href="classhw2_1_1_list.html#ae2722df537f46ed09139023075490d51">hw2::List&lt; T, Allocator &gt;</a>
 </li>
 </ul>
 
@@ -238,6 +276,19 @@
 </ul>
 
 
+<h3><a id="index_n"></a>- n -</h3><ul>
+<li>next
+: <a class="el" href="structhw2_1_1_list_1_1_node.html#a36083b6f5d3862cf1b0115cf7ddfa6fc">hw2::List&lt; T, Allocator &gt;::Node</a>
+</li>
+<li>node_alloc_traits
+: <a class="el" href="classhw2_1_1_list.html#ab6addf5cddbbc4f4a6ba59c7cc416adf">hw2::List&lt; T, Allocator &gt;</a>
+</li>
+<li>NodeAllocator
+: <a class="el" href="classhw2_1_1_list.html#aed0723471d66402ab006d0972846ada0">hw2::List&lt; T, Allocator &gt;</a>
+</li>
+</ul>
+
+
 <h3><a id="index_o"></a>- o -</h3><ul>
 <li>OperationResult
 : <a class="el" href="classhw1_1_1_ip_storage.html#a63e850a01050a2a388e63718facb2aca">hw1::IpStorage&lt; IpType &gt;</a>
@@ -263,15 +314,27 @@
 <li>operator&gt;()
 : <a class="el" href="classhw1_1_1_generic_ip.html#a392570343dbcfc4aa9262226dcce8f9e">hw1::GenericIp&lt; _bytesNumber &gt;</a>
 </li>
+<li>other
+: <a class="el" href="structhw2_1_1_reserve_allocator_1_1rebind.html#aeaffc1413806ff9de45fb3142ac757f4">hw2::ReserveAllocator&lt; T &gt;::rebind&lt; U &gt;</a>
+</li>
 </ul>
 
 
 <h3><a id="index_p"></a>- p -</h3><ul>
+<li>pointer
+: <a class="el" href="structhw2_1_1_reserve_allocator.html#a174100bf18743c7a308ad93d8af4c173">hw2::ReserveAllocator&lt; T &gt;</a>
+</li>
+<li>prev
+: <a class="el" href="structhw2_1_1_list_1_1_node.html#a31bc9d100302c735102b0844f9cd96fb">hw2::List&lt; T, Allocator &gt;::Node</a>
+</li>
 <li>print()
-: <a class="el" href="classhw1_1_1_ip_storage_printer.html#a5f81052b5a45da70c10b488c57e612c4">hw1::IpStoragePrinter&lt; IpStorageType &gt;</a>
+: <a class="el" href="classhw1_1_1_ip_storage_printer.html#a8827d8d1fde8805ecbd0576238343936">hw1::IpStoragePrinter&lt; IpStorageType &gt;</a>
 </li>
 <li>PrintIpTests()
 : <a class="el" href="classtest_1_1_print_ip_tests.html#ad73b92af5c9510a4143750a565948b27">test::PrintIpTests</a>
+</li>
+<li>push_front()
+: <a class="el" href="classhw2_1_1_list.html#ae46fe65d428c7ce0888015e36c0d5b89">hw2::List&lt; T, Allocator &gt;</a>
 </li>
 </ul>
 
@@ -279,6 +342,9 @@
 <h3><a id="index_s"></a>- s -</h3><ul>
 <li>setTestsIps()
 : <a class="el" href="classtest_1_1_ip_storage_tests.html#a3cea0aa4c64f65149a286be22281a99b">test::IpStorageTests</a>
+</li>
+<li>size_type
+: <a class="el" href="structhw2_1_1_reserve_allocator.html#aef6e86188f3258f145bcf7be100b7825">hw2::ReserveAllocator&lt; T &gt;</a>
 </li>
 <li>Success()
 : <a class="el" href="classhw__libs_1_1_operation_result.html#a50e4a9de5c4831e63c915d0ce828c2b6">hw_libs::OperationResult</a>
@@ -288,7 +354,12 @@
 
 <h3><a id="index_v"></a>- v -</h3><ul>
 <li>value
-: <a class="el" href="unionhw3_1_1_bits.html#a640d90c101e37fae030bff61dbe0b056">hw3::Bits&lt; T &gt;</a>
+: <a class="el" href="structhw2_1_1_list_1_1_node.html#a824affcbf7582c350e70398ac807677b">hw2::List&lt; T, Allocator &gt;::Node</a>
+, <a class="el" href="unionhw3_1_1_bits.html#a640d90c101e37fae030bff61dbe0b056">hw3::Bits&lt; T &gt;</a>
+</li>
+<li>value_type
+: <a class="el" href="classhw2_1_1_list.html#ac75bb2c5ff678aee8cfd232f570277f5">hw2::List&lt; T, Allocator &gt;</a>
+, <a class="el" href="structhw2_1_1_reserve_allocator.html#aceb1751b1d885c165aa9ebf1c71fb824">hw2::ReserveAllocator&lt; T &gt;</a>
 </li>
 </ul>
 
@@ -308,7 +379,7 @@
 </div>
 </div>
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Nov 21 2020 10:13:27 for OTUS C++ Homeworks by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Nov 21 2020 22:51:13 for OTUS C++ Homeworks by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.19
 </small></address>

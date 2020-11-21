@@ -1,11 +1,11 @@
 <map id="test::IpStorageTests" name="test::IpStorageTests">
-<area shape="rect" id="node1" title=" " alt="" coords="458,403,609,495"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,197,107,274"/>
-<area shape="rect" id="node3" title=" " alt="" coords="131,197,322,274"/>
-<area shape="rect" id="node4" href="$classhw1_1_1_ip_storage_printer.html" title=" " alt="" coords="347,160,523,311"/>
-<area shape="rect" id="node5" title=" " alt="" coords="389,5,480,83"/>
-<area shape="rect" id="node6" href="$classhw1_1_1_ip_storage.html" title=" " alt="" coords="547,145,722,325"/>
-<area shape="rect" id="node7" title=" " alt="" coords="575,5,694,83"/>
-<area shape="rect" id="node8" title=" " alt="" coords="746,197,851,274"/>
-<area shape="rect" id="node9" title=" " alt="" coords="875,197,1005,274"/>
+<area shape="rect" id="node1" title=" " alt="" coords="405,403,555,495"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,197,53,274"/>
+<area shape="rect" id="node3" title=" " alt="" coords="78,197,269,274"/>
+<area shape="rect" id="node4" href="$classhw1_1_1_ip_storage_printer.html" title=" " alt="" coords="293,160,469,311"/>
+<area shape="rect" id="node5" title=" " alt="" coords="336,5,427,83"/>
+<area shape="rect" id="node6" href="$classhw1_1_1_ip_storage.html" title=" " alt="" coords="494,145,669,325"/>
+<area shape="rect" id="node7" title=" " alt="" coords="522,5,641,83"/>
+<area shape="rect" id="node8" title=" " alt="" coords="693,197,798,274"/>
+<area shape="rect" id="node9" title=" " alt="" coords="821,197,952,274"/>
 </map>
