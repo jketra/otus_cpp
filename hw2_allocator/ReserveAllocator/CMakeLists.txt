@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.7)
 project(ReserveAllocator)
 
 set(_headers ReserveAllocator.h
+             ClassicAllocator.h
              List.h)
 
 add_library(${PROJECT_NAME} INTERFACE)

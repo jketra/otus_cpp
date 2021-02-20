@@ -1,7 +1,10 @@
 ﻿#pragma once 
 
 #include <cstddef>
+#include <cstdint>
 #include <vector>
+#include <array>
+
 #include <iostream>
 
 #ifdef _WIN32
@@ -10,7 +13,7 @@
 
 namespace hw2 {
 
-template<typename T/*, size_t size_*/>
+template<typename T, size_t _capacity>
 struct ReserveAllocator {
     using value_type = T;
     using pointer = T*;
@@ -25,19 +28,23 @@ struct ReserveAllocator {
 
     template<typename U>
     struct rebind {
-        using other = ReserveAllocator<U>;
+        using other = ReserveAllocator<U, _capacity>;
     };
 
-    pointer allocate(size_type n, const_void_pointer hint = nullptr) const {
-        std::cout << __PRETTY_FUNCTION__ << "[n = " << n << "]" << std::endl;
+    pointer allocate(size_type n, const_void_pointer hint = nullptr) {
+        //std::cout << __PRETTY_FUNCTION__ << "[n = " << n << "]" << std::endl;
         (void)hint;
-        return reinterpret_cast<T*>(::operator new(n * sizeof(T)));
+        //return reinterpret_cast<T*>(::operator new(n * sizeof(T)));
+        auto address = &_storage[_freeIndex];
+        _freeIndex += n;
+        return address;
     }
 
-    void deallocate(T* p, std::size_t n) const {
-        std::cout << __PRETTY_FUNCTION__ << "[n = " << n << "]" << std::endl;
+    void deallocate(T* p, std::size_t n) {
+        //std::cout << __PRETTY_FUNCTION__ << "[n = " << n << "]" << std::endl;
 
-        delete[] reinterpret_cast<char*>(p);
+        //delete[] reinterpret_cast<char*>(p);
+        _freeIndex -= n;
     }
 
     template<typename U, typename ...Args>
@@ -53,7 +60,10 @@ struct ReserveAllocator {
         p->~U();
     }
 
-    // NEED COPY CONSTRUCTOR !!!!!!!!!
+private:
+    //std::array<uint8_t, sizeof(value_type) * _capacity> _storage2;
+    std::array<value_type, _capacity> _storage;
+    size_type _freeIndex{ 0 };
 };
 
 }

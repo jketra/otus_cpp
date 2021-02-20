@@ -2,9 +2,9 @@
 
 #include <ReserveAllocator/List.h>
 #include <ReserveAllocator/ReserveAllocator.h>
+#include <ReserveAllocator/ClassicAllocator.h>
 
 #include <gtest/gtest.h>
-#include <ReserveAllocator/ReserveAllocator.h>
 
 namespace test {
 
@@ -32,7 +32,7 @@ TEST_F(ListTests, StdAllocator) {
 TEST_F(ListTests, CustomAllocator) {
     using namespace hw2;
 
-    List<int, ReserveAllocator<int>> list;
+    List<int, ClassicAllocator<int>> list;
 
     list.push_front(3);
     list.push_front(2);
